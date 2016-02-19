@@ -27,10 +27,10 @@
 		scene = new THREE.Scene();
 		//THREE.PerspectiveCamera(fov,aspect,near,far)
 		camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-		camera.position.z = 5;
+		camera.position.z = 55;
 		//Forma se crea la Forma (Geometry)
 		geometry = new THREE.BoxGeometry( 1, 1, 1 );
-		material = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: false } );
+		material = new THREE.MeshBasicMaterial( { color: 0x001f00, wireframe: true } );
 		
 		mesh = new THREE.Mesh( geometry, material );
 	       scene.add( mesh );
@@ -48,7 +48,7 @@
 		requestAnimationFrame( animate );
 
 		mesh.rotation.x +=0.1;
-		mesh.rotation.y += 0.5;
+		mesh.rotation.y += 0.1;
 
 		renderer.render( scene, camera );
 
