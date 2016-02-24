@@ -14,7 +14,7 @@
     </head>
     <body>
         
-     <script src="three.min.js"> </script>
+     <script src="../../js/three.min.js"> </script>
      <script>
         var scene, camera, renderer;
 	var geometry, material, mesh, figura;
@@ -34,7 +34,7 @@
 	    figura.lineTo(40,40);
 	    figura.lineTo(10,10);
 	    //Forma se crea la Forma (Geometry)(Shape)
-		geometry = new THREE.ShapeGeometry(5,6);
+		geometry = new THREE.ShapeGeometry(figura);
 		//material = new THREE.MeshDepthMaterial( { color: 0x1A0000, wireframe: false} );
 			mesh = new THREE.Mesh( geometry );
 	       scene.add( mesh );
