@@ -25,7 +25,7 @@
 	function init() {
 		scene = new THREE.Scene();
 		//THREE.PerspectiveCamera(fov,aspect,near,far)
-		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
 		camera.position.z = 50;
 		//Forma se crea la Forma (Geometry)(Toroide)
 		geometry = new THREE.TorusGeometry(8,2);
@@ -42,7 +42,7 @@
 //Lee pide al navegador que llame a la función y a cada imagen, para renderizar y presentarla
 	function animate() {
 		requestAnimationFrame( animate );
-		//mesh.rotation.x +=0.1;
+		mesh.rotation.x +=0.1;
 		//mesh.rotation.y += 0.1;
 		renderer.render( scene, camera );
 	}
