@@ -26,10 +26,10 @@
 		scene = new THREE.Scene();
 		//THREE.PerspectiveCamera(fov,aspect,near,far)
 		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
-		camera.position.z = 50;
+		camera.position.z = 30;
 		//Forma se crea la Forma (Geometry)(Toroide)
 		geometry = new THREE.TorusGeometry(8,2);
-		material = new THREE.MeshDepthMaterial( {color: 0xA014A8 wireframe: false} );
+		material = new THREE.MeshDepthMaterial( {color: 0xA01FA8 wireframe: false} );
 			mesh = new THREE.Mesh( geometry, material );
 	       scene.add( mesh );
 	   
