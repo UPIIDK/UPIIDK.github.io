@@ -5,7 +5,7 @@ function Pierna() {
     this.pie = new THREE.Mesh( new THREE.BoxGeometry(2,1,1));
     
     this.pierna.position.y=-2.5;
-    this.pie.position.y= - 4.5;
+    this.pie.position.y= -4.5;
     this.pie.position.x=1;
     
     this.add(this.pierna);
@@ -34,7 +34,7 @@ function Pierna() {
       
       renderer=new THREE.WebGLRenderer();
       renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
-      document.body.appendDChild(renderer.domElement);
+      document.body.appendChild(renderer.domElement);
       
       function loop(){
       requestAnimationFrame(loop);
