@@ -1,0 +1,12 @@
+/*Se muestra como la variable var toma, los datos que contiene la variable foo.
+*/
+//Esto se ejecuta en la Consola del navegador Chrome o FireFox
+var foo = {nombre: "foo", uno: 1, dos: 2};
+var bar= {dos: "dos", tres: 3};
+bar.__proto__=foo;
+Object { nombre: "foo", uno: 1, dos: 2 }
+//Para visualizar los datos en las variables
+console.log(bar.uno);
+console.log(bar.tres);
+console.log(bar.dos);
+console.log(bar.nombre);
