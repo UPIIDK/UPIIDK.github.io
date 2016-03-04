@@ -41,4 +41,14 @@ function Pierna() {
       renderer.render(escena, camara);
       
       if(Math.abs(piernaD.rotation.z) > .5)
+      step=-step;
+      
+      piernaD.rotation.z += step;
+      piernaI.rotation.z -= step;
+      }
+      
+      var camara, renderer, escena, piernaD, piernaI, step;
+      
+      setup();
+      loop();
       
