@@ -1,0 +1,15 @@
+<!doctype html>
+ <html lang="es">
+    <head>
+           <meta http-equiv="Content-Type" content="text/html; charset = "utf-8">
+           <title> Herencia en JavaScript </title>
+			<style>
+			body { text-align: center;}
+			</style>
+    </head>
+    <body>
+           <script src=" ../../js/three.min.js"> </script>
+           <script src="../Source/ejemploherencia1.js"></script>
+   </body>
+   
+</html>
