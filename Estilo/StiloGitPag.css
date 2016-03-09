@@ -1,4 +1,4 @@
-#cabecera {
+#Cabecera {
 font: bold 36px verdana, sans-serif;
 }
 
@@ -7,7 +7,7 @@ text-align: center;
 font: bold 36px verdana, sans-serif;
 }
 
-#pie {
+#Pie {
 display: block;
 width: 500px;
 margin: 50px auto;
