@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Ejemplo: Manejo basico de eventos</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    body{margin: 0;}
+	canvas{width: 100%; height: 100%}
+    </style>
+  </head>
+  <body>
+    <script src="../three.js-master/build/three.min.js"></script>
+	<script>
+	
+		// Inicialización
+		//=====================
+		
+		escena = new THREE.Scene();
+		var aspect = window.innerWidth/window.innerHeight;
+		camara = new THREE.PerspectiveCamera(75,aspect,0.1,1000);
+		
+		camara.position.z = 5;
+		renderer = new THREE.WebGLRenderer();
+		renderer.setSize(window.innerWidth,window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+		
+		//La figura se realiza 
+        var forma = new THREE.SphereGeometry(1);
+        var material= new THREE.MeshNormalMaterial();
+        malla = new THREE.Mesh(forma,material);
+        
+        escena.add(malla);
+		
+		var tipo_evento = 'resize';
+		//Es equivalente a function listener(){
+		var listener = function(){
+			//se actualiza la relacion de aspectos
+			camara.aspect = window.innerWidth/window.innerHeight;
+			
+			//Se recomputa la matrix de proyección
+			camara.updateProjectionMatrix();
+			
+			//Se ajusta el tamaño del renderer
+			renderer.setSize( window.innerWidth , window.innerHeight );
+		}
+			
+			//La variable capturarp se puede entender como "¿Desea capturar de 
+			//forma directa los siguientes eventos?". La 'p' al final del nombre es 
+			//una notación tradicional en ciertos circulos de programadores para 
+			//indicar un predicado, en este caso un verbo.
+			
+			//desea capturar
+			var capturarp = false;
+			window.addEventListener(tipo_evento, listener, capturarp);
+			function loop(){
+				requestAnimationFrame(loop);
+				malla.rotation.x+=0.01;
+				malla.rotation.y+=0.01;
+				renderer.render(escena, camara);
+				}
+			var malla,escena,renderer,camara;
+			
+			loop();
+		</script>	
+	</body>
+  </html>
