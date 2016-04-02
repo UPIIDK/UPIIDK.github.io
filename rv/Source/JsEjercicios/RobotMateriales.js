@@ -54,9 +54,9 @@ Robot.prototype=new THREE.Object3D();
 
 function setup(){
  var luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=200;
- luzPuntual.position.y=200;
- luzPuntual.position.z=200;
+ luzPuntual.position.x=80;
+ luzPuntual.position.y=80;
+ luzPuntual.position.z=80;
  rob=new Robot();
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
@@ -69,8 +69,8 @@ function setup(){
 
 function loop(){
 var timer = Date.now() * 0.0002;
-camara.position.x = Math.cos( timer ) * 100;
-camara.position.z = Math.sin( timer ) * 100;
+camara.position.x = Math.cos( timer ) * 50;
+camara.position.z = Math.sin( timer ) * 50;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
