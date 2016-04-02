@@ -69,8 +69,8 @@ function setup(){
 
 function loop(){
 var timer = Date.now() * 0.0002;
-camara.position.x = Math.cos( timer ) * 25;
-camara.position.z = Math.sin( timer ) * 10;
+camara.position.x = Math.cos( timer ) * 35;
+camara.position.z = Math.sin( timer ) * 15;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
