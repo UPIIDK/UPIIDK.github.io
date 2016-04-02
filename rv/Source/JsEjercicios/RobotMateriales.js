@@ -61,7 +61,7 @@ function setup(){
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
- camara.position.y=40;
+ camara.position.y=32;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
