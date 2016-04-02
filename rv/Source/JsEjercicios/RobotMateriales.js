@@ -34,13 +34,13 @@ function Cuerpo(){
 function Robot(){
  THREE.Object3D.call(this);
  this.llanta1=new Llanta(Math.PI/2,0,0);
- this.llanta2=new Llanta(Math.PI/2,0,0);
+ this.llanta6=new Llanta(Math.PI/2,0,0);
  this.llanta3=new Llanta(Math.PI/2,0,0);
  this.llanta4=new Llanta(Math.PI/2,0,0);
  posicionLlanta(this.llanta1,-2,-3,2);
- posicionLlanta(this.llanta2,0,-3,2);
  posicionLlanta(this.llanta3,2,-3,2);
  posicionLlanta(this.llanta4,-2,-3,-2);
+ posicionLlanta(this.llanta6,-2,3,-2);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4);
  this.add(this.cuerpobot);
@@ -74,9 +74,9 @@ camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 rob.llanta1.rotation.z+=0.01;
-rob.llanta2.rotation.z+=0.01;
 rob.llanta3.rotation.z+=0.01;
 rob.llanta4.rotation.z+=0.01;
+rob.llanta6.rotation.z+=0.01;
 }
 
 var escena,camara,renderer,rob;
