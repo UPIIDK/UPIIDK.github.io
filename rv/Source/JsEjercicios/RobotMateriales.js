@@ -56,9 +56,9 @@ Robot.prototype=new THREE.Object3D();
 
 function setup(){
  var luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=10;
- luzPuntual.position.y=10;
- luzPuntual.position.z=10;
+ luzPuntual.position.x=30;
+ luzPuntual.position.y=30;
+ luzPuntual.position.z=30;
  rob=new Robot();
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
