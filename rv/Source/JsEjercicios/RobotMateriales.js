@@ -22,7 +22,7 @@ function Cuerpo(){
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
  this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
- this.placa.position.y=1;
+ this.placa.position.y=2;
  this.caja.position.y=9;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=12;
@@ -39,10 +39,10 @@ function Robot(){
  this.llanta4=new Llanta(Math.PI/2,0,0);
  this.llanta5=new Llanta(Math.PI/2,0,0);
  this.llanta6=new Llanta(Math.PI/2,0,0);
- posicionLlanta(this.llanta1,-2,-3,2);
- posicionLlanta(this.llanta3,2,-3,2);
- posicionLlanta(this.llanta4,-2,-3,-2);
- posicionLlanta(this.llanta6,2,-3,-2);
+ posicionLlanta(this.llanta1,-2,-2,2);
+ posicionLlanta(this.llanta3,2,-2,2);
+ posicionLlanta(this.llanta4,-2,-2,-2);
+ posicionLlanta(this.llanta6,2,-2,-2);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta3,this.llanta4,this.llanta6);
  this.add(this.cuerpobot);
@@ -61,7 +61,7 @@ function setup(){
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
- camara.position.y=8;
+ camara.position.y=10;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
