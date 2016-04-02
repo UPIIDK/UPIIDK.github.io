@@ -23,9 +23,9 @@ function Cuerpo(){
  this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=4;
- this.caja.position.y=15;
+ this.caja.position.y=13;
  this.cam.applyMatrix(rotcam);
- this.cam.position.y=20;
+ this.cam.position.y=18;
  this.add(this.placa);
  this.add(this.caja);
  this.add(this.cam);
@@ -61,7 +61,7 @@ function setup(){
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
- camara.position.y=50;
+ camara.position.y=40;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
