@@ -56,15 +56,15 @@ Robot.prototype=new THREE.Object3D();
 
 function setup(){
  var luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=20;
- luzPuntual.position.y=20;
- luzPuntual.position.z=20;
+ luzPuntual.position.x=200;
+ luzPuntual.position.y=200;
+ luzPuntual.position.z=200;
  rob=new Robot();
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
- camara.position.z=-30;
- camara.position.y=2;
+ camara.position.z=-300;
+ camara.position.y=10;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight,window.innerHeight);
  document.body.appendChild(renderer.domElement);
