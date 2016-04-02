@@ -76,8 +76,10 @@ camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 rob.llanta1.rotation.z+=0.01;
+rob.llanta2.rotation.z+=0.01;
 rob.llanta3.rotation.z+=0.01;
 rob.llanta4.rotation.z+=0.01;
+rob.llanta5.rotation.z+=0.01;
 rob.llanta6.rotation.z+=0.01;
 }
 
