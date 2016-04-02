@@ -39,10 +39,10 @@ function Robot(){
  this.llanta4=new Llanta(Math.PI/2,0,0);
  this.llanta5=new Llanta(Math.PI/2,0,0);
  this.llanta6=new Llanta(Math.PI/2,0,0);
- posicionLlanta(this.llanta1,-1,0,1);
- posicionLlanta(this.llanta3,1,0,1);
- posicionLlanta(this.llanta4,-1,0,-1);
- posicionLlanta(this.llanta6,1,0,-1);
+ posicionLlanta(this.llanta1,-1.5,0,1);
+ posicionLlanta(this.llanta3,1.5,0,1);
+ posicionLlanta(this.llanta4,-1.5,0,-1);
+ posicionLlanta(this.llanta6,1.5,0,-1);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta3,this.llanta4,this.llanta6);
  this.add(this.cuerpobot);
@@ -54,9 +54,9 @@ Robot.prototype=new THREE.Object3D();
 
 function setup(){
  var luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=10;
- luzPuntual.position.y=10;
- luzPuntual.position.z=10;
+ luzPuntual.position.x=15;
+ luzPuntual.position.y=15;
+ luzPuntual.position.z=15;
  rob=new Robot();
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
@@ -69,8 +69,8 @@ function setup(){
 
 function loop(){
 var timer = Date.now() * 0.0002;
-camara.position.x = Math.cos( timer ) * 15;
-camara.position.z = Math.sin( timer ) * 15;
+camara.position.x = Math.cos( timer ) * 20;
+camara.position.z = Math.sin( timer ) * 20;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
