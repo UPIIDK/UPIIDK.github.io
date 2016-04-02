@@ -18,9 +18,9 @@ function posicionLlanta(cosa,xp,yp,zp){
 
 function Cuerpo(){
  THREE.Object3D.call(this);
- this.placa=new THREE.Mesh(new THREE.BoxGeometry(6,0.5,4),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
- this.caja=new THREE.Mesh(new THREE.BoxGeometry(2,2,2),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
- this.cam=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
+ this.placa=new THREE.Mesh(new THREE.BoxGeometry(4,0.4,18),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
+ this.caja=new THREE.Mesh(new THREE.BoxGeometry(4,8,4),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
+ this.cam=new THREE.Mesh(new THREE.SphereGeometry(1),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=-2.5;
  this.caja.position.y=-1.1;
