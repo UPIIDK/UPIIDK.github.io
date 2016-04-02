@@ -20,12 +20,12 @@ function Cuerpo(){
  THREE.Object3D.call(this);
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(4,0.4,18),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(4,8,4),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
- this.cam=new THREE.Mesh(new THREE.SphereGeometry(1),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
+ this.cam=new THREE.Mesh(new THREE.SphereGeometry(10),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
- this.placa.position.y=-2.5;
- this.caja.position.y=-1.1;
+ this.placa.position.y=2.5;
+ this.caja.position.y=3.1;
  this.cam.applyMatrix(rotcam);
- this.cam.position.y=0.3;
+ this.cam.position.y=8;
  this.add(this.placa);
  this.add(this.caja);
  this.add(this.cam);
