@@ -22,7 +22,7 @@ function Cuerpo(){
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
  this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
- this.placa.position.y=2;
+ this.placa.position.y=4;
  this.caja.position.y=9;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=12;
@@ -39,10 +39,10 @@ function Robot(){
  this.llanta4=new Llanta(Math.PI/2,0,0);
  this.llanta5=new Llanta(Math.PI/2,0,0);
  this.llanta6=new Llanta(Math.PI/2,0,0);
- posicionLlanta(this.llanta1,-2,-2,2);
- posicionLlanta(this.llanta3,2,-2,2);
- posicionLlanta(this.llanta4,-2,-2,-2);
- posicionLlanta(this.llanta6,2,-2,-2);
+ posicionLlanta(this.llanta1,-2,-1,2);
+ posicionLlanta(this.llanta3,2,-1,2);
+ posicionLlanta(this.llanta4,-2,-1,-2);
+ posicionLlanta(this.llanta6,2,-1,-2);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta3,this.llanta4,this.llanta6);
  this.add(this.cuerpobot);
@@ -54,14 +54,14 @@ Robot.prototype=new THREE.Object3D();
 
 function setup(){
  var luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=50;
- luzPuntual.position.y=50;
- luzPuntual.position.z=50;
+ luzPuntual.position.x=20;
+ luzPuntual.position.y=20;
+ luzPuntual.position.z=20;
  rob=new Robot();
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
- camara.position.y=10;
+ camara.position.y=15;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
@@ -69,8 +69,8 @@ function setup(){
 
 function loop(){
 var timer = Date.now() * 0.0002;
-camara.position.x = Math.cos( timer ) * 30;
-camara.position.z = Math.sin( timer ) * 30;
+camara.position.x = Math.cos( timer ) * 25;
+camara.position.z = Math.sin( timer ) * 55;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
