@@ -18,14 +18,14 @@ function posicionLlanta(cosa,xp,yp,zp){
 
 function Cuerpo(){
  THREE.Object3D.call(this);
- this.placa=new THREE.Mesh(new THREE.BoxGeometry(4,8,6),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
- this.caja=new THREE.Mesh(new THREE.BoxGeometry(4,4,12),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
+ this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
+ this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
  this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=1;
- this.caja.position.y=7;
+ this.caja.position.y=9;
  this.cam.applyMatrix(rotcam);
- this.cam.position.y=10;
+ this.cam.position.y=12;
  this.add(this.placa);
  this.add(this.caja);
  this.add(this.cam);
@@ -54,9 +54,9 @@ Robot.prototype=new THREE.Object3D();
 
 function setup(){
  var luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=80;
- luzPuntual.position.y=80;
- luzPuntual.position.z=80;
+ luzPuntual.position.x=50;
+ luzPuntual.position.y=50;
+ luzPuntual.position.z=50;
  rob=new Robot();
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
@@ -69,8 +69,8 @@ function setup(){
 
 function loop(){
 var timer = Date.now() * 0.0002;
-camara.position.x = Math.cos( timer ) * 50;
-camara.position.z = Math.sin( timer ) * 50;
+camara.position.x = Math.cos( timer ) * 30;
+camara.position.z = Math.sin( timer ) * 30;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
