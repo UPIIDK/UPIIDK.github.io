@@ -61,7 +61,7 @@ function setup(){
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
- camara.position.y=25;
+ camara.position.y=20;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
@@ -70,7 +70,7 @@ function setup(){
 function loop(){
 var timer = Date.now() * 0.0002;
 camara.position.x = Math.cos( timer ) * 15;
-camara.position.z = Math.sin( timer ) * 10;
+camara.position.z = Math.sin( timer ) * 15;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
