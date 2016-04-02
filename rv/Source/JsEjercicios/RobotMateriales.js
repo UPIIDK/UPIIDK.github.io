@@ -39,10 +39,10 @@ function Robot(){
  this.llanta4=new Llanta(Math.PI/2,0,0);
  this.llanta5=new Llanta(Math.PI/2,0,0);
  this.llanta6=new Llanta(Math.PI/2,0,0);
- posicionLlanta(this.llanta1,-1.75,-0.75,1.75);
- posicionLlanta(this.llanta3,1.75,-0.75,1.75);
- posicionLlanta(this.llanta4,-1.75,-0.75,-1.75);
- posicionLlanta(this.llanta6,1.75,-0.75,-1.75);
+ posicionLlanta(this.llanta1,-1.5,-0.75,1.75);
+ posicionLlanta(this.llanta3,1.5,-0.75,1.75);
+ posicionLlanta(this.llanta4,-1.5,-0.75,-1.75);
+ posicionLlanta(this.llanta6,1.5,-0.75,-1.75);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta3,this.llanta4,this.llanta6);
  this.add(this.cuerpobot);
@@ -69,8 +69,8 @@ function setup(){
 
 function loop(){
 var timer = Date.now() * 0.0002;
-camara.position.x = Math.cos( timer ) * 22;
-camara.position.z = Math.sin( timer ) * 22;
+camara.position.x = Math.cos( timer ) * 25;
+camara.position.z = Math.sin( timer ) * 25;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
