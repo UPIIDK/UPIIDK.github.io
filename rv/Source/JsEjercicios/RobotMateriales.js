@@ -37,12 +37,12 @@ function Robot(){
  this.llanta6=new Llanta(Math.PI/2,0,0);
  this.llanta3=new Llanta(Math.PI/2,0,0);
  this.llanta4=new Llanta(Math.PI/2,0,0);
- posicionLlanta(this.llanta1,-2,-3,2);
- posicionLlanta(this.llanta3,2,-3,2);
- posicionLlanta(this.llanta4,-2,-3,-2);
+ //posicionLlanta(this.llanta1,-2,-3,2);
+ //posicionLlanta(this.llanta3,2,-3,2);
+ //posicionLlanta(this.llanta4,-2,-3,-2);
  //posicionLlanta(this.llanta6,-2,6,-2);
  this.cuerpobot=new Cuerpo();
- this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4);
+ this.add(this.llanta1,this.llanta6,this.llanta3,this.llanta4);
  this.add(this.cuerpobot);
 }
 
