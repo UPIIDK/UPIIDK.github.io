@@ -18,9 +18,9 @@ function posicionLlanta(cosa,xp,yp,zp){
 
 function Cuerpo(){
  THREE.Object3D.call(this);
- this.placa=new THREE.Mesh(new THREE.BoxGeometry(4,4,18),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
- this.caja=new THREE.Mesh(new THREE.BoxGeometry(4,8,4),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
- this.cam=new THREE.Mesh(new THREE.SphereGeometry(5),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
+ this.placa=new THREE.Mesh(new THREE.BoxGeometry(4,8,6),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
+ this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,2,6),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
+ this.cam=new THREE.Mesh(new THREE.SphereGeometry(3),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=-0.1;
  this.caja.position.y=-1.1;
@@ -64,7 +64,7 @@ function setup(){
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=20;
- camara.position.y=6;
+ camara.position.y=26;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight,window.innerHeight);
  document.body.appendChild(renderer.domElement);
