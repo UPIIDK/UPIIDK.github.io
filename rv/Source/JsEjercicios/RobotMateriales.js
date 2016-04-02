@@ -37,7 +37,7 @@ function Robot(){
  this.llanta6=new Llanta(Math.PI/2,0,0);
  this.llanta3=new Llanta(Math.PI/2,0,0);
  this.llanta4=new Llanta(Math.PI/2,0,0);
- //posicionLlanta(this.llanta1,-2,-3,2);
+ posicionLlanta(this.llanta1,-2,-3,2);
  posicionLlanta(this.llanta3,2,-3,2);
  //posicionLlanta(this.llanta4,-2,-3,-2);
  posicionLlanta(this.llanta6,-2,3,2);
