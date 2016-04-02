@@ -46,7 +46,7 @@ function Robot(){
  posicionLlanta(this.llanta5,0,-3,-2);
  posicionLlanta(this.llanta6,2,-3,-2);
  this.cuerpobot=new Cuerpo();
- this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6);
+ this.add(this.llanta1,this.llanta3,this.llanta4,this.llanta6);
  this.add(this.cuerpobot);
 }
 
