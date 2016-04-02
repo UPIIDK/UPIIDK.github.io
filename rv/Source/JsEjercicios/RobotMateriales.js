@@ -34,9 +34,11 @@ function Cuerpo(){
 function Robot(){
  THREE.Object3D.call(this);
  this.llanta1=new Llanta(Math.PI/2,0,0);
- this.llanta6=new Llanta(Math.PI/2,0,0);
+ this.llanta2=new Llanta(Math.PI/2,0,0);
  this.llanta3=new Llanta(Math.PI/2,0,0);
  this.llanta4=new Llanta(Math.PI/2,0,0);
+ this.llanta5=new Llanta(Math.PI/2,0,0);
+ this.llanta6=new Llanta(Math.PI/2,0,0);
  posicionLlanta(this.llanta1,-2,-3,2);
  posicionLlanta(this.llanta2,0,-3,2);
  posicionLlanta(this.llanta3,2,-3,2);
