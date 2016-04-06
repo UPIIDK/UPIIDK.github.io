@@ -22,7 +22,7 @@ function Cuerpo(){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
  var texturaPlaca=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\LLanta.jpg');
- var texturaCaja=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\MetalRayado.jpg');
+ var texturaCaja=THREE.TextureLoader('E:\ \UPIITA\RealidadVirtual\Imagenes\MetalRayado.jpg');
  var texturaCabeza=THREE.TextureLoader('E:\ \UPIITA\RealidadVirtual\Imagenes\Helmet.jpg');
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({map:texturaPlaca})); //Color CÁFE 
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({map:texturaCaja})); //Color Azul
