@@ -1,8 +1,8 @@
 function Llanta(angx,angy,angz){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
- var textura=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\LLanta.jpg');
- this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshLambertMaterial({map:textura}));
+ var texturaLlanta=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\LLanta.jpg');
+ this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshLambertMaterial({map:texturaLlanta}));
  var rotx=new THREE.Matrix4().makeRotationX(angx);
  var roty=new THREE.Matrix4().makeRotationY(angy);
  var rotz=new THREE.Matrix4().makeRotationZ(angz);
@@ -20,9 +20,13 @@ function posicionLlanta(cosa,xp,yp,zp){
 
 function Cuerpo(){
  THREE.Object3D.call(this);
- this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({color:0x7A5100})); //Color CÁFE 
- this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({color:0x3332FE})); //Color Azul
- this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({color:0xff97A7})); //Color Rosa
+ THREE.ImageUtils.crossOrigin='';
+ var texturaPlaca=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\LLanta.jpg');
+ var texturaCaja=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\LLanta.jpg');
+ var texturaCabeza=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\LLanta.jpg');
+ this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({map:texturaPlaca})); //Color CÁFE 
+ this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({map:texturaCaja})); //Color Azul
+ this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({map:texturaCabeza})); //Color Rosa
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=4;
  this.caja.position.y=11;
