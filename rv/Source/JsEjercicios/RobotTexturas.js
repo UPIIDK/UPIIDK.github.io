@@ -21,9 +21,9 @@ function posicionLlanta(cosa,xp,yp,zp){
 function Cuerpo(){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
- var texturaPlaca=THREE.ImageUtils.loadTexture('E:\ \UPIITA\RealidadVirtual\Imagenes\hoja-metálica.jpg');
- var texturaCaja=THREE.TextureLoader('E:\ \UPIITA\RealidadVirtual\Imagenes\MetalRayado.jpg');
- var texturaCabeza=THREE.TextureLoader('E:\ \UPIITA\RealidadVirtual\Imagenes\metal-de-bronce-arrugado.jpg');
+ var texturaPlaca=THREE.ImageUtils.loadTexture('../../Imagenes/hoja-metálica.jpg');
+ var texturaCaja=THREE.TextureLoader('../../Imagenes/MetalRayado.jpg');
+ var texturaCabeza=THREE.TextureLoader('../../Imagenes/metal-de-bronce-arrugado.jpg');
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({map:texturaPlaca})); //Color CÁFE 
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({map:texturaCaja})); //Color Azul
  this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({map:texturaCabeza})); //Color Rosa
