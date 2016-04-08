@@ -15,7 +15,7 @@ function Llanta(angx,angy,angz){
 function Brazo(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin='';
-  var texturaBrazo=THREE.ImageUtils.loadTexture(''../Imagenes/metal-de-bronce-arrugado.jpg');
+  var texturaBrazo=THREE.ImageUtils.loadTexture('../Imagenes/metal-de-bronce-arrugado.jpg');
   this.brazo=new THREE.Mesh(New THREE.BoxGeometry(3,3,6),new THREE.MeshPhongMaterial({map:texturaBrazo}));
   this.brazo.position.y=8;
   this.brazo.position.x=8;
