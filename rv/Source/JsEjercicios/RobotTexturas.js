@@ -19,7 +19,7 @@ function Brazo(){
   this.brazo=new THREE.Mesh(new THREE.BoxGeometry(3,3,6),new THREE.MeshPhongMaterial({map:texturaBrazo}));
   this.brazo.position.y=8;
   this.brazo.position.x=8;
-  this.add(this.brazo);
+ // this.add(this.brazo);
 }
 
 function posicionLlanta(cosa,xp,yp,zp){
