@@ -1,7 +1,7 @@
 function Llanta(angx,angy,angz){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
- var texturaLlanta=THREE.ImageUtils.loadTexture('../Imagenes/LLanta.jpg');
+ var texturaLlanta=THREE.TextureLoader('../Imagenes/LLanta.jpg');
  this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshLambertMaterial({map:texturaLlanta}));
  var rotx=new THREE.Matrix4().makeRotationX(angx);
  var roty=new THREE.Matrix4().makeRotationY(angy);
@@ -21,7 +21,7 @@ function posicionLlanta(cosa,xp,yp,zp){
 function Cuerpo(){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
- var texturaPlaca=THREE.ImageUtils.loadTexture('UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
+ var texturaPlaca=THREE.TextureLoader('UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
  var texturaCaja=THREE.TextureLoader('UPIIDK.github.io/rv/Imagenes/MetalRayado.jpg');
  var texturaCabeza=THREE.TextureLoader('UPIIDK.github.io/rv/Imagenes/metal-de-bronce-arrugado.jpg');
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({map:texturaPlaca})); //Color CÁFE 
