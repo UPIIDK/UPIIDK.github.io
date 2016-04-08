@@ -12,6 +12,16 @@ function Llanta(angx,angy,angz){
  this.add(this.llanta);
 }
 
+function Brazo(){
+  THREE.Object3D.call(this);
+  THREE.ImageUtils.crossOrigin='';
+  var texturaBrazo=THREE.ImageUtils.loadTexture(''../Imagenes/metal-de-bronce-arrugado.jpg');
+  this.brazo=new THREE.Mesh(New THREE.BoxGeometry(3,3,6),new THREE.MeshPhongMaterial({map:texturaBrazo}));
+  this.brazo.position.y=8;
+  this.brazo.position.x=8;
+  this.add(this.brazo);
+}
+
 function posicionLlanta(cosa,xp,yp,zp){
  cosa.position.x=xp;
  cosa.position.y=yp;
@@ -21,9 +31,9 @@ function posicionLlanta(cosa,xp,yp,zp){
 function Cuerpo(){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
- var texturaPlaca=THREE.ImageUtils.loadTexture('UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
- var texturaCaja=THREE.ImageUtils.loadTexture('UPIIDK.github.io/rv/Imagenes/MetalRayado.jpg');
- var texturaCabeza=THREE.ImageUtils.loadTexture('UPIIDK.github.io/rv/Imagenes/metal-de-bronce-arrugado.jpg');
+ var texturaPlaca=THREE.ImageUtils.loadTexture('../Imagenes/hoja-metalica.jpg');
+ var texturaCaja=THREE.ImageUtils.loadTexture('../Imagenes/MetalRayado.jpg');
+ var texturaCabeza=THREE.ImageUtils.loadTexture('../Imagenes/metal-de-bronce-arrugado.jpg');
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({map:texturaPlaca}));  
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(3,4,14),new THREE.MeshPhongMaterial({map:texturaCaja})); 
  this.cam=new THREE.Mesh(new THREE.SphereGeometry(2),new THREE.MeshLambertMaterial({map:texturaCabeza}));
@@ -48,7 +58,9 @@ function Robot(){
  posicionLlanta(this.llanta4,-1.5,-0.75,-1.75);
  posicionLlanta(this.llanta6,1.5,-0.75,-1.75);
  this.cuerpobot=new Cuerpo();
+ this.brazobot=new Brazo();
  this.add(this.llanta1,this.llanta3,this.llanta4,this.llanta6);
+ this.add(this.brazobot);
  this.add(this.cuerpobot);
 }
 
