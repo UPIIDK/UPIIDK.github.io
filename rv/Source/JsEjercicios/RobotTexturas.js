@@ -21,7 +21,7 @@ function posicionLlanta(cosa,xp,yp,zp){
 function Cuerpo(){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
- var texturaPlaca=THREE.ImageUtils.loadTexture('UPIIDK.github.io/rv/Imagenes/hoja-metálica.jpg');
+ var texturaPlaca=THREE.ImageUtils.loadTexture('UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
  var texturaCaja=THREE.TextureLoader('UPIIDK.github.io/rv/Imagenes/MetalRayado.jpg');
  var texturaCabeza=THREE.TextureLoader('UPIIDK.github.io/rv/Imagenes/metal-de-bronce-arrugado.jpg');
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(3,10,6),new THREE.MeshPhongMaterial({map:texturaPlaca})); //Color CÁFE 
