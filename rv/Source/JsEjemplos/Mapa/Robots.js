@@ -1,5 +1,5 @@
 function Sensor(position,direction) {
-	THREE.Raycaster.call(thisc position, direction);
+	THREE.Raycaster.call(this, position, direction);
 	this.colision=false;
 }
 
