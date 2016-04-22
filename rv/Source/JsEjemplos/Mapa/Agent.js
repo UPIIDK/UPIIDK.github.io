@@ -11,7 +11,7 @@ function Agent(x=0, y=0){
 	//Las primitivas del Agente son: Percibir, planificar y Activar
 	
 	Agent.prototype.sense=function(environment){};
-	Agent.prototype.plan = function(environment){}:
+	Agent.prototype.plan = function(environment){};
 	Agent.prototype.act = function(environment){};
 	
 	//Constructor Enviroment()
