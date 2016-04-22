@@ -16,7 +16,7 @@ function Agent(x=0, y=0){
 	
 	//Constructor Enviroment()
 	
-	function Enviroment(){
+	function Environment(){
 	THREE.Scene.call(this);
 	}
 	
