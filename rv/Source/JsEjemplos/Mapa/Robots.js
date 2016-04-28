@@ -16,20 +16,20 @@ function Robot(size,x,y) {
 Robot.prototype = new Agent();
 
 Robot.prototype.sense=function(environment){
-	this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
+	this.Sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 		var obstaculo=this.sensor.interObjects(environment.children,true);
 		
 		if ((obstaculo.length > 0 &&
 		(obstaculo[0].distance <=.5)))
-		this.sensor.colision=true;
+		this.Sensor.colision=true;
 		else
-		this.sensor.colision=false;
+		this.Sensor.colision=false;
 	};
 
 Robot.prototype.plan=function(environment){
 		this.actuator.commands=[];
 		
-		if(this.sensor.colison==true)
+		if(this.Sensor.colison==true)
 		this.actuator.commands.push('rotateCCW');
 		else
 		this.actuator.commands.push('goStraight');
@@ -42,5 +42,4 @@ Robot.prototype.act=function(environment){
 	console.log('Undefined command');
 	else if(command in this.operations)
 	this.operations
-	
 };
