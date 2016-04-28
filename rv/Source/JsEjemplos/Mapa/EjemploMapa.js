@@ -37,8 +37,8 @@ function setup(){
   mapa[15] = "x                  x";
   mapa[16] = "xxxxxxxxxxxx    xxxx";
   mapa[17] = "x                  x";
-  mapa[18] = "x                  x";
-  mapa[19] = "x                  x";
+  mapa[18] = "x   r             x";
+  mapa[19] = "xr                 x";
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
