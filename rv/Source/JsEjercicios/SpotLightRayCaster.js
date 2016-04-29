@@ -36,7 +36,10 @@ obstaculo1=raycaster1.intersectObject(cubo3);
 obstaculo2=raycaster2.intersectObject(cubo4);
 
 if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5))
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshBasicMaterial());
 step2=-step2;
+else
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshLambertMaterial());
 
 pelota.position.x += step2;
 raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
