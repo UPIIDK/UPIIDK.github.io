@@ -52,7 +52,7 @@ function setup(){
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(spotLight,camera);
+  environment.add(camera);
 }
 
 function loop(){
