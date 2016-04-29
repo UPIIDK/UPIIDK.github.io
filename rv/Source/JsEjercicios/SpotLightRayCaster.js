@@ -39,7 +39,7 @@ step2=-step2;
 }
 
 pelota.position.x += step2;
-spotLight.position.set( pelota.position,10,10 );
+spotLight.position.set(pelota.position);
 spotLight.castShadow = true;
 raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
