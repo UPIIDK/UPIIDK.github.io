@@ -1,6 +1,6 @@
 function setup2(){
 
-cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshBasicMaterial());
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshPhongMaterial());
 cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
 
@@ -10,7 +10,7 @@ cubo4.position.x=-3;
 camara2= new THREE.PerspectiveCamera();
 camara2.position.z=10;
 var spotLight = new THREE.SpotLight( 0xffffff );
-spotLight.position.set( pelota.position,new THREE.Vector3(1,0,0) );
+spotLight.position.set( pelota.position,10,10 );
 spotLight.castShadow = true;
 
 raycaster1 = new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
