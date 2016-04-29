@@ -9,11 +9,14 @@ cubo4.position.x=-3;
 
 camara2= new THREE.PerspectiveCamera();
 camara2.position.z=10;
-var spotLight = new THREE.SpotLight( 0xffffff );
-spotLight.position.set(pelota.position);
-spotLight.castShadow = true;
+
+
 raycaster1 = new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2 = new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
+
+var spotLight = new THREE.SpotLight( 0xffffff );
+spotLight.position.set(raycaster1.position);
+spotLight.castShadow = true;
 
 escena2= new THREE.Scene();
 escena2.add(cubo3);
@@ -40,8 +43,7 @@ step2=-step2;
 }
 
 pelota.position.x += step2;
-spotLight.position.set(pelota.position);
-spotLight.castShadow = true;
+
 raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
 
