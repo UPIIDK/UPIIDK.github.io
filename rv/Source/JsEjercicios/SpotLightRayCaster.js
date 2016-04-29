@@ -19,7 +19,7 @@ escena2.add(cubo3);
 escena2.add(cubo4);
 escena2.add(pelota);
 escena2.add(camara2);
-escena2.add(spotlight);
+escena2.add(spotLight);
 
 renderer2 = new THREE.WebGLRenderer();
 renderer2.setSize(window.innerHeight*.95,window.innerHeight*.95);
