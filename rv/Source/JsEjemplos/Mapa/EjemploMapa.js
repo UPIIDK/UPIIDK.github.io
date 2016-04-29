@@ -52,7 +52,7 @@ function setup(){
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camera);
+  environment.add(spotLight,camera);
 }
 
 function loop(){
@@ -77,7 +77,6 @@ spotLight.shadow.camera.near = 500;
 spotLight.shadow.camera.far = 4000;
 spotLight.shadow.camera.fov = 30;
 
-scene.add( spotLight );
 var environment, camera, renderer;
 
 setup();
