@@ -1,5 +1,7 @@
 function Sensor(position, direction) {
   THREE.Raycaster.call(this,position, direction);
+  var spotLight = new THREE.SpotLight( 0xffffff,direction,position );
+spotLight.castShadow = true;
   this.colision = false;
 }
 
