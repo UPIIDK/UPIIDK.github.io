@@ -18,7 +18,7 @@ spotLight = new THREE.SpotLight( 0xff55ff );
 spotLight.position.set(raycaster1.position);
 escena2= new THREE.Scene();
 escena2.add(pelota);
-if (ban==0)
+if(ban==0)
 escena2.add(cubo3);
 escena2.add(cubo4);
 escena2.add(camara2);
@@ -39,6 +39,7 @@ obstaculo2=raycaster2.intersectObject(cubo4);
 if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5)){
 ban=1;
 cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMaterial());
+escena2.add(cubo3);
 step2=-step2;
 }
 
