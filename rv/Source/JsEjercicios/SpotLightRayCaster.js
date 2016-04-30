@@ -27,13 +27,12 @@ raycaster1 = new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2 = new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
 
 spotLight = createSpotlight( 0xffffff );
-spotLight.position.set(pelota.position.x,pelota.position.y,pelota.position.z);
 escena2= new THREE.Scene();
 escena2.add(pelota);
 escena2.add(cubo3);
 escena2.add(cubo4);
 escena2.add(camara2);
-escena2.add(spotLight);
+
 
 renderer2 = new THREE.WebGLRenderer();
 renderer2.setSize(window.innerHeight*.95,window.innerHeight*.95);
@@ -48,15 +47,16 @@ obstaculo1=raycaster1.intersectObject(cubo3);
 obstaculo2=raycaster2.intersectObject(cubo4);
 
 if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5)){
-ban=1;
 cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMaterial());
 cubo3.position.x=3;
 escena2.add(cubo3);
 step2=-step2;
+}else{
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMaterial());
+cubo3.position.x=3;
+escena2.add(cubo3);
 }
-
 pelota.position.x += step2;
-
 
 raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
@@ -66,7 +66,7 @@ renderer2.render( escena2, camara2);
 requestAnimationFrame(loop2);
 }
 var cubo3,cubo4,pelota,escena2,camara2,renderer2;
-var raycaster1,raycaster2,step2,spotlight,ban=0;
+var raycaster1,raycaster2,step2,spotlight;
 
 setup2();
 loop2();
