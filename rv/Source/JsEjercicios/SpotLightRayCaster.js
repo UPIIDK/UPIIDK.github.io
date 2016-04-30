@@ -1,6 +1,7 @@
 function setup2(){
 
-cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshPhongMaterial());
+var Material = new THREE.MeshNormalMaterial();
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), Material;
 cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshLambertMaterial());
 pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
 
