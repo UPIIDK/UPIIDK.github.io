@@ -16,8 +16,8 @@ cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMateri
 cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
 
-cubo3.position.x=3;
-cubo4.position.x=-3;
+cubo3.position.x=4;
+cubo4.position.x=-4;
 
 camara2= new THREE.PerspectiveCamera();
 camara2.position.z=10;
@@ -51,10 +51,6 @@ cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMateria
 cubo3.position.x=3;
 escena2.add(cubo3);
 step2=-step2;
-}else{
-cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
-cubo3.position.x=3;
-escena2.add(cubo3);
 }
 pelota.position.x += step2;
 
