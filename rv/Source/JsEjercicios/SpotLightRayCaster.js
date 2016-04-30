@@ -16,8 +16,8 @@ cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMateri
 cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
 
-cubo3.position.x=4;
-cubo4.position.x=-4;
+cubo3.position.x=3.5;
+cubo4.position.x=-3.5;
 
 camara2= new THREE.PerspectiveCamera();
 camara2.position.z=10;
@@ -48,7 +48,7 @@ obstaculo2=raycaster2.intersectObject(cubo4);
 
 if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5)){
 cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMaterial());
-cubo3.position.x=3;
+cubo3.position.x=3.5;
 escena2.add(cubo3);
 step2=-step2;
 }
