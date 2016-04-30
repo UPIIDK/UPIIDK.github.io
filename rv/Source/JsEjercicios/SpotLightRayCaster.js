@@ -9,13 +9,13 @@ cubo3.position.x=3;
 cubo4.position.x=-3;
 
 camara2= new THREE.PerspectiveCamera();
-camara2.position.z=100;
+camara2.position.z=10;
 
 
 raycaster1 = new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2 = new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
 
-spotLight = new THREE.SpotLight( 0xffffff );
+spotLight = new THREE.SpotLight( 0xff55ff );
 spotLight.position.set( 100, 1000, 100 );
 spotLight.castShadow = true;
 
