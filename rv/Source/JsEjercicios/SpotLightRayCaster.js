@@ -48,10 +48,11 @@ if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.lengt
 step2=-step2;
 
 pelota.position.x += step2;
-spotLight.position.set(raycaster1.position);
+
 
 raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
+spotLight.position.set(raycaster1.position);
 
 renderer2.render( escena2, camara2);
 requestAnimationFrame(loop2);
