@@ -8,7 +8,7 @@ cubo3.position.x=3;
 cubo4.position.x=-3;
 
 camara2= new THREE.PerspectiveCamera();
-camara2.position.z=10;
+camara2.position.z=100;
 
 
 raycaster1 = new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
