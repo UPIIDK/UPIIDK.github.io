@@ -52,7 +52,7 @@ cubo3.position.x=3;
 escena2.add(cubo3);
 step2=-step2;
 }else{
-cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMaterial());
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalgMaterial());
 cubo3.position.x=3;
 escena2.add(cubo3);
 }
