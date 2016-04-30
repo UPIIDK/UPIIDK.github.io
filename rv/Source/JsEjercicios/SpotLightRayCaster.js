@@ -15,7 +15,7 @@ raycaster1 = new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2 = new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
 
 spotLight = new THREE.SpotLight( 0xffffff );
-spotLight.position.set(raycaster1.position);
+spotLight.position.set( 100, 1000, 100 );
 spotLight.castShadow = true;
 
 spotLight.shadow.mapSize.width = 1024;
