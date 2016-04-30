@@ -37,7 +37,7 @@ obstaculo1=raycaster1.intersectObject(cubo3);
 obstaculo2=raycaster2.intersectObject(cubo4);
 
 if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5)){
-var ban=1;
+ban=1;
 cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMaterial());
 step2=-step2;
 }
@@ -53,7 +53,7 @@ renderer2.render( escena2, camara2);
 requestAnimationFrame(loop2);
 }
 var cubo3,cubo4,pelota,escena2,camara2,renderer2;
-var raycaster1,raycaster2,step2,spotlight;
+var raycaster1,raycaster2,step2,spotlight,ban=0;
 
 setup2();
 loop2();
