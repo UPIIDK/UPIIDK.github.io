@@ -1,3 +1,15 @@
+function createSpotlight( color ) {
+				var newObj = new THREE.SpotLight( color, 2 );
+				newObj.castShadow = true;
+				newObj.angle = 0.3;
+				newObj.penumbra = 0.2;
+				newObj.decay = 2;
+				newObj.distance = 50;
+				newObj.shadow.mapSize.width = 480;
+				newObj.shadow.mapSize.height = 480;
+				return newObj;
+			};
+
 function setup2(){
   
 cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
@@ -14,8 +26,8 @@ camara2.position.z=10;
 raycaster1 = new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2 = new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
 
-spotLight = new THREE.SpotLight( 0xff55ff );
-spotLight.position.set(raycaster1.position);
+spotLight = createSpotlight( 0xffffff );
+spotLight.position.set(pelota.position.x,pelota.position.y,pelota.position.z);
 escena2= new THREE.Scene();
 escena2.add(pelota);
 escena2.add(cubo3);
