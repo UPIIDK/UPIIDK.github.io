@@ -1,10 +1,10 @@
 function createSpotlight( color ) {
 				var newObj = new THREE.SpotLight( color, 2 );
 				newObj.castShadow = true;
-				newObj.angle = 0.3;
+				newObj.angle = 1;
 				newObj.penumbra = 0.2;
 				newObj.decay = 1;
-				newObj.distance = 10;
+				newObj.distance = 20;
 				newObj.shadow.mapSize.width = 480;
 				newObj.shadow.mapSize.height = 480;
 				return newObj;
