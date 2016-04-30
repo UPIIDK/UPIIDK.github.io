@@ -1,8 +1,5 @@
 function setup2(){
 
-var Material = new THREE.MeshNormalMaterial();
-cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), Material);
-cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshLambertMaterial());
 pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
 
 cubo3.position.x=3;
@@ -27,8 +24,6 @@ spotLight.shadow.camera.far = 4000;
 spotLight.shadow.camera.fov = 30;
 
 escena2= new THREE.Scene();
-escena2.add(cubo3);
-escena2.add(cubo4);
 escena2.add(pelota);
 escena2.add(camara2);
 escena2.add(spotLight);
@@ -45,8 +40,20 @@ function loop2(){
 obstaculo1=raycaster1.intersectObject(cubo3);
 obstaculo2=raycaster2.intersectObject(cubo4);
 
-if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5))
+if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) || (obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5)){
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
+cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
+escena2.add(cubo3);
+escena2.add(cubo4);
 step2=-step2;
+}
+else
+{
+cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
+cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
+escena2.add(cubo3);
+escena2.add(cubo4);
+}
 
 pelota.position.x += step2;
 
