@@ -4,7 +4,7 @@ function createSpotlight( color ) {
 				newObj.angle = 1;
 				newObj.penumbra = 0.2;
 				newObj.decay = 1;
-				newObj.distance = 20;
+				newObj.distance = 10;
 				newObj.shadow.mapSize.width = 480;
 				newObj.shadow.mapSize.height = 480;
 				return newObj;
