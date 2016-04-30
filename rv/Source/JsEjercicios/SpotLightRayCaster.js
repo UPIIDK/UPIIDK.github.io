@@ -3,8 +3,8 @@ function createSpotlight( color ) {
 				newObj.castShadow = true;
 				newObj.angle = 0.3;
 				newObj.penumbra = 0.2;
-				newObj.decay = 2;
-				newObj.distance = 50;
+				newObj.decay = 1;
+				newObj.distance = 10;
 				newObj.shadow.mapSize.width = 480;
 				newObj.shadow.mapSize.height = 480;
 				return newObj;
@@ -56,7 +56,7 @@ pelota.position.x += step2;
 
 raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
-spotLight.position.copy(pelota.position);
+spotLight.position.set(step2,0,0);
 escena2.add(spotLight);
 renderer2.render( escena2, camara2);
 requestAnimationFrame(loop2);
