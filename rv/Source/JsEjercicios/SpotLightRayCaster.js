@@ -18,7 +18,6 @@ spotLight = new THREE.SpotLight( 0xff55ff );
 spotLight.position.set(raycaster1.position);
 escena2= new THREE.Scene();
 escena2.add(pelota);
-if(ban==0)
 escena2.add(cubo3);
 escena2.add(cubo4);
 escena2.add(camara2);
@@ -42,8 +41,7 @@ cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMateria
 cubo3.position.x=3;
 escena2.add(cubo3);
 step2=-step2;
-}else 
-ban=0;
+}
 
 pelota.position.x += step2;
 
