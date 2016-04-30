@@ -18,6 +18,13 @@ spotLight = new THREE.SpotLight( 0xffffff );
 spotLight.position.set(raycaster1.position);
 spotLight.castShadow = true;
 
+spotLight.shadow.mapSize.width = 1024;
+spotLight.shadow.mapSize.height = 1024;
+
+spotLight.shadow.camera.near = 500;
+spotLight.shadow.camera.far = 4000;
+spotLight.shadow.camera.fov = 30;
+
 escena2= new THREE.Scene();
 escena2.add(cubo3);
 escena2.add(cubo4);
