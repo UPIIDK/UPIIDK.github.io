@@ -42,7 +42,8 @@ cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMateria
 cubo3.position.x=3;
 escena2.add(cubo3);
 step2=-step2;
-}
+}else 
+ban=0;
 
 pelota.position.x += step2;
 
