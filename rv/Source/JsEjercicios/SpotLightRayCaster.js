@@ -56,7 +56,7 @@ pelota.position.x += step2;
 
 raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
-spotLight.position.set(raycaster1.position);
+spotLight.position.copy(raycaster1.position);
 escena2.add(spotLight);
 renderer2.render( escena2, camara2);
 requestAnimationFrame(loop2);
