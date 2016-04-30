@@ -18,6 +18,8 @@ spotLight = new THREE.SpotLight( 0xff55ff );
 spotLight.position.set(raycaster1.position);
 escena2= new THREE.Scene();
 escena2.add(pelota);
+escena2.add(cubo3);
+escena2.add(cubo4);
 escena2.add(camara2);
 escena2.add(spotLight);
 
