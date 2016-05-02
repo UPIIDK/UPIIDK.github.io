@@ -11,7 +11,7 @@ function createSpotlight( color ) {
 			};
 
 function setup2(){
- var a=0,b=0; 
+ 
 cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
 cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 pelota = new THREE.Mesh(new THREE.SphereGeometry(0.5),new THREE.MeshNormalMaterial());
@@ -85,6 +85,6 @@ requestAnimationFrame(loop2);
 }
 var cubo3,cubo4,pelota,escena2,camara2,renderer2;
 var raycaster1,raycaster2,step2,spotlight;
-
+var a=0,b=0;
 setup2();
 loop2();
