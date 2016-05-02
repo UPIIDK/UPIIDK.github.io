@@ -51,19 +51,12 @@ cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMateria
 cubo3.position.x=4;
 escena2.add(cubo3);
 step2=-step2;
-cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
-cubo4.position.x=-4;
-escena2.add(cubo4);
 }
-
 if((obstaculo2.length > 0 && obstaculo2[0].distance <= 0.5)){
 cubo4 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshLambertMaterial());
 cubo4.position.x=-4;
 escena2.add(cubo4);
 step2=-step2;
-cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshNormalMaterial());
-cubo3.position.x=4;
-escena2.add(cubo3);
 }
 
 pelota.position.x += step2;
