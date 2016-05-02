@@ -46,7 +46,7 @@ function loop2(){
 obstaculo1=raycaster1.intersectObject(cubo3);
 obstaculo2=raycaster2.intersectObject(cubo4);
 
-if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5) && a==0) {
+if((obstaculo1.length > 0 && obstaculo1[0].distance <= 0.5)) {
 cubo3 = new THREE.Mesh( new THREE.BoxGeometry(1,1,1), new THREE.MeshPhongMaterial());
 cubo3.position.x=4;
 escena2.add(cubo3);
