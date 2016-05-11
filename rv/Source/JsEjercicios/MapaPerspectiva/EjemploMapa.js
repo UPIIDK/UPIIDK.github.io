@@ -15,7 +15,7 @@ Environment.prototype.setMap=function(map){
       this.add(new Wall(1,j-_offset,-(i-_offset)));
         else if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
-    
+   
   }
 }
 
@@ -48,7 +48,7 @@ function setup(){
   environment.setMap(mapa);
   
   camara=new THREE.PerspectiveCamera(45, 920 / 920, 1, 1000);
-  camara.position.z=20;
+  camara.position=robot.position;
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
