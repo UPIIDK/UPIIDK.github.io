@@ -16,6 +16,7 @@ Environment.prototype.setMap=function(map){
         else if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
     x=-(i-_offset);
+    y=j-_offset;
   }
 }
 
@@ -49,8 +50,8 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera(45,2,2,200);
   camara.position.z=0;
-  camara.position.x=10;
-  camara.position.y=0;
+  camara.position.x=x;
+  camara.position.y=y;
   camara.rotation.x=90;
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
@@ -69,7 +70,7 @@ function loop(){
   renderer.render(environment,camara);
 }
 
-var environment, camara, renderer,x;
+var environment, camara, renderer,x,y;
 
 setup();
 loop();
