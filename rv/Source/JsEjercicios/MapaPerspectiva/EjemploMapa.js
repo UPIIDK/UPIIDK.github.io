@@ -50,9 +50,7 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera(45,2,2,200);
   camara.position.z=0;
-  camara.position.x=x;
-  camara.position.y=y;
-  camara.rotation.x=90;
+   camara.rotation.x=-90;
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
@@ -70,7 +68,7 @@ function loop(){
   renderer.render(environment,camara);
 }
 
-var environment, camara, renderer,x,y;
+var environment, camara, renderer;
 
 setup();
 loop();
