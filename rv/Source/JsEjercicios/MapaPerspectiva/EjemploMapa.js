@@ -67,7 +67,7 @@ function loop(){
   renderer.render(environment,camara);
 }
 
-var environment, camera, renderer;
+var environment, camara, renderer;
 
 setup();
 loop();
