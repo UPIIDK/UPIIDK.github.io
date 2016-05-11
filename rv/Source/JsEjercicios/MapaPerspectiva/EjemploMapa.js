@@ -51,7 +51,7 @@ function setup(){
   camara.position.z=0;
   camara.position.x=0;
   camara.position.y=0;
-  camAra.rotation.x=90;
+  camara.rotation.x=90;
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
