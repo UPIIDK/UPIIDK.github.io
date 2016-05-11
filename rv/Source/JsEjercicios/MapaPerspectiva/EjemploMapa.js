@@ -48,8 +48,8 @@ function setup(){
   environment.setMap(mapa);
   
   camara=new THREE.PerspectiveCamera(35);
-  //camara.position.z=30;
-  camara.position.x=x;
+  camara.position.z=30;
+  camara.position.x=10;
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
