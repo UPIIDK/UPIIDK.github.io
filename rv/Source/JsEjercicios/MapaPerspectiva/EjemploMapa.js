@@ -47,7 +47,7 @@ function setup(){
   
   environment.setMap(mapa);
   
-  camara=new THREE.PerspectiveCamera(35,0,0,0);
+  camara=new THREE.PerspectiveCamera(35);
   //camara.position.z=30;
   camara.position.x=x;
   renderer=new THREE.WebGLRenderer();
