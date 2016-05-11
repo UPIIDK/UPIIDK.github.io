@@ -30,24 +30,24 @@ function setup(){
   mapa[6]  = "x        x         x";
   mapa[7]  = "x        x         x";
   mapa[8]  = "xxx     xxx     xxxx";
-  mapa[9]  = "x        x         x";
+  mapa[9]  = "x        x      x  x";
   mapa[10] = "x     r            x";
   mapa[11] = "x                  x";
   mapa[12] = "x         x        x";
   mapa[13] = "x         x        x";
   mapa[14] = "x         x        x";
   mapa[15] = "x         x        x";
-  mapa[16] = "xxxxx   xxxx    xxxx";
+  mapa[16] = "xxxxx   xxx     xxxx";
   mapa[17] = "x                  x";
   mapa[18] = "x                  x";
-  mapa[19] = "x                  x";
+  mapa[19] = "x         x        x";
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
   
   environment.setMap(mapa);
   
-  camara=new THREE.PerspectiveCamera(45);
+  camara=new THREE.PerspectiveCamera(65,2,1,100);
   camara.position.z=30;
   camara.position.x=0;
   camara.position.y=0;
