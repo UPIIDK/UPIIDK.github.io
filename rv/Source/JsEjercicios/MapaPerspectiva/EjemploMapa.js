@@ -49,7 +49,7 @@ function setup(){
   camara=new THREE.PerspectiveCamera(60,1,3,1000);
    camara.position=Robot.position;
    camara.rotation.x=-200;
-   camara.position.x=20;
+   camara.position.x=19;
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
