@@ -15,7 +15,7 @@ Environment.prototype.setMap=function(map){
       this.add(new Wall(1,j-_offset,-(i-_offset)));
         else if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
-    var x=j-_offset;
+    x=j-_offset;
   }
 }
 
@@ -67,7 +67,7 @@ function loop(){
   renderer.render(environment,camara);
 }
 
-var environment, camara, renderer;
+var environment, camara, renderer,x;
 
 setup();
 loop();
