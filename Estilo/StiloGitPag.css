@@ -6,7 +6,14 @@ font: bold 36px verdana, sans-serif;
 text-align: center;
 font: bold 36px verdana, sans-serif;
 }
-
+#Menu {
+  list-style-type:circle;
+  li {
+	margin:2px;
+	padding:2px;
+	border:1px solid#CCCCCC;
+	}
+}
 #Pie {
 display: block;
 width: 500px;
