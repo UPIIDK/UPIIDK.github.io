@@ -37,7 +37,7 @@ function setup(){
   mapa[13] = "x         x        x";
   mapa[14] = "x         x        x";
   mapa[15] = "x         x       xx";
-  mapa[16] = "xxxxx   xxx     xxxx";
+  mapa[16] = "xxxxx   xxx      xxx";
   mapa[17] = "x                  x";
   mapa[18] = "x                  x";
   mapa[19] = "x         x        x";
@@ -48,7 +48,7 @@ function setup(){
   environment.setMap(mapa);
   
   camara=new THREE.PerspectiveCamera(65,3,1,200);
-  camara.position.z=30;
+  camara.position.z=20;
   camara.position.x=0;
   camara.position.y=0;
   renderer=new THREE.WebGLRenderer();
