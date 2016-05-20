@@ -14,3 +14,4 @@ function muestraInformacion(elEvento) {
  
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
+<div id="info"></div>
