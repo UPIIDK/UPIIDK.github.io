@@ -5,11 +5,11 @@ function Sensor(position, direction) {
 
 Sensor.prototype = new THREE.Raycaster();
 
-function Robot(size,x,y){
+function Robot (size, x,y){
   Agent.call(this,x,y);
   this.sensor = new Sensor();
   //this.actuator = new THREE.Mesh(new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({color:'#aa0000'}));
-  this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshNormalMaterial());
+  this.actuator = new THREE.Mesh(new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
   this.actuator.commands=[];
   this.add(this.actuator);
 }
