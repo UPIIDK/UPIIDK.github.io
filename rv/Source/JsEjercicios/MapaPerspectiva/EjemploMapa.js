@@ -19,7 +19,7 @@ Environment.prototype.setMap=function(map){
  } 
 
 
-function setup(){
+function Setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "x                  x";
@@ -69,5 +69,5 @@ function loop(){
 
 var environment, camara, renderer;
 
-setup();
+Setup();
 loop();
