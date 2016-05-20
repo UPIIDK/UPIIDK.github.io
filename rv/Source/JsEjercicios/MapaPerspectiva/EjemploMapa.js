@@ -22,14 +22,14 @@ Environment.prototype.setMap=function(map){
 function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "xr                 x";
+  mapa[1]  = "xr  xx             x";
   mapa[2]  = "x                  x";
   mapa[3]  = "x                  x";
   mapa[4]  = "x                  x";
   mapa[5]  = "x                  x";
   mapa[6]  = "x                  x";
   mapa[7]  = "x                  x";
-  mapa[8]  = "xxx   xxxxxxxxxxxxxx";
+  mapa[8]  = "xxx   xxxx     xxxxx";
   mapa[9]  = "x                  x";
   mapa[10] = "x     r            x";
   mapa[11] = "x                  x";
@@ -37,10 +37,10 @@ function setup(){
   mapa[13] = "x                  x";
   mapa[14] = "x                  x";
   mapa[15] = "x                  x";
-  mapa[16] = "xxxxxxxxxxxx    xxxx";
+  mapa[16] = "xx   xxxxxxx    xxxx";
   mapa[17] = "x                  x";
-  mapa[18] = "x   r              x";
-  mapa[19] = "xr                 x";
+  mapa[18] = "x             x    x";
+  mapa[19] = "xr            x    x";
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
@@ -48,7 +48,8 @@ function setup(){
   environment.setMap(mapa);
   
   camara=new THREE.PerspectiveCamera();
-  camara.position.z=30;
+  camara.position.x=20;
+  camara.rotation.x=-195;
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
