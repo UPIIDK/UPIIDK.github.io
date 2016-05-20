@@ -49,7 +49,7 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera(4,2,3,1000);
   camara.position.x=0;
-  camara.position.z=30;
+  camara.position.z=50;
   camara.rotation.x=160;
 var tipo_evento='onKeyDown';
 var listener= function ( event ) {
