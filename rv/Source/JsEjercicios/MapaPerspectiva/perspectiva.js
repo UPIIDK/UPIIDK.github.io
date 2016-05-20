@@ -1,6 +1,6 @@
 function setup(){
 THREE.ImageUtils.crossOrigin='';
-var material=new THREE.MeshBasicMaterial({});
+var material=new THREE.MeshNormalMaterial({});
 var forma=new THREE.BoxGeometry(1,1,0.5);
 malla=new THREE.Mesh(forma,material);
 malla.rotation.z=0.75;
