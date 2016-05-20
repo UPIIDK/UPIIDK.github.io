@@ -1,5 +1,4 @@
 window.onload = function() {
-  document.onkeypress = muestraInformacion;
   document.onkeydown = muestraInformacion;
 }
  
