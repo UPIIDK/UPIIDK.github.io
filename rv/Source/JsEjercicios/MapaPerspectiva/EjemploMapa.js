@@ -47,10 +47,10 @@ function setup(){
   
   environment.setMap(mapa);
   
-  camara=new THREE.PerspectiveCamera(4,1,3,1000);
+  camara=new THREE.PerspectiveCamera(4,2,3,1000);
   camara.position.x=0;
   camara.position.z=30;
-  camara.rotation.x=155;
+  camara.rotation.x=160;
 var tipo_evento='onKeyDown';
 var listener= function ( event ) {
   if( event.keyCode == 38)
