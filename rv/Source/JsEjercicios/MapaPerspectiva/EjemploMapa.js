@@ -1,3 +1,4 @@
+
 function Wall(size,x,y){
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
   this.size=size;
@@ -7,40 +8,39 @@ function Wall(size,x,y){
 
 Wall.prototype=new THREE.Mesh();
 
-Environment.prototype.setMap=function(map){ 
-   var _offset=Math.floor(map.length/2); 
-   for(var i=0;i<map.length;i++) 
-   for(var j=0;j<map.length;j++){ 
-     if(map[i][j] === "x") 
-       this.add(new Wall(2,j-_offset,-(i-_offset))); 
-         else if(map[i][j] === "r") 
-     this.add(new Robot(1.75,j-_offset,-(i-_offset))); 
-   } 
- } 
+Environment.prototype.setMap=function(map){
+  var _offset=Math.floor(map.length/2);
+  for(var i=0;i<map.length;i++)
+  for(var j=0;j<map.length;j++){
+    if(map[i][j] === "x")
+      this.add(new Wall(1,j-_offset,-(i-_offset)));
+        else if(map[i][j] === "r")
+    this.add(new Robot(0.5,j-_offset,-(i-_offset)));
+  }
+}
 
-
-function Setup(){
+function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "x                  x";
+  mapa[1]  = "xr                 x";
   mapa[2]  = "x                  x";
-  mapa[3]  = "x        x         x";
-  mapa[4]  = "x        x         x";
-  mapa[5]  = "x        x         x";
-  mapa[6]  = "x        x         x";
-  mapa[7]  = "x        x         x";
-  mapa[8]  = "xxx     xxx     xxxx";
-  mapa[9]  = "x        x      x  x";
+  mapa[3]  = "x                  x";
+  mapa[4]  = "x                  x";
+  mapa[5]  = "x                  x";
+  mapa[6]  = "x                  x";
+  mapa[7]  = "x                  x";
+  mapa[8]  = "xxx   xxxxxxxxxxxxxx";
+  mapa[9]  = "x                  x";
   mapa[10] = "x     r            x";
   mapa[11] = "x                  x";
-  mapa[12] = "x         x        x";
-  mapa[13] = "x         x        x";
-  mapa[14] = "x         x        x";
-  mapa[15] = "x         x       xx";
-  mapa[16] = "xxxxx   xxx       xx";
+  mapa[12] = "x                  x";
+  mapa[13] = "x                  x";
+  mapa[14] = "x                  x";
+  mapa[15] = "x                  x";
+  mapa[16] = "xxxxxxxxxxxx    xxxx";
   mapa[17] = "x                  x";
-  mapa[18] = "x                  x";
-  mapa[19] = "x       xxx        x";
+  mapa[18] = "x   r              x";
+  mapa[19] = "xr                 x";
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
@@ -48,13 +48,13 @@ function Setup(){
   environment.setMap(mapa);
   
   camara=new THREE.PerspectiveCamera();
-   camara.rotation.x=-200;
-   camara.position.x=19;
+  camara.position.z=30;
+  
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camara);
+  environment.add(camera);
 }
 
 function loop(){
@@ -67,7 +67,7 @@ function loop(){
   renderer.render(environment,camara);
 }
 
-var environment, camara, renderer;
+var environment, camera, renderer;
 
-Setup();
+setup();
 loop();
