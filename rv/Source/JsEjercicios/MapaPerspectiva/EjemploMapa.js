@@ -47,17 +47,9 @@ function setup(){
   
   environment.setMap(mapa);
   
-  camara=new THREE.PerspectiveCamera(1,1,1,1);
+  camara=new THREE.PerspectiveCamera(8,1,1,1);
   camara.position.x=0;
   camara.position.z=50;
-var tipo_evento='onKeyDown';
-var listener= function ( event ) {
-  if( event.keyCode == 38)
-  camara.rotation.x+=1;
-  if( event.keyCode == 36)
-  camara.rotation.x-=1;
-}
-window.addEventListener(tipo_evento,listener, false );
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
