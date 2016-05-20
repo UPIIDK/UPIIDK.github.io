@@ -47,7 +47,7 @@ function setup(){
   
   environment.setMap(mapa);
   
-  camara=new THREE.PerspectiveCamera(1,1,1,1000);
+  camara=new THREE.PerspectiveCamera(1,1,1,1);
   camara.position.x=0;
   camara.position.z=50;
 var tipo_evento='onKeyDown';
