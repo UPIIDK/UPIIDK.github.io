@@ -5,10 +5,14 @@ window.onload = function() {
 function muestraInformacion(elEvento) {
   var evento = window.event || elEvento;
  
- if(evento==39)
+ if(evento==39){
  camara.position.x+=1;
  environment.add(camera);
- 
+ }
+ if(evento==38){
+ camara.position.x-=1;
+ environment.add(camera);
+ }
   var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>" +
                 "Propiedad charCode: " + evento.charCode + "<br>" +
