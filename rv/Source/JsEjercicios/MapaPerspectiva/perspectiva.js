@@ -12,7 +12,7 @@ escena.add(malla);
 
 var tipo_evento='onKeyDown';
 var listener= function ( event ) {
-  if( event.keyCode == 112)
+  if( event.keyCode == 39)
   sel=1;
   else
   sel=2;
