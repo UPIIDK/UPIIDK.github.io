@@ -1,7 +1,6 @@
 function setup(){
 THREE.ImageUtils.crossOrigin='';
-var textura = THREE.ImageUtils.loadTexture('mosaico.jpg');
-var material=new THREE.MeshBasicMaterial({map:textura});
+var material=new THREE.MeshBasicMaterial({});
 var forma=new THREE.BoxGeometry(1,1,0.5);
 malla=new THREE.Mesh(forma,material);
 malla.rotation.z=0.75;
@@ -21,8 +20,8 @@ var listener= function ( event ) {
 window.addEventListener(tipo_evento,listener, false );
 
 
-camara=new THREE.PerspectiveCamera();
-camara.position.z=5;
+camara1=new THREE.PerspectiveCamera();
+camara1.position.z=5;
 
 camara2 = new THREE.OrthographicCamera( 5 / - 2, 5 / 2, 8 / 2, 8 / - 2, 1, 1000 );
 camara2.position.z=5;
@@ -55,7 +54,7 @@ renderer.render(escena,camara2);
 
 }
 
-var camara,camara2,camara3,escena,renderer,malla;
+var camara1,camara2,camara3,escena,renderer,malla;
 var sel;
 setup();
 loop();
