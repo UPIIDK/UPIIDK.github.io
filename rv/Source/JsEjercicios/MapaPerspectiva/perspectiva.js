@@ -6,7 +6,7 @@ window.onload = function() {
 function muestraInformacion(elEvento) {
   var evento = window.event || elEvento;
  
- if(evento==37)
+ if(evento==39)
  camara.position.x+=1;
  environment.add(camera);
  
