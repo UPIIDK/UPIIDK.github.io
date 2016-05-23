@@ -6,6 +6,13 @@ function Wall(size,x,y,z){
   this.position.y=y;
   this.position.z=z;
 }
+function Piso(size,x,y,z){
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial());
+  this.size=size;
+  this.position.x=x;
+  this.position.y=y;
+  this.position.z=z;
+}
 
 Wall.prototype=new THREE.Mesh();
 
@@ -14,22 +21,14 @@ Environment.prototype.setMap=function(map){
   for(var i=0;i<map.length;i++)
   for(var j=0;j<map.length;j++){
     if(map[i][j] === "x")
-      this.add(new Wall(1,j-_offset,-(i-_offset)));
+      this.add(new Wall(1,j-_offset,-(i-_offset),0));
         else if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
+    else
+    this.add(new Piso(0.1,j-_offset,-(i-_offset),-2));
   }
 }
 
-Environment.prototype.setMap=function(map){
-  var _offset=Math.floor(map.length/2);
-  for(var i=0;i<map.length;i++)
-  for(var j=0;j<map.length;j++){
-    if(map[i][j] === "x")
-      this.add(new Wall(1,j-_offset,-(i-_offset),-3));
-        else if(map[i][j] === "r")
-    this.add(new Robot(0.5,j-_offset,-(i-_offset)));
-  }
-}
 function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
@@ -57,30 +56,6 @@ function setup(){
   environment = new Environment();
   
   environment.setMap(mapa);
-  
-  var mapaF = new Array();
-  mapaF[0]  = "";
-  mapaF[1]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[2]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[3]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[4]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[5]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[6]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[7]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[8]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[9]  = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[10] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[11] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[12] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[13] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[14] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[15] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[16] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[17] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[18] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[19] = " xxxxxxxxxxxxxxxxxx ";
-  mapaF[20] = "";
-  environment.setMap(mapaF);
   
   camara=new THREE.PerspectiveCamera();
   camara.position.z=30;
