@@ -23,19 +23,19 @@ function muestraInformacion(elEvento) {
  environment.add(camera);
  }
  if(evento.keyCode==68){
- camara.rotation.x+=1;
+ camara.rotation.x+=Math.pi/8;
  environment.add(camera);
  }
  if(evento.keyCode==65){
- camara.rotation.x-=1;
+ camara.rotation.x-=Math.pi/8;
  environment.add(camera);
  }
  if(evento.keyCode==87){
- camara.rotation.y-=1;
+ camara.rotation.y-=Math.pi/8;
  environment.add(camera);
  }
   if(evento.keyCode==83){
- camara.rotation.y+=1;
+ camara.rotation.y+=Math.pi/8;
  environment.add(camera);
  }
   /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
