@@ -1,3 +1,4 @@
+//keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha
 window.onload = function() {
   document.onkeydown = muestraInformacion;
 }
@@ -15,8 +16,7 @@ function muestraInformacion(elEvento) {
  }
   var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>" +
-                "Propiedad charCode: " + evento.charCode + "<br>" +
                 "Carácter pulsado: " + String.fromCharCode(evento.charCode);
- 
+
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
