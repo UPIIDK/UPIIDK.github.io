@@ -6,12 +6,12 @@ function Wall(size,x,y,z){
   this.position.y=y;
   this.position.z=z;
 }
-function Piso(size,x,y,z){
+function Piso(sizeP,xP,yP,zP){
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNBasicMaterial());
-  this.size=size;
-  this.position.x=x;
-  this.position.y=y;
-  this.position.z=z;
+  this.size=sizeP;
+  this.position.x=xP;
+  this.position.y=yP;
+  this.position.z=zP;
 }
 
 Wall.prototype=new THREE.Mesh();
