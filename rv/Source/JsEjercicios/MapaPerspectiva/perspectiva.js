@@ -14,6 +14,10 @@ function muestraInformacion(elEvento) {
  camara.position.x-=1;
  environment.add(camera);
  }
+ if(evento.keyCode==40){
+ camara.position.y-=1;
+ environment.add(camera);
+ }
   var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>" +
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
