@@ -5,11 +5,11 @@ window.onload = function() {
 function muestraInformacion(elEvento) {
   var evento = window.event || elEvento;
  
- if(evento==39){
+ if(evento.keyCode==39){
  camara.position.x+=1;
  environment.add(camera);
  }
- if(evento==38){
+ if(evento.keyCode==38){
  camara.position.x-=1;
  environment.add(camera);
  }
