@@ -22,6 +22,7 @@ function muestraInformacion(elEvento) {
  camara.position.y+=1;
  environment.add(camera);
  }
+ //Girar Camara
  if(evento.keyCode==68){
  camara.rotation.x+=Math.pi/8;
  environment.add(camera);
@@ -36,6 +37,15 @@ function muestraInformacion(elEvento) {
  }
   if(evento.keyCode==83){
  camara.rotation.y+=Math.pi/8;
+ environment.add(camera);
+ }
+ //ZOOM
+   if(evento.keyCode==107){
+ camara.position.z+=1;
+ environment.add(camera);
+ }
+ if(evento.keyCode==109){
+ camara.position.z-=1;
  environment.add(camera);
  }
   /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
