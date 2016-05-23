@@ -19,6 +19,16 @@ Environment.prototype.setMap=function(map){
   }
 }
 
+Environment.prototype.setMap=function(map){
+  var _offset=Math.floor(map.length/1.25);
+  for(var i=0;i<map.length;i++)
+  for(var j=0;j<map.length;j++){
+    if(map[i][j] === "x")
+      this.add(new Wall(1,j-_offset,-(i-_offset)));
+        else if(map[i][j] === "r")
+    this.add(new Robot(0.5,j-_offset,-(i-_offset)));
+  }
+}
 function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
@@ -46,6 +56,30 @@ function setup(){
   environment = new Environment();
   
   environment.setMap(mapa);
+  
+  var mapaF = new Array();
+  mapaF[0]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[1]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[2]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[3]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[4]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[5]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[6]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[7]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[8]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[9]  = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[10] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[11] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[12] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[13] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[14] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[15] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[16] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[17] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[18] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[19] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[20] = "xxxxxxxxxxxxxxxxxxxx";
+  environment.setMap(mapaF);
   
   camara=new THREE.PerspectiveCamera();
   camara.position.z=30;
