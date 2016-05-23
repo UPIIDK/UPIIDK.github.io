@@ -1,4 +1,4 @@
-//keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha
+//keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha, keyCode=38 FlechaArriba, keyCode=37 FlechaIzq
 window.onload = function() {
   document.onkeydown = muestraInformacion;
 }
@@ -10,7 +10,7 @@ function muestraInformacion(elEvento) {
  camara.position.x+=1;
  environment.add(camera);
  }
- if(evento.keyCode==38){
+ if(evento.keyCode==37){
  camara.position.x-=1;
  environment.add(camera);
  }
