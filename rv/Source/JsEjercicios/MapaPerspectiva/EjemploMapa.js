@@ -6,13 +6,7 @@ function Wall(size,x,y,z){
   this.position.y=y;
   this.position.z=z;
 }
-function Piso(size,x,y,z){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial());
-  this.size=size;
-  this.position.x=x;
-  this.position.y=y;
-  this.position.z=z;
-}
+
 
 Wall.prototype=new THREE.Mesh();
 
@@ -25,7 +19,7 @@ Environment.prototype.setMap=function(map){
         else if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
     else
-    this.add(new Piso(0.1,j-_offset,-(i-_offset),-2));
+    this.add(new Wall(1,j-_offset,-(i-_offset),-2));
   }
 }
 
