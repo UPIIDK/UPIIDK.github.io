@@ -41,11 +41,11 @@ function muestraInformacion(elEvento) {
  }
  //ZOOM
    if(evento.keyCode==107){
- camara.position.z+=1;
+ camara.position.z-=1;
  environment.add(camera);
  }
  if(evento.keyCode==109){
- camara.position.z-=1;
+ camara.position.z+=1;
  environment.add(camera);
  }
   /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
