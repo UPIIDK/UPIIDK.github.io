@@ -39,6 +39,6 @@ function muestraInformacion(elEvento) {
  environment.add(camera);
  }
   var mensaje = "Tipo de evento: " + evento.type + "<br>" +
-                "Propiedad keyCode: " + evento.keyCode + "<br>" +
+                "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
