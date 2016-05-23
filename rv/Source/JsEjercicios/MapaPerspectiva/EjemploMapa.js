@@ -7,7 +7,7 @@ function Wall(size,x,y,z){
   this.position.z=z;
 }
 function Piso(sizeP,xP,yP,zP){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNBasicMaterial());
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial());
   this.size=sizeP;
   this.position.x=xP;
   this.position.y=yP;
