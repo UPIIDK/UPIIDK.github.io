@@ -22,7 +22,7 @@ Environment.prototype.setMap=function(map){
   for(var j=0;j<map.length;j++){
     if(map[i][j] === "x")
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
-        else if(map[i][j] === "r")
+         if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
     this.add(new Piso(1,j-_offset,-(i-_offset),-1));
     else
