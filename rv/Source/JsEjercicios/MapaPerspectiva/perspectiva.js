@@ -24,19 +24,19 @@ function muestraInformacion(elEvento) {
  }
  //Girar Camara
  if(evento.keyCode==68){
- camara.rotation.x+=0.1;
- environment.add(camera);
- }
- if(evento.keyCode==65){
  camara.rotation.x-=0.1;
  environment.add(camera);
  }
+ if(evento.keyCode==65){
+ camara.rotation.x+=0.1;
+ environment.add(camera);
+ }
  if(evento.keyCode==87){
- camara.rotation.y-=0.1;
+ camara.rotation.y+=0.1;
  environment.add(camera);
  }
   if(evento.keyCode==83){
- camara.rotation.y+=0.1;
+ camara.rotation.y-=0.1;
  environment.add(camera);
  }
  //ZOOM
