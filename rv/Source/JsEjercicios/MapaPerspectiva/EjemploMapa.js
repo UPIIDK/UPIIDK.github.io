@@ -1,6 +1,6 @@
 
 function Wall(size,x,y,z){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial());
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -14,7 +14,7 @@ Environment.prototype.setMap=function(map){
   for(var i=0;i<map.length;i++)
   for(var j=0;j<map.length;j++){
     if(map[i][j] === "x")
-      this.add(new Wall(1,j-_offset,-(i-_offset),0));
+      this.add(new Wall(1,j-_offset,-(i-_offset)));
         else if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
   }
@@ -25,7 +25,7 @@ Environment.prototype.setMap=function(map){
   for(var i=0;i<map.length;i++)
   for(var j=0;j<map.length;j++){
     if(map[i][j] === "x")
-      this.add(new Wall(1,j-_offset,-(i-_offset),-2));
+      this.add(new Wall(1,j-_offset,-(i-_offset),-3));
         else if(map[i][j] === "r")
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
   }
@@ -59,27 +59,27 @@ function setup(){
   environment.setMap(mapa);
   
   var mapaF = new Array();
-  mapaF[0]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[1]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[2]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[3]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[4]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[5]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[6]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[7]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[8]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[9]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[10] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[11] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[12] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[13] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[14] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[15] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[16] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[17] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[18] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[19] = "xxxxxxxxxxxxxxxxxxxx";
-  mapaF[20] = "xxxxxxxxxxxxxxxxxxxx";
+  mapaF[0]  = "";
+  mapaF[1]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[2]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[3]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[4]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[5]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[6]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[7]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[8]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[9]  = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[10] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[11] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[12] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[13] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[14] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[15] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[16] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[17] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[18] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[19] = " xxxxxxxxxxxxxxxxxx ";
+  mapaF[20] = "";
   environment.setMap(mapaF);
   
   camara=new THREE.PerspectiveCamera();
