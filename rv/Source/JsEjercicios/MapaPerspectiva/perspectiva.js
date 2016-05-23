@@ -16,7 +16,5 @@ function muestraInformacion(elEvento) {
  }
   var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>" +
-                "Carácter pulsado: " + String.fromCharCode(evento.charCode);
-
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
