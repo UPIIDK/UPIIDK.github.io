@@ -23,28 +23,28 @@ function muestraInformacion(elEvento) {
  environment.add(camera);
  }
  //Girar Camara
- if(evento.keyCode==87){
+ if(evento.keyCode==87//A){
  camara.rotation.x+=0.01;
  environment.add(camera);
  }
- if(evento.keyCode==83){
+ if(evento.keyCode==83//D){
  camara.rotation.x-=0.01;
  environment.add(camera);
  }
- if(evento.keyCode==68){
+ if(evento.keyCode==68//S){
  camara.rotation.y-=0.01;
  environment.add(camera);
  }
-  if(evento.keyCode==65){
+  if(evento.keyCode==65//W){
  camara.rotation.y+=0.01;
  environment.add(camera);
  }
  //ZOOM
-   if(evento.keyCode==32){
+   if(evento.keyCode==32//Space){
  camara.position.z-=1;
  environment.add(camera);
  }
- if(evento.keyCode==90){
+ if(evento.keyCode==90//Z){
  camara.position.z+=1;
  environment.add(camera);
  }
