@@ -1,6 +1,6 @@
 
 function Wall(size,x,y,z){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial({color:0x00ffff}));
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -21,7 +21,7 @@ Environment.prototype.setMap=function(map){
     if(map[i][j]===" ")
     {var mensaje = "Flechas, Mueven la camara" +"<br>" +
                 "Teclas W A S D, Giran la Camara" + "<br>" + 
-                "Barra Espaciadora, ZOOM IN. Tecla Z, Zoom OUT"
+                "Barra Espaciadora, ZOOM IN. Tecla Z, Zoom OUT" + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje}
     else
     this.add(new Wall(1,j-_offset,-(i-_offset),-1));
