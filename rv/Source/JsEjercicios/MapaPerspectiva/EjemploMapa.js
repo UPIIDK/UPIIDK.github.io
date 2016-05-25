@@ -74,6 +74,28 @@ function loop(){
   environment.act();
   
   renderer.render(environment,camara);
+//INICIO  
+malla.rotation.x +=0.01;
+malla.rotation.y +=0.01;
+//malla.rotation.x +=0.01;
+//malla.rotation.y +=0.01;
+
+malla4.rotation.x +=0.01;
+malla3.rotation.x +=0.01;
+
+renderer.render(escena);
+
+if(Math.abs(malla9.rotation.x)>.3)
+step1=-step1;
+malla9.rotation.x +=step1;
+malla10.rotation.x -=step1;
+
+if(Math.abs(malla8.rotation.x)>.3)
+step=-step;
+
+malla8.rotation.x +=step;
+malla7.rotation.x -=step;
+//FIN
 }
 
 var environment, camera, renderer;
