@@ -19,10 +19,10 @@ Environment.prototype.setMap=function(map){
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
     this.add(new Wall(1,j-_offset,-(i-_offset),-1));}
     if(map[i][j]==='\0')
-    var mensaje = "Flechas, Mueven la camara" +"<br>" +
+    {var mensaje = "Flechas, Mueven la camara" +"<br>" +
                 "Teclas W A S D, Giran la Camara" + "<br>" + 
                 "Barra Espaciadora, ZOOM IN. Tecla Z, Zoom OUT"
-  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje}
     else
     this.add(new Wall(1,j-_offset,-(i-_offset),-1));
          
