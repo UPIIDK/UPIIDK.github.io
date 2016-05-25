@@ -1,6 +1,6 @@
 
 function Wall(size,x,y,z){
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial(0x00ffff.));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -19,7 +19,7 @@ Environment.prototype.setMap=function(map){
     this.add(new Robot(0.5,j-_offset,-(i-_offset)));
     this.add(new Wall(1,j-_offset,-(i-_offset),-1.5));}
     else
-    this.add(new Wall(1,j-_offset,-(i-_offset),-1.75));
+    this.add(new Wall(1,j-_offset,-(i-_offset),-1.5));
          
   }
 }
