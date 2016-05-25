@@ -40,11 +40,11 @@ function muestraInformacion(elEvento) {
  environment.add(camera);
  }
  //ZOOM
-   if(evento.keyCode==107){
+   if(evento.keyCode==90){
  camara.position.z-=1;
  environment.add(camera);
  }
- if(evento.keyCode==109){
+ if(evento.keyCode==32){
  camara.position.z+=1;
  environment.add(camera);
  }
