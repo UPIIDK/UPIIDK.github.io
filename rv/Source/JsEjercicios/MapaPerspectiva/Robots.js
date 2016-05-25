@@ -116,7 +116,7 @@ step1=0.02;
 
 
 //FiN
-}
+
 
 Robot.prototype = new Agent();
 
