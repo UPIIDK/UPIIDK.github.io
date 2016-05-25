@@ -23,19 +23,19 @@ function muestraInformacion(elEvento) {
  environment.add(camera);
  }
  //Girar Camara
- if(evento.keyCode==68){
+ if(evento.keyCode==87){
  camara.rotation.x+=0.01;
  environment.add(camera);
  }
- if(evento.keyCode==65){
+ if(evento.keyCode==83){
  camara.rotation.x-=0.01;
  environment.add(camera);
  }
- if(evento.keyCode==87){
+ if(evento.keyCode==68){
  camara.rotation.y-=0.01;
  environment.add(camera);
  }
-  if(evento.keyCode==83){
+  if(evento.keyCode==65){
  camara.rotation.y+=0.01;
  environment.add(camera);
  }
