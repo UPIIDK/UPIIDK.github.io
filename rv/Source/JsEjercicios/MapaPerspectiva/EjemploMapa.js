@@ -12,7 +12,7 @@ Wall.prototype=new THREE.Mesh();
 Environment.prototype.setMap=function(map){
   var _offset=Math.floor(map.length/2);
   for(var i=0;i<(map.length)-1;i++)
-  for(var j=0;j<(map.length)-1;j++){
+  for(var j=0;j<map.length;j++){
     if(map[i][j] === "x")
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
          if(map[i][j] === "r"){
