@@ -7,8 +7,9 @@ Sensor.prototype = new THREE.Raycaster();
 
 function Robot (size, x,y){
   Agent.call(this,x,y);
+  var texturar=THREE.ImageUtils.loadTexture('https://github.com/UPIIDK/UPIIDK.github.io/blob/master/rv/Imagenes/LLanta.jpg');
   this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({color:'#aa0000'}));
+  this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshNormalMaterial({map:texturar}));
   this.actuator.commands=[];
   this.add(this.actuator);
 //  iNICIO
