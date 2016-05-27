@@ -64,7 +64,7 @@ function muestraInformacion(elEvento) {
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 */}
-//Resize de la Pantalla
+//----------------------------------Resize de la Pantalla------------------------------------------------
 
 		var tipo_evento = 'resize';
 		//Es equivalente a function listener(){
