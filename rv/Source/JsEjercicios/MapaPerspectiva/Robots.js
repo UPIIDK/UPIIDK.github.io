@@ -9,7 +9,7 @@ function Robot (size, x,y){
   Agent.call(this,x,y);
   var texturar=THREE.ImageUtils.loadTexture('https://github.com/UPIIDK/UPIIDK.github.io/blob/master/rv/Imagenes/LLanta.jpg');
   this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshLambertMaterial({map: texturar}));
+  this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
   this.actuator.commands=[];
   this.add(this.actuator);
 //  iNICIO
