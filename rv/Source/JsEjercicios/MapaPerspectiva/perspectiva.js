@@ -1,8 +1,9 @@
 //keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha, keyCode=38 FlechaArriba, keyCode=37 FlechaIzq
 window.onload = function() {
   document.onkeydown = muestraInformacion;
-  var mensaje = "Tipo de evento: " + "Tecla Esc,Reinicia la Camara" + "<br>" +
-                "Propiedad keyCode: " + "Barra Espaciadora, Zoom In" + "<br>"
+  var mensaje = "Teclas de Control " + "<br>" + "Tecla Esc: Reinicia la Camara" + "<br>" +
+                "Tecla Z: Zoom out " + "Barra Espaciadora, Zoom In" + "<br>" + "Flecha, Mueven la camara" + 
+                "<br>" + "Letras AWSD, Rotan la Camara" 
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
  
