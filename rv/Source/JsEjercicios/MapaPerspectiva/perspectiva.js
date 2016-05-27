@@ -55,7 +55,7 @@ function muestraInformacion(elEvento) {
   camara.position.x=0;
   camara.rotation=0;
  }
- }
+ 
  var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
