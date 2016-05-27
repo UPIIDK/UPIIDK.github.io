@@ -1,6 +1,9 @@
 //keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha, keyCode=38 FlechaArriba, keyCode=37 FlechaIzq
 window.onload = function() {
   document.onkeydown = muestraInformacion;
+  var mensaje = "Tipo de evento: " + "Tecla Esc,Reinicia la Camara" + "<br>" +
+                "Propiedad keyCode: " + "Barra Espaciadora, Zoom In" + "<br>"
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
  
 function muestraInformacion(elEvento) {
