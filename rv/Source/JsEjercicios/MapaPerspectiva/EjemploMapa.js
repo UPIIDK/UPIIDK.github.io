@@ -63,7 +63,7 @@ function setup(){
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camera);
+  environment.add(camara);
 }
 
 function loop(){
@@ -98,7 +98,7 @@ malla7.rotation.x -=step;
 //FIN
 }
 
-var environment, camera, renderer;
+var environment, camara, renderer;
 
 setup();
 loop();
