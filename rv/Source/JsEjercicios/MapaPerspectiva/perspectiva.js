@@ -2,7 +2,7 @@
 window.onload = function() {
   document.onkeydown = muestraInformacion;
   var mensaje = "Teclas de Control " + "<br>" + "Tecla Esc: Reinicia la Camara" + "<br>" +
-                "Tecla Z: Zoom out " + "Barra Espaciadora, Zoom In" + "<br>" + "Flecha, Mueven la camara" + 
+                "Tecla Z: Zoom out " + "<br>" + "Barra Espaciadora, Zoom In" + "<br>" + "Flecha, Mueven la camara" + 
                 "<br>" + "Letras AWSD, Rotan la Camara" 
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
@@ -58,6 +58,12 @@ function muestraInformacion(elEvento) {
   camara.position.y=0;
   camara.position.x=0;
   camara.rotation=0;
+ }
+ //Captar variables
+  if(evento.keyCode==91){ //ESC
+  var mensaje = "Position camara: " + camara.position + "<br>" +
+                "Rotation camara: " + camara.rotation + "<br>"
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
  }
  
  /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
