@@ -61,8 +61,12 @@ function muestraInformacion(elEvento) {
  }
  //Captar variables
   if(evento.keyCode==91){ //ESC
-  var mensaje = "Position camara: " + camara.position + "<br>" +
-                "Rotation camara: " + camara.rotation + "<br>"
+  var mensaje = "Position camara x: " + camara.position.x + "<br>" +
+  		"Position camara y: " + camara.position.y + "<br>" +
+  		"Position camara z: " + camara.position.z + "<br>" +
+                "Rotation camara x: " + camara.rotation.x + "<br>" +
+                "Rotation camara y: " + camara.rotation.y + "<br>" +
+                "Rotation camara z: " + camara.rotation.z + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
  }
  
