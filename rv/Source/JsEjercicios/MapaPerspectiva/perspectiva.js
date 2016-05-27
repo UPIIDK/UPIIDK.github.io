@@ -54,10 +54,10 @@ function muestraInformacion(elEvento) {
  }
  
  if(evento.keyCode==27){ //ESC
-  camara.position.z=30;
-  camara.position.y=0;
-  camara.position.x=0;
-  camara.rotation=0;
+  camara.position.z=10;
+  camara.position.y=-31;
+  camara.position.x=-1;
+  camara.rotation.x= 1.16;
  }
  //Captar variables
   if(evento.keyCode==91){ //ESC
