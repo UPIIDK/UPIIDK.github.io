@@ -49,7 +49,7 @@ function muestraInformacion(elEvento) {
  environment.add(camera);
  }
  
- if(evento.keyCode==85){ //ESC
+ if(evento.keyCode==91){ //ESC
   camara.position.z=30;
   camara.position.y=0;
   camara.position.x=0;
