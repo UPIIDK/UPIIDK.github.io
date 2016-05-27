@@ -49,14 +49,14 @@ function muestraInformacion(elEvento) {
  environment.add(camera);
  }
  
- if(evento.keyCode==91){ //ESC
+ if(evento.keyCode==27){ //ESC
   camara.position.z=30;
   camara.position.y=0;
   camara.position.x=0;
   camara.rotation=0;
  }
  
- var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+ /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-}
+*/}
