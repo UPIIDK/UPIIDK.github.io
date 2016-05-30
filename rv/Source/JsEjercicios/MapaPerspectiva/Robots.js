@@ -1,5 +1,5 @@
 function CuerpoRobot(Tmaño,x,y){
-var bot[10];
+var bot;
 THREE.Object3D.call(this);
   //  iNICIO
 THREE.ImageUtils.crossOrigin=' ';
