@@ -69,6 +69,7 @@ camara.position.z=90;*/
 step=0.01;
 step1=0.02;
 //FiN
+this.add(this.Camara,this.Rostro,this.Antena,this.PiernaI);
 }
 CuerpoRobot.prototype=new THREE.Object3D();
 
