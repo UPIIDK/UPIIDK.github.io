@@ -1,53 +1,52 @@
 function CuerpoRobot(Tmaño,x,y){
-var Bot=new Array();
 THREE.Object3D.call(this);
   //  iNICIO
 THREE.ImageUtils.crossOrigin=' ';
 var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
-Bot[0]=this.Camara= new THREE.Mesh(new THREE.SphereGeometry(Tmaño+2) ,new THREE.MeshPhongMaterial({map: texturaC}));
+this.Camara= new THREE.Mesh(new THREE.SphereGeometry(Tmaño+2) ,new THREE.MeshPhongMaterial({map: texturaC}));
 this.Camara.position.y=y+2;
 
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
-Bot[1]=this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(Tmaño+1.5, Tmaño+1.5,Tmaño+4),new THREE.MeshPhongMaterial({map: texturaA}));
+this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(Tmaño+1.5, Tmaño+1.5,Tmaño+4),new THREE.MeshPhongMaterial({map: texturaA}));
 this.Antena.position.y=y-2;
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
-Bot[2]=this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+10,Tmaño+10,Tmaño+2.5),new THREE.MeshPhongMaterial({map: texturaR}));
+this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+10,Tmaño+10,Tmaño+2.5),new THREE.MeshPhongMaterial({map: texturaR}));
 this.Rostro.position.y=y-9;
 
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-Bot[3]=this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+5, Tmaño+2, Tmaño+2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
+this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+5, Tmaño+2, Tmaño+2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaI.position.x=x-7.5;
 this.OrejaI.position.y=y-9;
 
-Bot[4]=this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+5, Tmaño+2, Tmaño+2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
+this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+5, Tmaño+2, Tmaño+2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaD.position.x=x+7.5;
 this.OrejaD.position.y=y-9;
 
-Bot[5]=this.Cuello= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+3, Tmaño+3, Tmaño+2.5),new THREE.MeshPhongMaterial({map: texturaO}));
+this.Cuello= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+3, Tmaño+3, Tmaño+2.5),new THREE.MeshPhongMaterial({map: texturaO}));
 //malla5.position.x=7;
 this.Cuello.position.y=y-15;
 
 var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
-Bot[6]=this.Panza= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+9, Tmaño+9, Tmaño+5 ),new THREE.MeshPhongMaterial({map: texturaP}));
+this.Panza= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+9, Tmaño+9, Tmaño+5 ),new THREE.MeshPhongMaterial({map: texturaP}));
 //malla5.position.x=7;
 this.Panza.position.y=y-20;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-Bot[7]=this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaI.position.x=x-3;
 this.PiernaI.position.y=y-30;
 
-Bot[8]=this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaD.position.x=x+3;
 this.PiernaD.position.y=y-30;
 
 var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
-Bot[9]=this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+5,Tmaño+3),new THREE.MeshPhongMaterial({map: texturaB}));
+this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+5,Tmaño+3),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoI.position.x=x-6;
 this.BrazoI.position.y=y-21;
 
-Bot[10]=this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+5,Tmaño+3),new THREE.MeshPhongMaterial({map: texturaB}));
+this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+5,Tmaño+3),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoD.position.x=x+6;
 this.BrazoD.position.y=y-21;
 
