@@ -70,7 +70,7 @@ step=0.01;
 step1=0.02;
 //FiN
 }
-CuerpoRobot.prototype=new THREE.Mesh();
+CuerpoRobot.prototype=new THREE.Object3D();
 
 function Sensor(position, direction) {
   THREE.Raycaster.call(this,position, direction);
