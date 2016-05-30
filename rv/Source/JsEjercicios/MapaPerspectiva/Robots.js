@@ -70,8 +70,8 @@ camara.position.z=90;*/
 step=0.01;
 step1=0.02;
 //FiN
-this.add(this.Bot)
 }
+CuerpoRobot.prototype=new THREE.Mesh();
 
 function Sensor(position, direction) {
   THREE.Raycaster.call(this,position, direction);
