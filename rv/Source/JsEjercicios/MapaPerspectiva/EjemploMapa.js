@@ -83,26 +83,26 @@ function loop(){
   
   renderer.render(environment,camara);
 //INICIO  
-malla.rotation.x +=0.01;
-malla.rotation.y +=0.01;
+Camara.rotation.x +=0.01;
+Camara.rotation.y +=0.01;
 //malla.rotation.x +=0.01;
 //malla.rotation.y +=0.01;
 
-malla4.rotation.x +=0.01;
-malla3.rotation.x +=0.01;
+OrejaD.rotation.x +=0.01;
+OrejaI.rotation.x +=0.01;
 
-renderer.render(escena);
+//renderer.render(escena);
 
-if(Math.abs(malla9.rotation.x)>.3)
+if(Math.abs(PiernaD.rotation.x)>.3)
 step1=-step1;
-malla9.rotation.x +=step1;
-malla10.rotation.x -=step1;
+PieraD.rotation.x +=step1;
+BrazoD.rotation.x -=step1;
 
-if(Math.abs(malla8.rotation.x)>.3)
+if(Math.abs(PiernaI.rotation.x)>.3)
 step=-step;
 
-malla8.rotation.x +=step;
-malla7.rotation.x -=step;
+PiernaI.rotation.x +=step;
+BrazoI.rotation.x -=step;
 //FIN
 }
 
