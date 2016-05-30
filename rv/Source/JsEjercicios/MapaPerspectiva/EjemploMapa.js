@@ -61,6 +61,12 @@ function setup(){
   camara.position.x=-1;
   camara.rotation.x= 1.16;
   
+  var luzPuntual=new THREE.PointLight(0xFFFFFF);
+luzPuntual.position.x=-10;
+luzPuntual.position.y=-300;
+luzPuntual.position.z=100;
+luzPuntual.rotation.x=1.16;
+  
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
