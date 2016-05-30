@@ -3,27 +3,27 @@ THREE.Object3D.call(this);
   //  iNICIO
 THREE.ImageUtils.crossOrigin=' ';
 var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
-this.Camara= new THREE.Mesh(new THREE.SphereGeometry(Tmaño+2) ,new THREE.MeshPhongMaterial({map: texturaC}));
+this.Camara= new THREE.Mesh(new THREE.SphereGeometry(2) ,new THREE.MeshPhongMaterial({map: texturaC}));
 this.Camara.position.y=y+2;
 
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
-this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(Tmaño+1.5, Tmaño+1.5,Tmaño+4),new THREE.MeshPhongMaterial({map: texturaA}));
+this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5,4),new THREE.MeshPhongMaterial({map: texturaA}));
 this.Antena.position.y=y-2;
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
-this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+10,Tmaño+10,Tmaño+2.5),new THREE.MeshPhongMaterial({map: texturaR}));
+this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(10,10,2.5),new THREE.MeshPhongMaterial({map: texturaR}));
 this.Rostro.position.y=y-9;
 
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+5, Tmaño+2, Tmaño+2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
+this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(5, 2, 2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaI.position.x=x-7.5;
 this.OrejaI.position.y=y-9;
 
-this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+5, Tmaño+2, Tmaño+2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
+this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( 5, 2,2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaD.position.x=x+7.5;
 this.OrejaD.position.y=y-9;
 
-this.Cuello= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+3, Tmaño+3, Tmaño+2.5),new THREE.MeshPhongMaterial({map: texturaO}));
+this.Cuello= new THREE.Mesh(new THREE.BoxGeometry(3,3,2.5),new THREE.MeshPhongMaterial({map: texturaO}));
 //malla5.position.x=7;
 this.Cuello.position.y=y-15;
 
@@ -33,23 +33,24 @@ this.Panza= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+9, Tmaño+9, Tmaño+5 )
 this.Panza.position.y=y-20;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaI.position.x=x-3;
 this.PiernaI.position.y=y-30;
 
-this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaD.position.x=x+3;
 this.PiernaD.position.y=y-30;
 
 var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
-this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+5,Tmaño+3),new THREE.MeshPhongMaterial({map: texturaB}));
+this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoI.position.x=x-6;
 this.BrazoI.position.y=y-21;
 
-this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño+3,Tmaño+5,Tmaño+3),new THREE.MeshPhongMaterial({map: texturaB}));
+this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoD.position.x=x+6;
 this.BrazoD.position.y=y-21;
 
+this.size=Tmaño;
 /*escena=new THREE.Scene();
 escena.add(malla);
 escena.add(malla1);
@@ -69,7 +70,7 @@ camara.position.z=90;*/
 step=0.01;
 step1=0.02;
 //FiN
-this.add(this.Camara,this.Rostro,this.Antena,this.PiernaI);
+this.add(this.Camara,this.Rostro,this.Antena,this.PiernaI,this.PiernaD,this.BrazoD,this.BrazoI);
 }
 CuerpoRobot.prototype=new THREE.Object3D();
 
