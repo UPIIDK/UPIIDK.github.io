@@ -88,7 +88,7 @@ function loop(){
 //malla.rotation.x +=0.01;
 //malla.rotation.y +=0.01;
 
-OrejaD.rotation.x +=0.01;
+/*OrejaD.rotation.x +=0.01;
 OrejaI.rotation.x +=0.01;
 
 //renderer.render(escena);
@@ -103,7 +103,7 @@ step=-step;
 
 PiernaI.rotation.x +=step;
 BrazoI.rotation.x -=step;
-//FIN
+//FIN*/
 }
 
 var environment, camara, renderer;
