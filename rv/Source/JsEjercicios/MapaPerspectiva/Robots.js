@@ -1,99 +1,58 @@
-function Sensor(position, direction) {
-  THREE.Raycaster.call(this,position, direction);
-  this.colision = false;
-}
-
-Sensor.prototype = new THREE.Raycaster();
-
-function Robot (size, x,y){
-  Agent.call(this,x,y);
-  var texturar=THREE.ImageUtils.loadTexture('https://UPIIDK.github.io/rv/Imagenes/LLanta.jpg');
-  this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
-  this.actuator.commands=[];
-  this.add(this.actuator);
-//  iNICIO
-  THREE.ImageUtils.crossOrigin=' ';
-var textura= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
-var material= new THREE.MeshPhongMaterial({map: textura});
-var forma= new THREE.SphereGeometry(2);
-malla= new THREE.Mesh(forma,material);
-malla.position.y=y+2;
-
+function CuerpoRobot(Tmaño,x,y){
+THREE.Object3D.call(this);
+  //  iNICIO
 THREE.ImageUtils.crossOrigin=' ';
-var textura1= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
-var material1= new THREE.MeshPhongMaterial({map: textura1});
-var forma1=new THREE.CylinderGeometry(1.5, 1.5,4);
-malla1= new THREE.Mesh(forma1,material1);
-malla1.position.y=y-2;
+var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
+this.Camara= new THREE.Mesh(new THREE.SphereGeometry(2) ,new THREE.MeshPhongMaterial({map: texturaC}));
+this.Camara.position.y=y+2;
 
-var textura2= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
-var material2= new THREE.MeshPhongMaterial({map: textura2});
-var forma2=new THREE.BoxGeometry(10,10,2.5);
-malla2= new THREE.Mesh(forma2,material2);
-malla2.position.y=y-9;
+var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
+this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5,4),new THREE.MeshPhongMaterial({map: texturaA}));
+this.Antena.position.y=y-2;
+
+var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
+this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(10,10,2.5),new THREE.MeshPhongMaterial({map: texturaR}));
+this.Rostro.position.y=y-9;
 
 var textura3= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-var material3= new THREE.MeshPhongMaterial({map: textura3});
-var forma3=new THREE.BoxGeometry( 5, 2, 2.5 )
-malla3= new THREE.Mesh(forma3,material3);
-malla3.position.x=x-7.5;
-malla3.position.y=y-9;
+this.= new THREE.Mesh(new THREE.BoxGeometry( 5, 2, 2.5 ),new THREE.MeshPhongMaterial({map: textura3}));
+this.malla3.position.x=x-7.5;
+this.malla3.position.y=y-9;
 
 var textura4= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-var material4= new THREE.MeshPhongMaterial({map: textura4});
-var forma4=new THREE.BoxGeometry( 5, 2, 2.5 )
-malla4= new THREE.Mesh(forma4,material4);
-malla4.position.x=x+7.5;
-malla4.position.y=y-9;
+this.malla4= new THREE.Mesh(new THREE.BoxGeometry( 5, 2, 2.5 ),new THREE.MeshPhongMaterial({map: textura4}));
+this.malla4.position.x=x+7.5;
+this.malla4.position.y=y-9;
 
 var textura5= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-var material5= new THREE.MeshPhongMaterial({map: textura5});
-var forma5=new THREE.BoxGeometry( 3, 3, 2.5);
-malla5= new THREE.Mesh(forma5,material5);
+this.malla5= new THREE.Mesh(new THREE.BoxGeometry( 3, 3, 2.5),new THREE.MeshPhongMaterial({map: textura5}));
 //malla5.position.x=7;
-malla5.position.y=y-15;
+this.malla5.position.y=y-15;
 
 var textura6= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
-var material6= new THREE.MeshPhongMaterial({map: textura6});
-var forma6=new THREE.BoxGeometry( 9, 9, 5 )
-malla6= new THREE.Mesh(forma6,material6);
+malla6= new THREE.Mesh(new THREE.BoxGeometry( 9, 9, 5 ),new THREE.MeshPhongMaterial({map: textura6}));
 //malla5.position.x=7;
 malla6.position.y=y-20;
 
 var textura7= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-var material7= new THREE.MeshPhongMaterial({map: textura7});
-var forma7=new THREE.BoxGeometry(3,10,1);
-malla7= new THREE.Mesh(forma7,material7);
+malla7= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: textura7}));
 malla7.position.x=x-3;
 malla7.position.y=y-30;
 
 var textura8= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-var material8= new THREE.MeshPhongMaterial({map: textura8});
-var forma8=new THREE.BoxGeometry(3,10,1);
-malla8= new THREE.Mesh(forma8,material8);
+malla8= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: textura8}));
 malla8.position.x=x+3;
 malla8.position.y=y-30;
 
 var textura9= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
-var material9= new THREE.MeshPhongMaterial({map: textura9});
-var forma9=new THREE.BoxGeometry(3,5,3);
-malla9= new THREE.Mesh(forma9,material9);
+malla9= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: textura9}));
 malla9.position.x=x-6;
 malla9.position.y=y-21;
 
 var textura10= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
-var material10= new THREE.MeshPhongMaterial({map: textura10});
-var forma10=new THREE.BoxGeometry(3,5,3);
-malla10= new THREE.Mesh(forma10,material10);
+malla10= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: textura10}));
 malla10.position.x=x+6;
 malla10.position.y=y-21;
-
-/*var luzPuntual=new THREE.PointLight(0xFFFFFF);
-luzPuntual.position.x=500;
-luzPuntual.position.y=500;
-luzPuntual.position.z=500;
-*/
 
 escena=new THREE.Scene();
 escena.add(malla);
@@ -113,11 +72,25 @@ escena.add(malla10);
 camara.position.z=90;*/
 step=0.01;
 step1=0.02;
+//FiN
 }
 
+function Sensor(position, direction) {
+  THREE.Raycaster.call(this,position, direction);
+  this.colision = false;
+}
 
-//FiN
+Sensor.prototype = new THREE.Raycaster();
 
+function Robot (size, x,y){
+  Agent.call(this,x,y);
+  //var texturar=THREE.ImageUtils.loadTexture('https://UPIIDK.github.io/rv/Imagenes/LLanta.jpg');
+  this.sensor = new Sensor();
+  //this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
+  this.actuator=CuerpoRobot(size,x,y);
+  this.actuator.commands=[];
+  this.add(this.actuator);
+}
 
 Robot.prototype = new Agent();
 
