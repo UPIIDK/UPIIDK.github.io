@@ -14,47 +14,43 @@ var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(10,10,2.5),new THREE.MeshPhongMaterial({map: texturaR}));
 this.Rostro.position.y=y-9;
 
-var textura3= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-this.= new THREE.Mesh(new THREE.BoxGeometry( 5, 2, 2.5 ),new THREE.MeshPhongMaterial({map: textura3}));
-this.malla3.position.x=x-7.5;
-this.malla3.position.y=y-9;
+var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
+this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry( 5, 2, 2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
+this.OrejaI.position.x=x-7.5;
+this.OrejaI.position.y=y-9;
 
-var textura4= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-this.malla4= new THREE.Mesh(new THREE.BoxGeometry( 5, 2, 2.5 ),new THREE.MeshPhongMaterial({map: textura4}));
-this.malla4.position.x=x+7.5;
-this.malla4.position.y=y-9;
+this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( 5, 2, 2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
+this.OrejaD.position.x=x+7.5;
+this.OrejaD.position.y=y-9;
 
-var textura5= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
-this.malla5= new THREE.Mesh(new THREE.BoxGeometry( 3, 3, 2.5),new THREE.MeshPhongMaterial({map: textura5}));
+this.Cuello= new THREE.Mesh(new THREE.BoxGeometry( 3, 3, 2.5),new THREE.MeshPhongMaterial({map: texturaO}));
 //malla5.position.x=7;
-this.malla5.position.y=y-15;
+this.Cuello.position.y=y-15;
 
-var textura6= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
-malla6= new THREE.Mesh(new THREE.BoxGeometry( 9, 9, 5 ),new THREE.MeshPhongMaterial({map: textura6}));
+var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
+this.Panza= new THREE.Mesh(new THREE.BoxGeometry( 9, 9, 5 ),new THREE.MeshPhongMaterial({map: texturaP}));
 //malla5.position.x=7;
-malla6.position.y=y-20;
+this.Panza.position.y=y-20;
 
-var textura7= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-malla7= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: textura7}));
-malla7.position.x=x-3;
-malla7.position.y=y-30;
+var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
+this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaI.position.x=x-3;
+this.PiernaI.position.y=y-30;
 
-var textura8= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-malla8= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: textura8}));
-malla8.position.x=x+3;
-malla8.position.y=y-30;
+this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaD.position.x=x+3;
+this.PiernaD.position.y=y-30;
 
-var textura9= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
-malla9= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: textura9}));
-malla9.position.x=x-6;
-malla9.position.y=y-21;
+var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
+this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: texturaB}));
+this.BrazoI.position.x=x-6;
+this.BrazoI.position.y=y-21;
 
-var textura10= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
-malla10= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: textura10}));
-malla10.position.x=x+6;
-malla10.position.y=y-21;
+this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMaterial({map: texturaB}));
+this.BrazoD.position.x=x+6;
+this.BrazoD.position.y=y-21;
 
-escena=new THREE.Scene();
+/*escena=new THREE.Scene();
 escena.add(malla);
 escena.add(malla1);
 escena.add(malla2);
@@ -65,7 +61,7 @@ escena.add(malla6);
 escena.add(malla7);
 escena.add(malla8);
 escena.add(malla9);
-escena.add(malla10);
+escena.add(malla10);*/
 //escena.add(luzPuntual);
 
 /*camara=new THREE.PerspectiveCamera();
@@ -87,7 +83,7 @@ function Robot (size, x,y){
   //var texturar=THREE.ImageUtils.loadTexture('https://UPIIDK.github.io/rv/Imagenes/LLanta.jpg');
   this.sensor = new Sensor();
   //this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
-  this.actuator=CuerpoRobot(size,x,y);
+  this.actuator=new CuerpoRobot(size,x,y);
   this.actuator.commands=[];
   this.add(this.actuator);
 }
