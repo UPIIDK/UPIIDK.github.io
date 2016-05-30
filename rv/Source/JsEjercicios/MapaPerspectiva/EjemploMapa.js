@@ -83,8 +83,8 @@ function loop(){
   
   renderer.render(environment,camara);
 //INICIO  
-Camara.rotation.x +=0.01;
-Camara.rotation.y +=0.01;
+//Camara.rotation.x +=0.01;
+//Camara.rotation.y +=0.01;
 //malla.rotation.x +=0.01;
 //malla.rotation.y +=0.01;
 
