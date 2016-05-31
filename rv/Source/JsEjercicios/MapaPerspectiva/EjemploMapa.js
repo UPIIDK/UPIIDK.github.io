@@ -82,28 +82,7 @@ function loop(){
   environment.act();
   
   renderer.render(environment,camara);
-//INICIO
-//Robot.Camara.rotation.x +=0.01;
-//Camara.rotation.y +=0.01;
-//malla.rotation.x +=0.01;
-//malla.rotation.y +=0.01;
 
-//Robot.OrejaD.rotation.x +=0.01;
-/*OrejaI.rotation.x +=0.01;
-
-//renderer.render(escena);
-
-if(Math.abs(PiernaD.rotation.x)>.3)
-step1=-step1;
-PieraD.rotation.x +=step1;
-BrazoD.rotation.x -=step1;
-
-if(Math.abs(PiernaI.rotation.x)>.3)
-step=-step;
-
-PiernaI.rotation.x +=step;
-BrazoI.rotation.x -=step;
-//FIN*/
 }
 
 var environment, camara, renderer;
