@@ -17,6 +17,7 @@ Environment.prototype.setMap=function(map){
   for(var j=0;j<(map.length)-1;j++){
     if(map[i][j] === "x")
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
+      this.add(new Wall(1,j-_offset,-(i-_offset),1));
          if(map[i][j] === "r"){
     this.add(new Robot(1,j-_offset,-(i-_offset)));
     this.add(new Wall(1,j-_offset,-(i-_offset),-1));}
