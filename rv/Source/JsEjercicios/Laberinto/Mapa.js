@@ -88,8 +88,6 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera();
   //Valores obtenidos a prueba y error
-  camara.position.x=1;
-  camara.position.y=3;
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
   camara.rotation.x=4.71;
   camara.rotation.y=-Math.PI/2;
