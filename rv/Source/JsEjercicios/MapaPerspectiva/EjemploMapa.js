@@ -82,7 +82,9 @@ function loop(){
   environment.act();
   
   renderer.render(environment,camara);
-//INICIO  
+//INICIO
+
+//Camara.rotation.y +=0.01;
 //malla.rotation.x +=0.01;
 //malla.rotation.y +=0.01;
 
