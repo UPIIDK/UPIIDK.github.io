@@ -15,9 +15,7 @@ function Meta(size,x,y,z){
  this.size=size;
  this.position.x=x;
  this.position.y=y;
-luzMeta.position.z=10;
-luzMeta.position.x=x;
-luzMeta.position.y=y;
+luzMeta.position.set(x,y,10);
 luzMeta.rotation.y=Math.PI/2;
 }
 Meta.prototype=new THREE.Mesh();
@@ -107,8 +105,11 @@ function setup(){
   camara.rotation.z=-Math.PI;
   
 //Posicion luces 
-luzPuntual.position=camara.position;;
+luzPuntual.position.set=camara.position;
 luzPuntual.rotation=camara.rotation;
+luzPuntaul.shadow.camera.near = 5;
+luzPuntual.shadow.camera.far = 40;
+luzPuntual.shadow.camera.fov = 0.3;
 luzPuntual.castShadow =true;
   
   renderer=new THREE.WebGLRenderer();
