@@ -98,13 +98,13 @@ function Robot (size, x,y,z){
 Robot.prototype = new Agent();
 
 Robot.prototype.sense = function(environment){
-  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
+  /*this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
   var obstaculo= this.sensor.intersectObjects(environment.children,true);
   if((obstaculo.length>0 && (obstaculo[0].distance<=.5)))
     this.sensor.colision=true;
   else
     this.sensor.colision=false;
-    /*
+    */
     this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 //this.sensor.set(this.position, new THREE.Vector3(12,12,0));
 this.sensor2.set(this.position, new THREE.Vector3(1,0,0));
@@ -143,7 +143,6 @@ if((obstaculo5.length>0&&(obstaculo5[0].distance<=1)))
  else
   this.sensor5.colision=false;
 
-    */
 }
 //las operaciones posibles con este robot son
   //goStraight()
@@ -151,42 +150,28 @@ if((obstaculo5.length>0&&(obstaculo5[0].distance<=1)))
   //rotateCCW()
   //Stop()
 Robot.prototype.plan=function (environment){
-  this.actuator.commands=[];
-  if (this.sensor.colision==true){
-    this.actuator.commands.push('Stop');
-    this.actuator.commands.push('rotateCCW')
-    //if(this.sensor.colision==true)
-    //this.actuator.commands.push('Animation');
-}
-  else{
-    this.actuator.commands.push('goStraight');
-    //this.actuator.commands.push('Animation');
-  }
-  /*
    this.actuator.commands=[];
-
-
   if(this.sensor.colision==false)
-  this.actuator.commands.push('Sigue');
+  this.actuator.commands.push('goStraight');
 
 else if(px==10.499999999999975 && py==11.599999999999953)
-this.actuator.commands.push('Para');
+this.actuator.commands.push('Stop');
 else if(this.sensor3.colision==true && this.sensor5.colision==true)
-  this.actuator.commands.push('Derecha');
+  this.actuator.commands.push('rotateCW');
 
 else if(this.sensor3.colision==true && this.sensor4.colision==true)
-  this.actuator.commands.push('Derecha');
+  this.actuator.commands.push('rotateCW');
 
 else if(this.sensor2.colision==true && this.sensor4.colision==false)
-  this.actuator.commands.push('Izquierda');
+  this.actuator.commands.push('rotateCCW');
 
 
  else if(this.sensor.colision==true && this.sensor2.colision==true)
-   this.actuator.commands.push('Izquierda');
+   this.actuator.commands.push('rotateCCW');
 
 else if(this.sensor.colision==true )
-  this.actuator.commands.push('Izquierda');
-  */
+  this.actuator.commands.push('rotateCCW');
+  
 }
 Robot.prototype.act=function(environment){
   var command=this.actuator.commands.pop();
