@@ -120,8 +120,8 @@ var obstaculo4 = this.sensor4.intersectObjects(environment.children,true);
 var obstaculo5 = this.sensor5.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1))){
   this.sensor.colision=true;
-  console.log(var px);
-  console.log(var py);}
+  console.log(xR);
+  console.log(yR);}
  else
   this.sensor.colision=false;
 
@@ -156,7 +156,7 @@ Robot.prototype.plan=function (environment){
   if(this.sensor.colision==false)
   this.actuator.commands.push('goStraight');
 
-else if(px==10.499999999999975 && py==11.599999999999953)
+else if(xR==10.499999999999975 && yR==11.599999999999953)
 this.actuator.commands.push('Stop');
 else if(this.sensor3.colision==true && this.sensor5.colision==true)
   this.actuator.commands.push('rotateCW');
