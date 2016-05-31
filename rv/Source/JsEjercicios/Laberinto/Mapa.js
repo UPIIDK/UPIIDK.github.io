@@ -74,9 +74,11 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera();
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
+  camara.rotation.x=Math.PI/2;
   
   var luzPuntual=new THREE.PointLight(0xFFFFFF);
 luzPuntual.position.z=camara.position.z;
+luzPuntual.rotation.x=camara.rotation.x;
 
   
   renderer=new THREE.WebGLRenderer();
