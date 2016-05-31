@@ -24,16 +24,16 @@ function muestraInformacion(elEvento) {
  }
  //Girar Camara
  if(evento.keyCode==87){//A
- camara.rotation.x+=Math.PI/4;
+ camara.rotation.x+=Math.PI/16;
  }
  if(evento.keyCode==83){//D
- camara.rotation.x-=Math.PI/4;
+ camara.rotation.x-=Math.PI/16;
  }
  if(evento.keyCode==68){//S
- camara.rotation.y-=Math.PI/4;
+ camara.rotation.y-=Math.PI/16;
  }
   if(evento.keyCode==65){//W
- camara.rotation.y+=Math.PI/4;
+ camara.rotation.y+=Math.PI/16;
  }
  //ZOOM
    if(evento.keyCode==32){//Space
