@@ -1,4 +1,4 @@
-function CuerpoRobot(Tmaño,x,y){
+function CuerpoRobot(Tmaño){
 THREE.Object3D.call(this);
   //  iNICIO
 THREE.ImageUtils.crossOrigin=' ';
@@ -51,6 +51,7 @@ this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(3,5,3),new THREE.MeshPhongMate
 this.BrazoD.position.x=6;
 this.BrazoD.position.y=-21;
 
+this.size=Tmaño;
 step=0.01;
 step1=0.02;
 //FiN
@@ -70,9 +71,9 @@ function Robot (size, x,y){
   //var texturar=THREE.ImageUtils.loadTexture('https://UPIIDK.github.io/rv/Imagenes/LLanta.jpg');
   this.sensor = new Sensor();
   //this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
-  this.actuator=new CuerpoRobot(size,x,y);
+  this.actuator=new CuerpoRobot(size);
   this.actuator.commands=[];
-  this.size=size;
+  this.actuator.size=size;
   this.add(this.actuator);
 }
 
