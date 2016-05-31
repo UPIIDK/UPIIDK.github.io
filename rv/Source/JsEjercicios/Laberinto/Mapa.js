@@ -40,7 +40,10 @@ Environment.prototype.setMap=function(map){
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
          if(map[i][j] === "r"){
     this.add(new Robot(1,j-_offset,-(i-_offset)));
-    this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));}
+    this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
+        var yC=i-_offset;
+        var xC=j-_offset;
+         }
     if(map[i][j]!=="'\0'")
     {
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
@@ -83,17 +86,19 @@ function setup(){
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
-  
+  camara=new THREE.PerspectiveCamera();
+ luzPuntual=new THREE.PointLight(0xFFFFFF);
   environment.setMap(mapa);
   
-  camara=new THREE.PerspectiveCamera();
   //Valores obtenidos a prueba y error
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
+  camara.position.x=xC;
+  camara.position.y=yC;
   camara.rotation.x=4.71;
   camara.rotation.y=-Math.PI/2;
   camara.rotation.z=-Math.PI;
   
- luzPuntual=new THREE.PointLight(0xFFFFFF);
+ 
 luzPuntual.position.z=camara.position.z;
 luzPuntual.rotation.x=camara.rotation.x;
 luzPuntual.rotation.y=camara.rotation.y;
