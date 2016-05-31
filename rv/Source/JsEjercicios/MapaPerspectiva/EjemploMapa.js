@@ -3,7 +3,7 @@ function Wall(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
 var texturaW= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map: texturaW}));
-  this.size=size;
+  //this.size=size;
   this.position.x=x;
   this.position.y=y;
   this.position.z=z;
