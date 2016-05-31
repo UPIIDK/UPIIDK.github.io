@@ -134,7 +134,7 @@ Robot.prototype.act=function(environment){
   
   Robot.prototype.operations={};
   Robot.prototype.operations.Animation= function(robot){
-robot.Camara.rotation.x +=0.01;
+/*robot.Camara.rotation.x +=0.01;
 robot.Camara.rotation.y +=0.01;
 
 robot.OrejaD.rotation.x +=0.01;
