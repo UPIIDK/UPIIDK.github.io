@@ -50,13 +50,8 @@ Environment.prototype.setMap=function(map){
     this.add(new Techo(1,j-_offset,-(i-_offset),(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]==="F"){
-    luzMeta=new THREE.PointLight(0x00FF00);
-    var xl=j-_offset;;
-    var yl=-(i-_offset);
-luzMeta.position.z=10;
-luzMeta.position.x=xl;
-luzMeta.position.y=yl;
-environment.add(luzMeta);
+     xl=j-_offset;;
+     yl=-(i-_offset);
   }
   }
 }
@@ -87,10 +82,13 @@ function setup(){
   
   environment = new Environment();
   camara=new THREE.PerspectiveCamera();
+  //Luces
  luzPuntual=new THREE.PointLight(0xFFFFFF);
+ luzMeta=new THREE.PointLight(0x00FF00);
   environment.setMap(mapa);
   
   //Valores obtenidos a prueba y error
+    //Position, inicial de la camara, inicia con el robot
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
   camara.position.x=xC;
   camara.position.y=yC;
@@ -98,18 +96,22 @@ function setup(){
   camara.rotation.y=-Math.PI/2;
   camara.rotation.z=-Math.PI;
   
- 
+//Posicion luces 
 luzPuntual.position.z=camara.position.z;
 luzPuntual.rotation.x=camara.rotation.x;
 luzPuntual.rotation.y=camara.rotation.y;
 luzPuntual.rotation.z=camara.rotation.z;
+luzMeta.position.z=10;
+luzMeta.position.x=xl;
+luzMeta.position.y=yl;
+luzMeta.rotation.y=Math.PI/2;
 
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camara,luzPuntual);
+  environment.add(camara,luzPuntual,luzMeta);
 }
 
 function loop(){
@@ -123,6 +125,6 @@ function loop(){
 
 }
 
-var environment, camara, renderer,luzMeta,luzPuntual,xR,yR,xC,yC;
+var environment, camara, renderer,luzMeta,luzPuntual,xR,yR,xC,yC,xl,yl;
 setup();
 loop();
