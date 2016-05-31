@@ -22,7 +22,7 @@ this.Rostro.position.z=z+(0.25/Tmaño)+(0.5/Tmaño)+(1/Tmaño);
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(0.2/Tmaño, 0.5/Tmaño, 0.25/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaI.position.x=-0.75+x;
-this.OrejaI.posi(1/Tmañon.y=0.5/y;
+this.OrejaI.position.y=0.5/y;
 this.OrejaI.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( 0.2/Tmaño, 0.5/Tmaño, 0.25/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
