@@ -39,6 +39,7 @@ function muestraInformacion(elEvento) {
  }
  if(evento.keyCode==86){//Q
  camara.rotation.y-=Math.PI/16;
+ }
  //ZOOM
    if(evento.keyCode==32){//Space
  camara.position.z-=1;
