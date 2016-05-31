@@ -11,7 +11,7 @@ var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/
 Wall.prototype=new THREE.Mesh();
 
 function Meta(size,x,y,z){
- THREE.Mesh.call(this,new THREE.SphereGeometry(size), new THREE.MeshBasicMaterial({color:'green'})); 
+ THREE.Mesh.call(this,new THREE.SphereGeometry(size), new THREE.MeshPhongMaterial({color:'green'})); 
  this.size=size;
  this.position.x=x;
  this.position.y=y;
@@ -115,7 +115,7 @@ luzPuntual.castShadow =true;
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camara,luzPuntual);
+  environment.add(camara,luzPuntual,luzMeta);
 }
 
 function loop(){
