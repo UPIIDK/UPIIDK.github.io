@@ -15,19 +15,19 @@ this.Antena.rotation.x=Math.PI/2;
 this.Antena.position.z=z+(1/Tmaño)+(0.5/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
-this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.9/Tmaño,0.9/Tmaño,0.5/Tmaño),new THREE.MeshPhongMaterial({map: texturaR}));
+this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.6/Tmaño,0.6/Tmaño,0.5/Tmaño),new THREE.MeshPhongMaterial({map: texturaR}));
 this.Rostro.position.y=0.5/y;
 var AR=1/Tmaño;//Altura Rostro
-this.Rostro.position.z=z+(1/Tmaño)+(0.9/Tmaño)+(0.25/Tmaño);;
+this.Rostro.position.z=z+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
-this.OrejaI.position.x=-(0.25/Tmaño)/x;
+this.OrejaI.position.x=-(0.6/Tmaño)/x;
 this.OrejaI.position.y=0.5/y;
 this.OrejaI.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( 0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
-this.OrejaD.position.x=(0.25/Tmaño)/x;
+this.OrejaD.position.x=(0.6/Tmaño)/x;
 this.OrejaD.position.y=0.5/y;
 this.OrejaD.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
@@ -55,13 +55,13 @@ this.Panza.position.z=z+(1/Tmaño);
 this.Panza.rotation.z=Math.PI;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(0.3/Tmaño,0.1/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(0.1/Tmaño,0.1/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaI.position.x=-0.3/x;
 this.PiernaI.position.y=0.5/y;
 this.PiernaI.position.z=z;
 var APS=1/Tmaño;
 
-this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(0.3/Tmaño,0.1/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(0.1/Tmaño,0.1/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaD.position.x=0.3/x;
 this.PiernaD.position.y=0.5/y;
 this.PiernaD.position.z=z;
