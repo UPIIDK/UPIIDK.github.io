@@ -216,7 +216,7 @@ robot.BrazoI.rotation.x -=step;
   camara.position.x+=distance*Math.cos(robot.rotation.z);
   camara.position.y+=distance*Math.sin(robot.rotation.z);
   luzPuntual.position.x+=distance*Math.cos(robot.rotation.z);
-  luzPuntual.position.y+=distance*Math.cos(robot.rotation.z);
+  luzPuntual.position.y+=distance*Math.sin(robot.rotation.z);
   xR=robot.position.x;
   yR=robot.position.y;
   camara.updateProjectionMatrix();
