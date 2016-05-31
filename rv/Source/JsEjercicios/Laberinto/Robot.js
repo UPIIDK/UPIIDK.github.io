@@ -185,8 +185,8 @@ Robot.prototype.operations.Stop=function(robot, distance){
     //Primera Persona
   robot.position .x+= 0;
   robot.position .y+= 0;
-  camara.position.x+=distance*Math.cos(robot.rotation.z);
-  camara.position.y+= distance*Math.sin(robot.rotation.z);
+  camara.position.x+=0;
+  camara.position.y+= 0;
  /* luzPuntual.position.x+=distance*Math.cos(robot.rotation.z);
   luzPuntual.position.y+=distance*Math.cos(robot.rotation.z);
 */}
