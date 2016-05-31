@@ -22,10 +22,10 @@ function muestraInformacion(elEvento) {
  camara.position.y+=1;
  }
  //Girar Camara
- if(evento.keyCode==87){//A
+ if(evento.keyCode==86){//Q
  camara.rotation.x+=Math.PI/16;
  }
- if(evento.keyCode==83){//D
+ if(evento.keyCode==82){//E
  camara.rotation.x-=Math.PI/16;
  }
  if(evento.keyCode==68){//S
@@ -34,10 +34,10 @@ function muestraInformacion(elEvento) {
   if(evento.keyCode==65){//W
  camara.rotation.z+=Math.PI/16;
  }
- if(event.keyCode==81){//E
+ if(event.keyCode==83){//D
  camara.rotation.y+=Math.PI/16;
  }
- if(evento.keyCode==86){//Q
+ if(evento.keyCode==87){//A
  camara.rotation.y-=Math.PI/16;
  }
  //ZOOM
