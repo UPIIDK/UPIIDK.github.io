@@ -153,11 +153,11 @@ robot.BrazoI.rotation.x -=step;
   }
   Robot.prototype.operations.goStraight= function(robot, distance){
   if(distance== undefined)
-    distance= .05;
+    distance= .01;
   robot.position.x+= distance*Math.cos(robot.rotation.z);
   robot.position.y+= distance*Math.sin(robot.rotation.z);
-  camara.position.x+=robot.position.x;
-  camara.position.y+=robot.position.y;
+  camara.position.x+=distance*Math.cos(robot.rotation.z);
+  camara.position.y+=distance*Math.sin(robot.rotation.z);
   /*luzPuntual.position.x+=distance*Math.cos(robot.rotation.z);
   luzPuntual.position.y+=distance*Math.cos(robot.rotation.z);
 */}
