@@ -140,7 +140,7 @@ robot.Camara.rotation.y +=0.01;
 robot.OrejaD.rotation.x +=0.01;
 robot.OrejaI.rotation.x +=0.01;
 
-if(Math.abs(robot.PiernaD.rotation.x)>.3){
+/*if(Math.abs(robot.PiernaD.rotation.x)>.3){
 step1=-step1;
 robot.PieraD.rotation.x +=step1;
 robot.BrazoD.rotation.x -=step1;
