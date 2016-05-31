@@ -12,7 +12,7 @@ var texturaW= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3
 Wall.prototype=new THREE.Mesh();
 
 Environment.prototype.setMap=function(map){
-  var _offset=Math.floor(map.length/2);
+  var _offset=Math.floor(map.length);
   for(var i=0;i<map.length;i++)
   for(var j=0;j<(map.length)-1;j++){
     if(map[i][j] === "x")
