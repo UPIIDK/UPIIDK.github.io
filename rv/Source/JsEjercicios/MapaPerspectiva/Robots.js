@@ -40,12 +40,12 @@ var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8
 this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.3/Tmaño,0.5/Tmaño),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoI.position.x=-0.6/x;
 this.BrazoI.position.y=0.5/y;
-this.BrazoI.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño);
+this.BrazoI.position.z=z+(1/Tmaño)+(0.5/Tmaño);
 
 this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.3/Tmaño,0.5/Tmaño),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoD.position.x=0.6/x;
 this.BrazoD.position.y=0.5/y;
-this.BrazoD.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño);
+this.BrazoD.position.z=z+(1/Tmaño)+(0.5/Tmaño);
 
 var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
 this.Panza= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.5/Tmaño,0.9/Tmaño ),new THREE.MeshPhongMaterial({map: texturaP}));
