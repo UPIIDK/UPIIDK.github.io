@@ -5,52 +5,52 @@ THREE.ImageUtils.crossOrigin=' ';
 var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
 this.Camara= new THREE.Mesh(new THREE.SphereGeometry(0.2/Tmaño) ,new THREE.MeshPhongMaterial({map: texturaC}));
 this.Camara.position.y=0.5/y;
-this.Camara.position.z=z+AA+AR+AC+AP+APS;
+this.Camara.position.z=z+(0.4/Tmaño)+(0.25/Tmaño)+(0.25/Tmaño)+(1/Tmaño))+(1/Tmaño);
 
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(0.4/Tmaño,0.4/Tmaño,0.15/Tmaño),new THREE.MeshPhongMaterial({map: texturaA}));
 var AA=0.4/Tmaño;
 this.Antena.position.y=0.5/y;
-this.Antena.position.z=z+AR+AC+AP+APS;
+this.Antena.position.z=z+AR+(0.25/Tmaño)+(0.(1/Tmaño)maño)+(1/Tmaño);
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.25/Tmaño,0.25/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaR}));
 this.Rostro.position.y=0.5/y;
 var AR=0.25/Tmaño;//Altura Rostro
-this.Rostro.position.z=z+AC+AP+APS;
+this.Rost(1/Tmaño)position.z=z+(0.25/Tmaño)+(0.5/Tmaño)+(1/Tmaño);
 
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(0.2/Tmaño, 0.5/Tmaño, 0.25/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaI.position.x=-0.75+x;
-this.OrejaI.position.y=0.5/y;
-this.OrejaI.position.z=z+0.25+APS+AP+AR;
+this.OrejaI.posi(1/Tmañon.y=0.5/y;
+this.OrejaI.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( 0.2/Tmaño, 0.5/Tmaño, 0.25/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaD.position.x=x+0.75;
 this.OrejaD.position.y=0.5/y;
-this.OrejaD.position.z=z+0.25+APS+AP+AR;
+thi(1/Tmaño)rejaD.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 this.Cuello= new THREE.Mesh(new THREE.BoxGeometry(0.25/Tmaño,0.25/Tmaño,0.3/Tmaño),new THREE.MeshPhongMaterial({map: texturaO}));
 var AC=0.25/Tmaño;//Altura Cuello
 this.Cuello.position.y=0.5/y;
-this.Cuello.position.z=z+AP+APS;
+thi(1/Tmaño)uello.position.z=z+(0.5/Tmaño)+(1/Tmaño);
 
 var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
 this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.3/Tmaño,0.5/Tmaño),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoI.position.x=-0.6+x;
 this.BrazoI.position.y=0.5/y;
-this.BrazoI.position.z=z+0.25+APS+AP;
+this.BrazoI.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño);
 
 this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.3/Tmaño,0.5/Tmaño),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoD.position.x=0.6+x;
 this.BrazoD.position.y=0.5/y;
-this.BrazoD.position.z=z+0.25+APS+AP;
+this.BrazoD.position.z=z+0.25+(1/Tmaño)+(0.5/Tmaño);
 
 var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
 this.Panza= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.5/Tmaño,0.9/Tmaño ),new THREE.MeshPhongMaterial({map: texturaP}));
 var AP=0.5/Tmaño;
 this.Panza.position.y=0.5/y;
-this.Panza.position.z=z+APS;
+this.Panza.position.z=z+(1/Tmaño);
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
 this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(0.1/Tmaño,0.3/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
@@ -63,7 +63,6 @@ this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(0.1/Tmaño,0.3/Tmaño,1/Tmañ
 this.PiernaD.position.x=0.3+x;
 this.PiernaD.position.y=0.5/y;
 this.PiernaD.position.z=z;
-
 
 step=0.01;
 step1=0.02;
