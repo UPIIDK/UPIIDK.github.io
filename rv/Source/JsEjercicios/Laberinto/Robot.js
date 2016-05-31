@@ -220,6 +220,7 @@ robot.BrazoI.rotation.x -=step;
   xR=robot.position.x;
   yR=robot.position.y;
   camara.updateProjectionMatrix();
+  environment.add(luzPuntual);
 }
 
 Robot.prototype.operations.rotateCW= function (robot,angle){
@@ -230,6 +231,7 @@ Robot.prototype.operations.rotateCW= function (robot,angle){
   camara.rotation.y+=angle;
    luzPuntual.rotation.z+=angle;
    camara.updateProjectionMatrix();
+   environment.add(luzPuntual);
 }
 
 Robot.prototype.operations.rotateCCW=function(robot,angle){
@@ -240,6 +242,7 @@ Robot.prototype.operations.rotateCCW=function(robot,angle){
   camara.rotation.y-=angle;
   camara.updateProjectionMatrix();
   luzPuntual.rotation.z+=angle;
+  environment.add(luzPuntual);
 }
 Robot.prototype.operations.Stop=function(robot, distance){
    if(distance== undefined)
@@ -249,8 +252,9 @@ Robot.prototype.operations.Stop=function(robot, distance){
   robot.position .y+=0;
   camara.position.x+=0;
   camara.position.y+=0;
- luzPuntual.position.x+=0;
+  luzPuntual.position.x+=0;
   luzPuntual.position.y+=0;
+  environment.add(luzPuntual);
   camara.updateProjectionMatrix();
   xR=robot.position.x;
   yR=robot.position.y;
