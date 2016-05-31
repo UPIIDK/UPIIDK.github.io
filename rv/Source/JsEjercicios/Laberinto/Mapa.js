@@ -1,7 +1,7 @@
 function Wall(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
 var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshLambertMaterial({map: texturaW}));
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size+1),new THREE.MeshLambertMaterial({map: texturaW}));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -21,6 +21,16 @@ var texturaP= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/
 }
 Piso.prototype=new THREE.Mesh();
 
+function Techo(size,x,y,z){
+  THREE.ImageUtils.crossOrigin=' ';
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshPhongMaterial({map: texturaP}));
+  this.size=size;
+  this.position.x=x;
+  this.position.y=y;
+  this.position.z=z;
+}
+Techo.prototype=new THREE.Mesh();
+
 Environment.prototype.setMap=function(map){
   var _offset=Math.floor(map.length/2);
   for(var i=0;i<map.length;i++)
@@ -33,6 +43,7 @@ Environment.prototype.setMap=function(map){
     if(map[i][j]!=="'\0'")
     {
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
+    this.add(new Techo(1,j-_offset,-(i-_offset),2));
     }
     if(map[i][j]==="F"){
     var luzMeta=new THREE.PointLight(0x00FF00);
