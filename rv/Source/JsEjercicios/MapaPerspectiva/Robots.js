@@ -25,7 +25,7 @@ var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaI.position.x=((-0.6/Tmaño)+(-0.5/Tmaño))/x;
 this.OrejaI.position.y=0.5/y;
-this.OrejaI.position.z=z+(1/Tmaño)+(0.9/Tmaño)+(0.25/Tmaño);
+this.OrejaI.position.z=z+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( 0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaD.position.x=((0.6/Tmaño)+(0.5/Tmaño))/x;
