@@ -182,7 +182,7 @@ Robot.prototype.operations.rotateCCW=function(robot,angle){
     angle = Math.PI/2;
   //Primera Persona
   robot.rotation.z+=angle;
-  camara.rotation.y+=angle;
+  camara.rotation.y-=angle;
   //luzPuntual.rotation.z+=angle;
 }
 Robot.prototype.operations.Stop=function(robot, distance){
