@@ -5,12 +5,13 @@ THREE.ImageUtils.crossOrigin=' ';
 var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
 this.Camara= new THREE.Mesh(new THREE.SphereGeometry(0.2/Tmaño) ,new THREE.MeshPhongMaterial({map: texturaC}));
 this.Camara.position.y=0.5/y;
-this.Camara.position.z=z+(0.4/Tmaño)+(0.25/Tmaño)+(0.15/Tmaño)+(0.1/Tmaño)+(1/Tmaño);
+this.Camara.position.z=z+(0.4/Tmaño)+(0.1/Tmaño)+(0.5/Tmaño)+(0.3/Tmaño)+(1/Tmaño);
 
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(0.15/Tmaño,0.15/Tmaño,0.4/Tmaño),new THREE.MeshPhongMaterial({map: texturaA}));
 var AA=0.4/Tmaño;
 this.Antena.position.y=0.5/y;
+this.Antena.rotation.z=Math.PI/2;
 this.Antena.position.z=z+(0.25/Tmaño)+(1/Tmaño)+(0.1/Tmaño)+(1/Tmaño);
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
