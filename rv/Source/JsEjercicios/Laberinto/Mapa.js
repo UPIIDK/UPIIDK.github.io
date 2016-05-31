@@ -40,8 +40,8 @@ Environment.prototype.setMap=function(map){
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
          if(map[i][j] === "r"){
     this.add(new Robot(1,j-_offset,-(i-_offset)));
-    var xR=j-_offset;
-    var yR=-(i-_offset);
+     xR=j-_offset;
+     yR=-(i-_offset);
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));}
     if(map[i][j]!=="'\0'")
     {
@@ -50,8 +50,8 @@ Environment.prototype.setMap=function(map){
     }
     if(map[i][j]==="F"){
     luzMeta=new THREE.PointLight(0x00FF00);
-    var xl=i;
-    var yl=j;
+    var xl=j-_offset;;
+    var yl=-(i-_offset);
 luzMeta.position.z=10;
 luzMeta.position.x=xl;
 luzMeta.position.y=yl;
@@ -122,7 +122,7 @@ function loop(){
 
 }
 
-var environment, camara, renderer,luzMeta,luzPuntual;
+var environment, camara, renderer,luzMeta,luzPuntual,xR,yR;
 
 setup();
 loop();
