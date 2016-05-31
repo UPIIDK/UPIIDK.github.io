@@ -9,7 +9,7 @@ this.Camara.rotation.x +=0.01;
 
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(1.5/Tmaño, 1.5/Tmaño,4/Tmaño),new THREE.MeshPhongMaterial({map: texturaA}));
-this.Antena/.position.y=-2;
+this.Antena.position.y=-2;
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(10/Tmaño,10/Tmaño,2.5/Tmaño),new THREE.MeshPhongMaterial({map: texturaR}));
