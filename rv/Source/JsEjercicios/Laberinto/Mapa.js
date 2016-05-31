@@ -97,10 +97,8 @@ function setup(){
   camara.rotation.z=-Math.PI;
   
 //Posicion luces 
-luzPuntual.position.z=camara.position.z;
-luzPuntual.rotation.x=camara.rotation.x;
-luzPuntual.rotation.y=camara.rotation.y;
-luzPuntual.rotation.z=camara.rotation.z;
+luzPuntual.position=camara.position;;
+luzPuntual.rotation=camara.rotation;
 /*luzMeta.position.z=10;
 luzMeta.position.x=xl;
 luzMeta.position.y=yl;
@@ -111,7 +109,7 @@ luzMeta.rotation.y=Math.PI/2;
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camara,luzPuntual,luzMeta);
+  environment.add(camara,luzPuntual);
 }
 
 function loop(){
