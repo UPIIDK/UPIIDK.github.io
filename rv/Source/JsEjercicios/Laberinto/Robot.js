@@ -156,7 +156,7 @@ Robot.prototype.plan=function (environment){
   if(this.sensor.colision==false)
   this.actuator.commands.push('goStraight');
 
-else if(xR==10.499999999999975 && yR==11.599999999999953)
+else if(this.sensor.colision==true)
 this.actuator.commands.push('Stop');
 else if(this.sensor3.colision==true && this.sensor5.colision==true)
   this.actuator.commands.push('rotateCW');
@@ -225,7 +225,7 @@ robot.BrazoI.rotation.x -=step;
 
 Robot.prototype.operations.rotateCW= function (robot,angle){
   if(angle==undefined)
-   angle = -Math.PI/2;
+   angle = Math.PI/2;
    //Primera Persona
   robot.rotation.z+=angle;
   camara.rotation.y+=angle;
