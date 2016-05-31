@@ -39,7 +39,7 @@ Environment.prototype.setMap=function(map){
 luzMeta.position.z=10;
 luzMeta.position.x=j-_offset;
 luzMeta.position.y=-(i-_offset);
-enviroment.add(luzMeta);
+environment.add(luzMeta);
   }
   }
 }
