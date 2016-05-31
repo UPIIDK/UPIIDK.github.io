@@ -5,6 +5,8 @@ window.onload = function() {
                 "Tecla Z: Zoom out " + "<br>" + "Barra Espaciadora, Zoom In" + "<br>" + "Flecha, Mueven la camara" + 
                 "<br>" + "Letras AWSD, Rotan la Camara" 
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+  //Movimiento Robot
+  Camara.rotation.y +=0.01;
 }
  
 function muestraInformacion(elEvento) {
