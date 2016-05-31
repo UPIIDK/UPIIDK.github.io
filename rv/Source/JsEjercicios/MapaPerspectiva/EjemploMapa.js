@@ -22,7 +22,7 @@ Environment.prototype.setMap=function(map){
     this.add(new Wall(1,j-_offset,-(i-_offset),-1));}
     if(map[i][j]!=="'\0'")
     {
-    this.add(new Wall(2,j-_offset,-(i-_offset),-1));
+    this.add(new Wall(1,j-_offset,-(i-_offset),-1));
     }
   }
 }
