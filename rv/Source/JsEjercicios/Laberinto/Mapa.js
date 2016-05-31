@@ -73,10 +73,10 @@ function setup(){
   environment.setMap(mapa);
   
   camara=new THREE.PerspectiveCamera();
-  camara.position.z=30;
+  camara.position.z=(0.5/Tmaño)+(1/Tmaño)+(0.3/Tmaño);
   
   var luzPuntual=new THREE.PointLight(0xFFFFFF);
-luzPuntual.position.z=40;
+luzPuntual.position.z=camara.position.z;
 
   
   renderer=new THREE.WebGLRenderer();
