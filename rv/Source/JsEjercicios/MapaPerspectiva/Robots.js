@@ -10,7 +10,7 @@ this.Camara.position.z=z+(0.15/Tmaño)+(0.25/Tmaño)+(0.25/Tmaño)+(0.5/Tmaño)+
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(0.4/Tmaño,0.4/Tmaño,0.15/Tmaño),new THREE.MeshPhongMaterial({map: texturaA}));
 this.Antena.position.y=0.5/y;
-this.Antena.position.z=z+0.8;
+this.Antena.position.z=z+(0.25/Tmaño)+(0.25/Tmaño)+(0.5/Tmaño)+(0.3/Tmaño);
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.25/Tmaño,0.25/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaR}));
