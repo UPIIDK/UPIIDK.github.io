@@ -6,7 +6,7 @@ window.onload = function() {
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
  
-function muestraInformacion(elEvento) {
+function muestraInformacion(elEvento,robot) {
   var evento = window.event || elEvento;
  //Mover Camara
  if(evento.keyCode==39){
