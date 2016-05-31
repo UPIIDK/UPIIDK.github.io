@@ -22,23 +22,23 @@ function muestraInformacion(elEvento) {
  camara.position.y+=1;
  }
  //Girar Camara
- if(evento.keyCode==86){//Q
- camara.rotation.x+=Math.PI/16;
- }
- if(evento.keyCode==82){//E
- camara.rotation.x-=Math.PI/16;
- }
- if(evento.keyCode==68){//S
- camara.rotation.z-=Math.PI/16;
- }
-  if(evento.keyCode==65){//W
+ if(evento.keyCode==81){//Q
  camara.rotation.z+=Math.PI/16;
  }
- if(event.keyCode==83){//D
+ if(evento.keyCode==61){//E
+ camara.rotation.z-=Math.PI/16;
+ }
+ if(evento.keyCode==68){//D
+ camara.rotation.y-=Math.PI/16;
+ }
+  if(evento.keyCode==65){//A
  camara.rotation.y+=Math.PI/16;
  }
- if(evento.keyCode==87){//A
- camara.rotation.y-=Math.PI/16;
+ if(event.keyCode==83){//S
+ camara.rotation.x+=Math.PI/16;
+ }
+ if(evento.keyCode==87){//W
+ camara.rotation.x-=Math.PI/16;
  }
  //ZOOM
    if(evento.keyCode==32){//Space
