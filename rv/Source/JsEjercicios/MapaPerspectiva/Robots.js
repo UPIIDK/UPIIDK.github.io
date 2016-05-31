@@ -104,7 +104,7 @@ Robot.prototype.sense = function(environment){
 Robot.prototype.plan=function (environment){
   this.actuator.commands=[];
   if (this.sensor.colision==true)
-    this.actuator.commands.push('rotateCCW');
+    this.actuator.commands.push('Stop');
   else
     this.actuator.commands.push('goStraight');
 }
@@ -143,4 +143,10 @@ Robot.prototype.operations.rotateCCW=function(robot,angle){
   if(angle== undefined)
     angle = Math.PI/2;
   robot.rotation.z+=angle;
+}
+Robot.prototype.operations.Stop=function(robot, distance){
+   if(distance== undefined)
+    distance= .05;
+  robot.position .x+= 0;
+  robot.position .y+= 0;
 }
