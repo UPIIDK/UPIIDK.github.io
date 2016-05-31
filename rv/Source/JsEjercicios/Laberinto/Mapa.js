@@ -40,8 +40,6 @@ Environment.prototype.setMap=function(map){
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
          if(map[i][j] === "r"){
     this.add(new Robot(1,j-_offset,-(i-_offset)));
-     xR=j-_offset;
-     yR=-(i-_offset);
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));}
     if(map[i][j]!=="'\0'")
     {
@@ -90,8 +88,8 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera();
   //Valores obtenidos a prueba y error
-  camara.position.x=xR;
-  camara.position.y=yR;
+  camara.position.x=1;
+  camara.position.y=3;
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
   camara.rotation.x=4.71;
   camara.rotation.y=-Math.PI/2;
