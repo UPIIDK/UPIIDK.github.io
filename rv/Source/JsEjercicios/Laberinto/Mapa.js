@@ -47,7 +47,7 @@ Environment.prototype.setMap=function(map){
     if(map[i][j]!=="'\0'")
     {
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
-    this.add(new Techo(1,j-_offset,-(i-_offset),-0.9+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
+    this.add(new Techo(1,j-_offset,-(i-_offset),-0.4+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]=="F"){
      xl=j-_offset;;
@@ -101,11 +101,11 @@ luzPuntual.position.z=camara.position.z;
 luzPuntual.rotation.x=camara.rotation.x;
 luzPuntual.rotation.y=camara.rotation.y;
 luzPuntual.rotation.z=camara.rotation.z;
-luzMeta.position.z=10;
+/*luzMeta.position.z=10;
 luzMeta.position.x=xl;
 luzMeta.position.y=yl;
 luzMeta.rotation.y=Math.PI/2;
-
+*/
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
