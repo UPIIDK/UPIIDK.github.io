@@ -25,7 +25,7 @@ function muestraInformacion(elEvento) {
  if(evento.keyCode==81){//Q
  camara.rotation.x+=Math.PI/16;
  }
- if(evento.keyCode==61){//E
+ if(evento.keyCode==69){//E
  camara.rotation.x-=Math.PI/16;
  }
  if(evento.keyCode==68){//D
@@ -71,7 +71,7 @@ luzPuntual.rotation=camara.rotation;
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
  }
  
- var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+ /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-}
+*/}
