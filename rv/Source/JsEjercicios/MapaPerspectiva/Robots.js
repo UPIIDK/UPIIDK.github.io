@@ -133,22 +133,22 @@ Robot.prototype.act=function(environment){
   //Stop()
   
   Robot.prototype.operations={};
-  Robot.prototype.operations.Animation= function(robot, distance){
-Robot.Camara.rotation.x +=0.01;
-Robot.Camara.rotation.y +=0.01;
+  Robot.prototype.operations.Animation= function(robot){
+robot.Camara.rotation.x +=0.01;
+robot.Camara.rotation.y +=0.01;
 
-Robot.OrejaD.rotation.x +=0.01;
-Robot.OrejaI.rotation.x +=0.01;
+robot.OrejaD.rotation.x +=0.01;
+robot.OrejaI.rotation.x +=0.01;
 
-if(Math.abs(Robot.PiernaD.rotation.x)>.3){
+if(Math.abs(robot.PiernaD.rotation.x)>.3){
 step1=-step1;
-PieraD.rotation.x +=step1;
-BrazoD.rotation.x -=step1;
+robot.PieraD.rotation.x +=step1;
+robot.BrazoD.rotation.x -=step1;
 }
-if(Math.abs(Robot.PiernaI.rotation.x)>.3){
+if(Math.abs(robot.PiernaI.rotation.x)>.3){
 step=-step;
-PiernaI.rotation.x +=step;
-BrazoI.rotation.x -=step;
+robot.PiernaI.rotation.x +=step;
+robot.BrazoI.rotation.x -=step;
 }
 //FIN*/
   }
