@@ -32,22 +32,6 @@ this.Cuello= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/2.5,Tmaño/2.5,Tmaño/3
 this.Cuello.position.y=0.5/y;
 this.Cuello.position.z=z+3;
 
-var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
-this.Panza= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5,Tmaño/5,Tmaño/9 ),new THREE.MeshPhongMaterial({map: texturaP}));
-this.Panza.position.y=0.5/y;
-this.Panza.position.z=z+1;
-
-var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/1,Tmaño/10),new THREE.MeshPhongMaterial({map: texturaPn}));
-this.PiernaI.position.x=-3+x;
-this.PiernaI.position.y=0.5/y;
-this.PiernaI.position.z=z;
-
-this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/1,Tmaño/10),new THREE.MeshPhongMaterial({map: texturaPn}));
-this.PiernaD.position.x=3+x;
-this.PiernaD.position.y=0.5/y;
-this.PiernaD.position.z=z;
-
 var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
 this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5,Tmaño/3,Tmaño/5),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoI.position.x=-6+x;
@@ -58,6 +42,23 @@ this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5,Tmaño/3,Tmaño/5),ne
 this.BrazoD.position.x=6+x;
 this.BrazoD.position.y=0.5/y;
 this.BrazoD.position.z=z+2;
+
+var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
+this.Panza= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5,Tmaño/5,Tmaño/9 ),new THREE.MeshPhongMaterial({map: texturaP}));
+this.Panza.position.y=0.5/y;
+this.Panza.position.z=z+1;
+
+var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
+this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/1,Tmaño/10),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaI.position.x=-0.3+x;
+this.PiernaI.position.y=0.5/y;
+this.PiernaI.position.z=z;
+
+this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/1,Tmaño/10),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaD.position.x=0.3+x;
+this.PiernaD.position.y=0.5/y;
+this.PiernaD.position.z=z;
+
 
 step=0.01;
 step1=0.02;
