@@ -158,23 +158,28 @@ robot.BrazoI.rotation.x -=step;
     distance= .05;
   robot.position .x+= distance*Math.cos(robot.rotation.z);
   robot.position .y+= distance*Math.sin(robot.rotation.z);
-  
+  camara.position.x+=distance*Math.cos(robot.rotation.z);
+  camara.position.y+= distance*Math.sin(robot.rotation.z);
 }
 
 Robot.prototype.operations.rotateCW= function (robot,angle){
   if(angle==undefined)
    angle = -Math.PI/2;
   robot.rotation.z+=angle;
+  camara.rotation.z+=angle;
 }
 
 Robot.prototype.operations.rotateCCW=function(robot,angle){
   if(angle== undefined)
     angle = Math.PI/2;
   robot.rotation.z+=angle;
+  camara.rotation.z+=angle;
 }
 Robot.prototype.operations.Stop=function(robot, distance){
    if(distance== undefined)
     distance= .05;
   robot.position .x+= 0;
   robot.position .y+= 0;
+  camara.position.x+=distance*Math.cos(robot.rotation.z);
+  camara.position.y+= distance*Math.sin(robot.rotation.z);
 }
