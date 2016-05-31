@@ -4,7 +4,7 @@ THREE.Object3D.call(this);
 THREE.ImageUtils.crossOrigin=' ';
 var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
 this.Camara= new THREE.Mesh(new THREE.SphereGeometry(2/Tmaño) ,new THREE.MeshPhongMaterial({map: texturaC}));
-this.Camara./Tmañopos/Tmañoition.y=2;
+this.Camara.position.y=2;
 this.Camara.rotation.x +=0.01;
 
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
