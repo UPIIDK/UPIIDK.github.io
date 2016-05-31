@@ -83,12 +83,12 @@ function Sensor(position, direction) {
 
 Sensor.prototype = new THREE.Raycaster();
 
-function Robot (size, x,y){
+function Robot (size, x,y,z){
   Agent.call(this,x,y);
   //var texturar=THREE.ImageUtils.loadTexture('https://UPIIDK.github.io/rv/Imagenes/LLanta.jpg');
   this.sensor = new Sensor();
   //this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
-  this.actuator=new CuerpoRobot(size,x,y,0);
+  this.actuator=new CuerpoRobot(size,x,y,z);
   this.actuator.rotation.z=Math.PI/2;
   this.actuator.commands=[];
   this.actuator.size=size;
@@ -105,10 +105,16 @@ Robot.prototype.sense = function(environment){
   else
     this.sensor.colision=false;
 }
+//las operaciones posibles con este robot son
+  //goStraight()
+  //rotateCW()
+  //rotateCCW()
+  //Stop()
 Robot.prototype.plan=function (environment){
   this.actuator.commands=[];
   if (this.sensor.colision==true){
     this.actuator.commands.push('Stop');
+    this.actuator.commands.push('rotateCCW')
     //if(this.sensor.colision==true)
     //this.actuator.commands.push('Animation');
 }
