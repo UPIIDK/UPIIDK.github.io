@@ -41,7 +41,7 @@ Environment.prototype.setMap=function(map){
          if(map[i][j] === "r"){
     this.add(new Robot(1,j-_offset,-(i-_offset)));
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
-        yC=i-_offset;
+        yC=-(i-_offset);
         xC=j-_offset;
          }
     if(map[i][j]!=="'\0'")
