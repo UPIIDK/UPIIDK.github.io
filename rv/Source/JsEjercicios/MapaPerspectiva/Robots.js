@@ -15,7 +15,7 @@ this.Antena.rotation.x=Math.PI/2;
 this.Antena.position.z=z+(1/Tmaño)+(1/Tmaño)+(0.9/Tmaño)+(0.25/Tmaño);
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
-this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.25/Tmaño,0.25/Tmaño,(1/Tmaño),new THREE.MeshPhongMaterial({map: texturaR}));
+this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.25/Tmaño,0.25/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaR}));
 this.Rostro.position.y=0.5/y;
 var AR=1/Tmaño;//Altura Rostro
 this.Rostro.position.z=z+(1/Tmaño)+(0.9/Tmaño)+(0.25/Tmaño);;
