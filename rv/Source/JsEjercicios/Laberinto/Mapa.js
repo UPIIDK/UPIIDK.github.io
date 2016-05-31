@@ -39,6 +39,7 @@ Environment.prototype.setMap=function(map){
 luzMeta.position.z=10;
 luzMeta.position.x=j-_offset;
 luzMeta.position.y=-(i-_offset);
+enviroment.add(luzMeta);
   }
   }
 }
@@ -82,7 +83,7 @@ luzPuntual.position.z=40;
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camara,luzPuntual,luzMeta);
+  environment.add(camara,luzPuntual);
 }
 
 function loop(){
