@@ -48,9 +48,11 @@ Environment.prototype.setMap=function(map){
     }
     if(map[i][j]==="F"){
     luzMeta=new THREE.PointLight(0x00FF00);
+    var xl=i;
+    var yl=j;
 luzMeta.position.z=10;
-luzMeta.position.x=i;
-luzMeta.position.y=j;
+luzMeta.position.x=xl;
+luzMeta.position.y=yl;
 environment.add(luzMeta);
   }
   }
