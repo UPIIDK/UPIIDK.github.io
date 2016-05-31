@@ -1,6 +1,6 @@
 function Wall(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
-var texturaW= THREE.ImageUtils.loadTexture('../../../Imagenes/hoja-metalica.jpg');
+var texturaW= THREE.ImageUtils.loadTexture('../../Imagenes/hoja-metalica.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map: texturaW}));
   this.size=size;
   this.position.x=x;
@@ -12,7 +12,7 @@ Wall.prototype=new THREE.Mesh();
 
 function Piso(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
-var texturaP= THREE.ImageUtils.loadTexture('../../../Imagenes/MetalRayado.jpg');
+var texturaP= THREE.ImageUtils.loadTexture('../../Imagenes/MetalRayado.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshBasicMaterial({map: texturaP}));
   this.size=size;
   this.position.x=x;
