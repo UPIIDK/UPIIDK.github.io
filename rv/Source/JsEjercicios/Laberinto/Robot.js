@@ -175,6 +175,7 @@ Robot.prototype.operations.rotateCW= function (robot,angle){
   robot.rotation.z+=angle;
   camara.rotation.y+=angle;
    //luzPuntual.rotation.z+=angle;
+   camara.updateProjectionMatrix();
 }
 
 Robot.prototype.operations.rotateCCW=function(robot,angle){
@@ -183,6 +184,7 @@ Robot.prototype.operations.rotateCCW=function(robot,angle){
   //Primera Persona
   robot.rotation.z+=angle;
   camara.rotation.y-=angle;
+  camara.updateProjectionMatrix();
   //luzPuntual.rotation.z+=angle;
 }
 Robot.prototype.operations.Stop=function(robot, distance){
