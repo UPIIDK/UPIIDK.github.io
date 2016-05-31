@@ -27,7 +27,6 @@ Environment.prototype.setMap=function(map){
   for(var j=0;j<(map.length)-1;j++){
     if(map[i][j] === "x")
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
-      this.add(new Wall(1,j-_offset,-(i-_offset),1));
          if(map[i][j] === "r"){
     this.add(new Robot(1,j-_offset,-(i-_offset)));
     this.add(new Piso(1,j-_offset,-(i-_offset),-1));}
@@ -67,16 +66,11 @@ function setup(){
   environment.setMap(mapa);
   
   camara=new THREE.PerspectiveCamera();
-  camara.position.z=10;
-  camara.position.y=-31;
-  camara.position.x=-1;
-  camara.rotation.x= 1.16;
+  camara.position.z=30;
   
   var luzPuntual=new THREE.PointLight(0xFFFFFF);
-luzPuntual.position.x=-10;
-luzPuntual.position.y=-30;
-luzPuntual.position.z=10;
-luzPuntual.rotation.x=1.16;
+luzPuntual.position.z=40;
+
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
