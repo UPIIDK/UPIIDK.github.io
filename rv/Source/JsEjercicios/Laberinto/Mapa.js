@@ -47,7 +47,7 @@ Environment.prototype.setMap=function(map){
     this.add(new Techo(1,j-_offset,-(i-_offset),2));
     }
     if(map[i][j]==="F"){
-    var luzMeta=new THREE.PointLight(0x00FF00);
+    luzMeta=new THREE.PointLight(0x00FF00);
 luzMeta.position.z=10;
 luzMeta.position.x=i;
 luzMeta.position.y=j;
@@ -90,7 +90,7 @@ function setup(){
   camara.rotation.y=-Math.PI/2;
   camara.rotation.z=-Math.PI;
   
-  var luzPuntual=new THREE.PointLight(0xFFFFFF);
+ luzPuntual=new THREE.PointLight(0xFFFFFF);
 luzPuntual.position.z=camara.position.z;
 luzPuntual.rotation.x=camara.rotation.x;
 luzPuntual.rotation.y=camara.rotation.y;
@@ -115,7 +115,7 @@ function loop(){
 
 }
 
-var environment, camara, renderer;
+var environment, camara, renderer,luzMeta,luzPuntual;
 
 setup();
 loop();
