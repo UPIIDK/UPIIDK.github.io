@@ -88,7 +88,7 @@ function loop(){
 //malla.rotation.x +=0.01;
 //malla.rotation.y +=0.01;
 
-Robot.OrejaD.rotation.x +=0.01;
+//Robot.OrejaD.rotation.x +=0.01;
 /*OrejaI.rotation.x +=0.01;
 
 //renderer.render(escena);
