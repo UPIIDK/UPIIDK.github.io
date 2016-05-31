@@ -88,7 +88,7 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera();
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
-  camara.rotation.x=(4/3)*(Math.PI);
+  camara.rotation.x=4.71;
   camara.rotation.y=-Math.PI/2;
   camara.rotation.z=-Math.PI;
   
