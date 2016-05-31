@@ -11,7 +11,7 @@ var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(0.15/Tmaño,0.15/Tmaño,0.4/Tmaño),new THREE.MeshPhongMaterial({map: texturaA}));
 var AA=0.4/Tmaño;
 this.Antena.position.y=0.5/y;
-this.Antena.rotation.z=Math.PI/2;
+this.Antena.rotation.x=Math.PI/2;
 this.Antena.position.z=z+(0.25/Tmaño)+(1/Tmaño)+(0.1/Tmaño)+(1/Tmaño);
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
@@ -52,6 +52,7 @@ this.Panza= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.5/Tmaño,0.9/Tmañ
 var AP=0.5/Tmaño;
 this.Panza.position.y=0.5/y;
 this.Panza.position.z=z+(1/Tmaño);
+this.Panza.rotation.z=Math.PI/2;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
 this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(0.3/Tmaño,0.3/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
