@@ -63,8 +63,8 @@ function setup(){
   
   var luzPuntual=new THREE.PointLight(0xFFFFFF);
 luzPuntual.position.x=-10;
-luzPuntual.position.y=-300;
-luzPuntual.position.z=100;
+luzPuntual.position.y=-30;
+luzPuntual.position.z=10;
 luzPuntual.rotation.x=1.16;
   
   renderer=new THREE.WebGLRenderer();
