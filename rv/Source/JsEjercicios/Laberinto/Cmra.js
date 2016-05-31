@@ -51,7 +51,7 @@ function muestraInformacion(elEvento) {
   camara.rotation.y=-Math.PI/2;
   camara.rotation.z=-Math.PI;
   
-luzPuntual.position=camara.position:
+luzPuntual.position=camara.position;
 luzPuntual.rotation=camara.rotation;
  }
  //Captar variables
