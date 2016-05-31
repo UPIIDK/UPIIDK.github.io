@@ -78,7 +78,7 @@ function Robot (size, x,y){
   //var texturar=THREE.ImageUtils.loadTexture('https://UPIIDK.github.io/rv/Imagenes/LLanta.jpg');
   this.sensor = new Sensor();
   //this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
-  this.actuator=new CuerpoRobot(size,x,y);
+  this.actuator=new CuerpoRobot(size,x,y,0);
   this.actuator.commands=[];
   this.actuator.size=size;
   this.add(this.actuator);
