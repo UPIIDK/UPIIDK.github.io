@@ -155,7 +155,7 @@ Robot.prototype.plan=function (environment){
    this.actuator.commands=[];
   if(this.sensor.colision==false)
   this.actuator.commands.push('goStraight');
-if(this.sensor.colision==true)
+else if(xR==-8 && yR==123 2.5099999999999496)
 this.actuator.commands.push('Stop');
 else if(this.sensor3.colision==true && this.sensor5.colision==true)
   this.actuator.commands.push('rotateCW');
