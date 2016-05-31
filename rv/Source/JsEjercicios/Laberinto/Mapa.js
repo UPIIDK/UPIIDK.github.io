@@ -39,7 +39,7 @@ Environment.prototype.setMap=function(map){
     if(map[i][j] === "x")
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
          if(map[i][j] === "r"){
-    this.add(new Robot(1,j-_offset,-(i-_offset)));
+    this.add(new Robot(1,j-_offset,-(i-_offset),-0.9));
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
         yC=-(i-_offset);
         xC=j-_offset;
@@ -47,7 +47,7 @@ Environment.prototype.setMap=function(map){
     if(map[i][j]!=="'\0'")
     {
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
-    this.add(new Techo(1,j-_offset,-(i-_offset),(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
+    this.add(new Techo(1,j-_offset,-(i-_offset),-0.9+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]==="F"){
      xl=j-_offset;;
