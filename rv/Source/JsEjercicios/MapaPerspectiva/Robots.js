@@ -4,38 +4,38 @@ THREE.Object3D.call(this);
 THREE.ImageUtils.crossOrigin=' ';
 var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
 this.Camara= new THREE.Mesh(new THREE.SphereGeometry(Tmaño/2) ,new THREE.MeshPhongMaterial({map: texturaC}));
-this.Camara.position.y=y;
-this.Camara.position.z=z+10;
+this.Camara.position.y=2/y;
+this.Camara.position.z=z+6;
 
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(Tmaño/1.5,Tmaño/1.5,Tmaño/4),new THREE.MeshPhongMaterial({map: texturaA}));
-this.Antena.position.y=y;
-this.Antena.position.z=z+9;
+this.Antena.position.y=-2/y;
+this.Antena.position.z=z+5;
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/10,Tmaño/10,Tmaño/2.5),new THREE.MeshPhongMaterial({map: texturaR}));
-this.Rostro.position.y=y;
-this.Rostro.position.z=z+8;
+this.Rostro.position.y=-9/y;
+this.Rostro.position.z=z+4;
 
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5, Tmaño/2, Tmaño/2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaI.position.x=-7.5/x;
 this.OrejaI.position.y=-9/y;
-this.OrejaI.position.z=z+7;
+this.OrejaI.position.z=z+4;
 
 this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( Tmaño/5, Tmaño/2,Tmaño/2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaD.position.x=7.5/x;
 this.OrejaD.position.y=-9/y;
-this.OrejaD.position.z=z+7;
+this.OrejaD.position.z=z+4;
 
 this.Cuello= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/3,Tmaño/2.5),new THREE.MeshPhongMaterial({map: texturaO}));
 this.Cuello.position.y=-15/y;
-this.Cuello.position.z=z+5;
+this.Cuello.position.z=z+3;
 
 var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
 this.Panza= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/9,Tmaño/9,Tmaño/5 ),new THREE.MeshPhongMaterial({map: texturaP}));
 this.Panza.position.y=-20/y;
-this.Panza.position.z=z+4;
+this.Panza.position.z=z+2;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
 this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/10,Tmaño/1),new THREE.MeshPhongMaterial({map: texturaPn}));
