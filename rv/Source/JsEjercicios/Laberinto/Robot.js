@@ -109,7 +109,7 @@ Robot.prototype.plan=function (environment){
   this.actuator.commands=[];
   if (this.sensor.colision==true){
     this.actuator.commands.push('Stop');
-    if(this.sensor.colision==true)
+    //if(this.sensor.colision==true)
     //this.actuator.commands.push('Animation');
 }
   else{
