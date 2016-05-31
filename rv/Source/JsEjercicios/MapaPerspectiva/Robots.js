@@ -85,6 +85,7 @@ function Robot (size, x,y){
   this.sensor = new Sensor();
   //this.actuator = new THREE.Mesh(new THREE.SphereGeometry(size),new THREE.MeshBasicMaterial({map: texturar}));
   this.actuator=new CuerpoRobot(size,x,y,0);
+  this.actuator.rotation.z=Math.PI/2;
   this.actuator.commands=[];
   this.actuator.size=size;
   this.add(this.actuator);
