@@ -107,7 +107,7 @@ function setup(){
 //Posicion luces 
 luzPuntual.position.set=camara.position;
 luzPuntual.rotation=camara.rotation;
-luzPuntaul.shadow.camera.near = 5;
+luzPuntual.shadow.camera.near = 5;
 luzPuntual.shadow.camera.far = 40;
 luzPuntual.shadow.camera.fov = 0.3;
 luzPuntual.castShadow =true;
