@@ -15,8 +15,7 @@ function Meta(size,x,y,z){
  this.size=size;
  this.position.x=x;
  this.position.y=y;
-luzMeta.position.set(x,y,10);
-luzMeta.rotation.y=Math.PI/2;
+ this.position.z=z;
 }
 Meta.prototype=new THREE.Mesh();
 function Piso(size,x,y,z){
@@ -92,7 +91,6 @@ function setup(){
   camara=new THREE.PerspectiveCamera();
   //Luces
  luzPuntual=new THREE.PointLight(0xFFFFFF);
- luzMeta=new THREE.PointLight(0x00FF00);
   environment.setMap(mapa);
   
   //Valores obtenidos a prueba y error
@@ -116,7 +114,7 @@ luzPuntual.castShadow =true;
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camara,luzPuntual,luzMeta);
+  environment.add(camara,luzPuntual);
 }
 
 function loop(){
@@ -130,6 +128,6 @@ function loop(){
 
 }
 
-var environment, camara, renderer,luzMeta,luzPuntual,xR,yR,xC,yC,xl,yl;
+var environment, camara, renderer,luzPuntual,xR,yR,xC,yC,xl,yl;
 setup();
 loop();
