@@ -28,12 +28,12 @@ this.Cuello= new THREE.Mesh(new THREE.BoxGeometry(3,3,2.5),new THREE.MeshPhongMa
 this.Cuello.position.y=y-15;
 
 var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
-this.Panza= new THREE.Mesh(new THREE.BoxGeometry( Tmaño+9, Tmaño+9, Tmaño+5 ),new THREE.MeshPhongMaterial({map: texturaP}));
+this.Panza= new THREE.Mesh(new THREE.BoxGeometry(9,9,5 ),new THREE.MeshPhongMaterial({map: texturaP}));
 //malla5.position.x=7;
 this.Panza.position.y=y-20;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(3,Tmaño+10,Tmaño+1),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(3,10,1),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaI.position.x=x-3;
 this.PiernaI.position.y=y-30;
 
@@ -70,7 +70,7 @@ camara.position.z=90;*/
 step=0.01;
 step1=0.02;
 //FiN
-this.add(this.Camara,this.Rostro,this.Antena,this.PiernaI,this.PiernaD,this.BrazoD,this.BrazoI);
+this.add(this.Camara,this.Rostro,this.Antena,this.PiernaI,this.PiernaD,this.BrazoD,this.BrazoI,this.Panza,this.OrejaI,this.OrejaD,this.Cuello);
 }
 CuerpoRobot.prototype=new THREE.Object3D();
 
