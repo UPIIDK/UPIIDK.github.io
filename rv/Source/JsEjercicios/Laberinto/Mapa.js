@@ -23,6 +23,7 @@ Piso.prototype=new THREE.Mesh();
 
 function Techo(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
+  var texturaP= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/MetalRayado.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshPhongMaterial({map: texturaP}));
   this.size=size;
   this.position.x=x;
