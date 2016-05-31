@@ -10,6 +10,17 @@ var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/
 
 Wall.prototype=new THREE.Mesh();
 
+function Meta(size,x,y,z){
+ THREE.Mesh.call(this,new THREE.SphereGeometry(size), new THREE.MeshBasicMaterial({color:'green'})); 
+ this.size=size;
+ this.position.x=x;
+ this.position.y=y;
+luzMeta.position.z=10;
+luzMeta.position.x=x;
+luzMeta.position.y=y;
+luzMeta.rotation.y=Math.PI/2;
+}
+Meta.prototype=new THREE.Mesh();
 function Piso(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
 var texturaP= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/MetalRayado.jpg');
@@ -99,11 +110,7 @@ function setup(){
 //Posicion luces 
 luzPuntual.position=camara.position;;
 luzPuntual.rotation=camara.rotation;
-/*luzMeta.position.z=10;
-luzMeta.position.x=xl;
-luzMeta.position.y=yl;
-luzMeta.rotation.y=Math.PI/2;
-*/
+luzPuntual.castShadow =true;
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
