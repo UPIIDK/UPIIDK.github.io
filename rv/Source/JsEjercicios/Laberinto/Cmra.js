@@ -74,4 +74,4 @@ luzPuntual.rotation=camara.rotation;
  var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-*/}
+}
