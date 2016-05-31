@@ -1,6 +1,5 @@
 function CuerpoRobot(Tmaño,x,y,z){
 THREE.Object3D.call(this);
-  //  iNICIO
 THREE.ImageUtils.crossOrigin=' ';
 var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
 this.Camara= new THREE.Mesh(new THREE.SphereGeometry(0.2/Tmaño) ,new THREE.MeshPhongMaterial({map: texturaC}));
@@ -121,8 +120,8 @@ var obstaculo4 = this.sensor4.intersectObjects(environment.children,true);
 var obstaculo5 = this.sensor5.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1))){
   this.sensor.colision=true;
-  console.log(px);
-  console.log(py);}
+  console.log(var px);
+  console.log(var py);}
  else
   this.sensor.colision=false;
 
