@@ -40,12 +40,12 @@ this.Panza.position.z=z+2;
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
 this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/10,Tmaño/1),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaI.position.x=-3/x;
-this.PiernaI.position.y=y;
+this.PiernaI.position.y=-30/y;
 this.PiernaI.position.z=z;
 
 this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/10,Tmaño/1),new THREE.MeshPhongMaterial({map: texturaPn}));
 this.PiernaD.position.x=3/x;
-this.PiernaD.position.y=y;
+this.PiernaD.position.y=-30/y;
 this.PiernaD.position.z=z;
 
 var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
