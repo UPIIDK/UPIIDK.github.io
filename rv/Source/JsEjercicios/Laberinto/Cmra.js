@@ -47,6 +47,10 @@ function muestraInformacion(elEvento) {
   camara.position.y=-31;
   camara.position.x=-1;
   camara.rotation.x= 1.16;
+  luzPuntual.position.z=camara.position.z;
+luzPuntual.rotation.x=camara.rotation.x;
+luzPuntual.rotation.y=camara.rotation.y;
+luzPuntual.rotation.z=camara.rotation.z;
  }
  //Captar variables
   if(evento.keyCode==91){ //ESC
