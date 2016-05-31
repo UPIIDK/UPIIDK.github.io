@@ -23,12 +23,12 @@ this.Rostro.rotation.x=Math.PI/2;
 
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
-this.OrejaI.position.x=(-0.6/Tmaño)+x;
+this.OrejaI.position.x=((-0.6-0.5)/Tmaño)/x;
 this.OrejaI.position.y=0.5/y;
 this.OrejaI.position.z=z+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
 this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( 0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshPhongMaterial({map: texturaO}));
-this.OrejaD.position.x=(0.6/Tmaño)+x;
+this.OrejaD.position.x=((0.6+0.5)/Tmaño)/x;
 this.OrejaD.position.y=0.5/y;
 this.OrejaD.position.z=z+(1/Tmaño)+(0.5/Tmaño)+(0.25/Tmaño);
 
@@ -56,15 +56,15 @@ this.Panza.position.z=z+(1/Tmaño);
 this.Panza.rotation.z=Math.PI;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
-this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(0.1/Tmaño,0.1/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
-this.PiernaI.position.x=-0.3/x;
+this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(0.2/Tmaño,0.2/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaI.position.x=-0.5/x;
 this.PiernaI.position.y=0.5/y;
 this.PiernaI.position.z=z;
 this.PiernaI.rotation.z=Math.PI/2;
 var APS=1/Tmaño;
 
-this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(0.1/Tmaño,0.1/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
-this.PiernaD.position.x=0.3/x;
+this.PiernaD= new THREE.Mesh(new THREE.BoxGeometry(0.2/Tmaño,0.2/Tmaño,1/Tmaño),new THREE.MeshPhongMaterial({map: texturaPn}));
+this.PiernaD.position.x=0.5/x;
 this.PiernaD.position.y=0.5/y;
 this.PiernaD.position.z=z;
 this.PiernaD.rotation.z=Math.PI/2;
@@ -109,8 +109,10 @@ Robot.prototype.plan=function (environment){
   this.actuator.commands=[];
   if (this.sensor.colision==true)
     this.actuator.commands.push('rotateCCW');
+    this.actuator.commands.push('Animation');
   else
     this.actuator.commands.push('Stop');
+    this.actuator.commands.push('Animation');
 }
 Robot.prototype.act=function(environment){
   var command=this.actuator.commands.pop();
@@ -126,9 +128,28 @@ Robot.prototype.act=function(environment){
   //goStraight()
   //rotateCW()
   //rotateCCW()
+  //Stop()
   
   Robot.prototype.operations={};
-  
+  Robot.prototype.operations.Animation= function(robot, distance){
+Robot.Camara.rotation.x +=0.01;
+Robot.Camara.rotation.y +=0.01;
+
+Robot.OrejaD.rotation.x +=0.01;
+Robot.OrejaI.rotation.x +=0.01;
+
+if(Math.abs(Robot.PiernaD.rotation.x)>.3){
+step1=-step1;
+PieraD.rotation.x +=step1;
+BrazoD.rotation.x -=step1;
+}
+if(Math.abs(Robot.PiernaI.rotation.x)>.3){
+step=-step;
+PiernaI.rotation.x +=step;
+BrazoI.rotation.x -=step;
+}
+//FIN*/
+  }
   Robot.prototype.operations.goStraight= function(robot, distance){
   if(distance== undefined)
     distance= .05;
