@@ -43,14 +43,16 @@ function muestraInformacion(elEvento) {
  }
  
  if(evento.keyCode==27){ //ESC
-  camara.position.z=10;
-  camara.position.y=-31;
-  camara.position.x=-1;
-  camara.rotation.x= 1.16;
-  luzPuntual.position.z=camara.position.z;
-luzPuntual.rotation.x=camara.rotation.x;
-luzPuntual.rotation.y=camara.rotation.y;
-luzPuntual.rotation.z=camara.rotation.z;
+  camara.position.z=(0.5/1)+(1/1)+(0.3/1);;
+  camara.position.y=0;
+  camara.position.x=0;
+  camara.rotation.x=4.71;
+   camara.rotation.x=4.71;
+  camara.rotation.y=-Math.PI/2;
+  camara.rotation.z=-Math.PI;
+  
+luzPuntual.position=camara.position:
+luzPuntual.rotation=camara.rotation;
  }
  //Captar variables
   if(evento.keyCode==91){ //ESC
