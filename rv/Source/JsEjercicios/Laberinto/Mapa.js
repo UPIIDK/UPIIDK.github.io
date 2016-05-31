@@ -34,23 +34,29 @@ Environment.prototype.setMap=function(map){
     {
     this.add(new Piso(1,j-_offset,-(i-_offset),-1));
     }
+    if(map[i][j]==="F"){
+    var luzMeta=new THREE.PointLight(0x00FF00);
+luzMeta.position.z=10;
+luzMeta.position.x=j-_offset;
+luzMeta.position.y=-(i-_offset);
+  }
   }
 }
 
 function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "x  x               x";
+  mapa[1]  = "x  x              Fx";
   mapa[2]  = "x                  x";
   mapa[3]  = "x                  x";
   mapa[4]  = "x     x            x";
-  mapa[5]  = "x      x            x";
+  mapa[5]  = "x      x           x";
   mapa[6]  = "x                  x";
   mapa[7]  = "x       x          x";
   mapa[8]  = "xxx   xxxx     xxxxx";
   mapa[9]  = "x                  x";
   mapa[10] = "x       x          x";
-  mapa[11] = "x       x           x";
+  mapa[11] = "x       x          x";
   mapa[12] = "x       xx         x";
   mapa[13] = "x                  x";
   mapa[14] = "x                  x";
@@ -76,7 +82,7 @@ luzPuntual.position.z=40;
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  environment.add(camara,luzPuntual);
+  environment.add(camara,luzPuntual,luzMeta);
 }
 
 function loop(){
