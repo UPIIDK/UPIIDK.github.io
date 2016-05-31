@@ -112,7 +112,7 @@ Robot.prototype.plan=function (environment){
     this.actuator.commands.push('Animation');
 }
   else{
-    this.actuator.commands.push('Stop');
+    this.actuator.commands.push('goStraight');
     this.actuator.commands.push('Animation');
   }
 }
@@ -134,8 +134,8 @@ Robot.prototype.act=function(environment){
   
   Robot.prototype.operations={};
   Robot.prototype.operations.Animation= function(robot){
-/*robot.Camara.rotation.x +=0.01;
-robot.Camara.rotation.y +=0.01;
+CuerpoRobot.Camara.rotation.x +=0.01;
+/*robot.Camara.rotation.y +=0.01;
 
 robot.OrejaD.rotation.x +=0.01;
 robot.OrejaI.rotation.x +=0.01;
