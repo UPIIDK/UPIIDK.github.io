@@ -61,8 +61,7 @@ Environment.prototype.setMap=function(map){
     this.add(new Techo(1,j-_offset,-(i-_offset),-0.4+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]=="F"){
-     xl=j-_offset;;
-     yl=-(i-_offset);
+     this.add(new Meta(0.1,j-_offset,-(i-_offset),(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
   }
   }
 }
