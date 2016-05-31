@@ -164,7 +164,7 @@ robot.BrazoI.rotation.x -=step;
   robot.position.y+= distance*Math.sin(robot.rotation.z);
   camara.position.x+=distance*Math.cos(robot.rotation.z);
   camara.position.y+=distance*Math.sin(robot.rotation.z);
-  /*luzPuntual.position.x+=distance*Math.cos(robot.rotation.z);
+  luzPuntual.position.x+=distance*Math.cos(robot.rotation.z);
   luzPuntual.position.y+=distance*Math.cos(robot.rotation.z);
 */}
 
@@ -174,7 +174,7 @@ Robot.prototype.operations.rotateCW= function (robot,angle){
    //Primera Persona
   robot.rotation.z+=angle;
   camara.rotation.y+=angle;
-   //luzPuntual.rotation.z+=angle;
+   luzPuntual.rotation.z+=angle;
    camara.updateProjectionMatrix();
 }
 
@@ -185,7 +185,7 @@ Robot.prototype.operations.rotateCCW=function(robot,angle){
   robot.rotation.z+=angle;
   camara.rotation.y-=angle;
   camara.updateProjectionMatrix();
-  //luzPuntual.rotation.z+=angle;
+  luzPuntual.rotation.z+=angle;
 }
 Robot.prototype.operations.Stop=function(robot, distance){
    if(distance== undefined)
@@ -195,6 +195,6 @@ Robot.prototype.operations.Stop=function(robot, distance){
   robot.position .y+= 0;
   camara.position.x+=0;
   camara.position.y+= 0;
- /* luzPuntual.position.x+=distance*Math.cos(robot.rotation.z);
+ luzPuntual.position.x+=distance*Math.cos(robot.rotation.z);
   luzPuntual.position.y+=distance*Math.cos(robot.rotation.z);
-*/}
+}
