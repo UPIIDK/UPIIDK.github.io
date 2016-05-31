@@ -10,32 +10,32 @@ this.Camara.position.z=z+4;
 var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(Tmaño/4,Tmaño/4,Tmaño/1.5),new THREE.MeshPhongMaterial({map: texturaA}));
 this.Antena.position.y=-2/y;
-this.Antena.position.z=z+3.5;
+this.Antena.position.z=z+3;
 
 var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/2.5,Tmaño/2.5,Tmaño/10),new THREE.MeshPhongMaterial({map: texturaR}));
 this.Rostro.position.y=-2/y;
-this.Rostro.position.z=z+2.5;
+this.Rostro.position.z=z+2;
 
 var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/2, Tmaño/5, Tmaño/2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaI.position.x=-7.5/x;
 this.OrejaI.position.y=-2/y;
-this.OrejaI.position.z=z+3;
+this.OrejaI.position.z=z+2.5;
 
 this.OrejaD= new THREE.Mesh(new THREE.BoxGeometry( Tmaño/2, Tmaño/5,Tmaño/2.5 ),new THREE.MeshPhongMaterial({map: texturaO}));
 this.OrejaD.position.x=7.5/x;
 this.OrejaD.position.y=-2/y;
-this.OrejaD.position.z=z+3;
+this.OrejaD.position.z=z+2.5;
 
 this.Cuello= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/2.5,Tmaño/2.5,Tmaño/3),new THREE.MeshPhongMaterial({map: texturaO}));
 this.Cuello.position.y=-2/y;
-this.Cuello.position.z=z+2;
+this.Cuello.position.z=z+1;
 
 var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
 this.Panza= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5,Tmaño/5,Tmaño/9 ),new THREE.MeshPhongMaterial({map: texturaP}));
 this.Panza.position.y=-2/y;
-this.Panza.position.z=z+1;
+this.Panza.position.z=z+0.5;
 
 var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
 this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/3,Tmaño/1,Tmaño/10),new THREE.MeshPhongMaterial({map: texturaPn}));
@@ -52,12 +52,12 @@ var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8
 this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5,Tmaño/3,Tmaño/5),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoI.position.x=-6/x;
 this.BrazoI.position.y=-2/y;
-this.BrazoI.position.z=z+1.5;
+this.BrazoI.position.z=z+1;
 
 this.BrazoD= new THREE.Mesh(new THREE.BoxGeometry(Tmaño/5,Tmaño/3,Tmaño/5),new THREE.MeshPhongMaterial({map: texturaB}));
 this.BrazoD.position.x=6/x;
 this.BrazoD.position.y=-2/y;
-this.BrazoD.position.z=z+1.5;
+this.BrazoD.position.z=z+1;
 
 step=0.01;
 step1=0.02;
