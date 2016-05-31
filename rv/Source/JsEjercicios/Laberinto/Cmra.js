@@ -23,10 +23,10 @@ function muestraInformacion(elEvento) {
  }
  //Girar Camara
  if(evento.keyCode==81){//Q
- camara.rotation.z+=Math.PI/16;
+ camara.rotation.x+=Math.PI/16;
  }
  if(evento.keyCode==61){//E
- camara.rotation.z-=Math.PI/16;
+ camara.rotation.x-=Math.PI/16;
  }
  if(evento.keyCode==68){//D
  camara.rotation.y-=Math.PI/16;
@@ -35,10 +35,10 @@ function muestraInformacion(elEvento) {
  camara.rotation.y+=Math.PI/16;
  }
  if(event.keyCode==83){//S
- camara.rotation.x+=Math.PI/16;
+ camara.rotation.z+=Math.PI/16;
  }
  if(evento.keyCode==87){//W
- camara.rotation.x-=Math.PI/16;
+ camara.rotation.z-=Math.PI/16;
  }
  //ZOOM
    if(evento.keyCode==32){//Space
@@ -71,7 +71,7 @@ luzPuntual.rotation=camara.rotation;
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
  }
  
- /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+ var mensaje = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-*/}
+}
