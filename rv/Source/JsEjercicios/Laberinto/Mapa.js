@@ -29,10 +29,10 @@ Environment.prototype.setMap=function(map){
       this.add(new Wall(1,j-_offset,-(i-_offset),0));
          if(map[i][j] === "r"){
     this.add(new Robot(1,j-_offset,-(i-_offset)));
-    this.add(new Piso(1,j-_offset,-(i-_offset),-0.1));}
+    this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));}
     if(map[i][j]!=="'\0'")
     {
-    this.add(new Piso(1,j-_offset,-(i-_offset),-0.1));
+    this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
     }
     if(map[i][j]==="F"){
     var luzMeta=new THREE.PointLight(0x00FF00);
@@ -74,12 +74,13 @@ function setup(){
   
   camara=new THREE.PerspectiveCamera();
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
-  camara.rotation.x=Math.PI/2;
-  camara.rotation.z=Math.PI/2;
+  camara.rotation.y=Math.PI/2;
+  camara.rotation.z=-Math.PI/2;
   
   var luzPuntual=new THREE.PointLight(0xFFFFFF);
 luzPuntual.position.z=camara.position.z;
-luzPuntual.rotation.x=camara.rotation.x;
+luzPuntual.rotation.y=camara.rotation.y;
+luzPuntual.rotation.z=camara.rotation.z;
 
   
   renderer=new THREE.WebGLRenderer();
