@@ -49,14 +49,10 @@ function muestraInformacion(elEvento) {
  }
  
  if(evento.keyCode==27){ //ESC
-  camara.position.z=(0.5/1)+(1/1)+(0.3/1);;
-  camara.position.y=0;
-  camara.position.x=0;
-  camara.rotation.x=4.71;
-   camara.rotation.x=4.71;
-  camara.rotation.y=-Math.PI/2;
-  camara.rotation.z=-Math.PI;
-  
+  camara.position.z=(0.5/1)+(1/1)+(0.3/1);
+  camara.position.y=robot.position.y;
+  camara.position.x=robot.position.x;
+  camara.rotation=robot.rotation;
 luzPuntual.position=camara.position;
 luzPuntual.rotation=camara.rotation;
  }
