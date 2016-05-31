@@ -29,11 +29,16 @@ function muestraInformacion(elEvento) {
  camara.rotation.x-=Math.PI/16;
  }
  if(evento.keyCode==68){//S
- camara.rotation.y-=Math.PI/16;
+ camara.rotation.z-=Math.PI/16;
  }
   if(evento.keyCode==65){//W
+ camara.rotation.z+=Math.PI/16;
+ }
+ if(event.keyCode==81){//E
  camara.rotation.y+=Math.PI/16;
  }
+ if(evento.keyCode==86){//Q
+ camara.rotation.y-=Math.PI/16;
  //ZOOM
    if(evento.keyCode==32){//Space
  camara.position.z-=1;
