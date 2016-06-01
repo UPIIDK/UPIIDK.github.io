@@ -90,9 +90,9 @@ function setup(){
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
-  camara=new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 100 );
+  camara=new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 1, 1000 );
   //Luces
- luzPuntual=new THREE.PointLight(0xFFFFFF,0.5,30,1,0.5,2);
+ luzPuntual=new THREE.PointLight(0xFFFFFF,0.5,30,0.1,1,2);
   environment.setMap(mapa);
   
   //Valores obtenidos a prueba y error
