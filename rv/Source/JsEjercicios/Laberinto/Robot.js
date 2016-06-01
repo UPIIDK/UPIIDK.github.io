@@ -224,7 +224,7 @@ robot.BrazoI.rotation.x -=step;
 
 Robot.prototype.operations.rotateCW= function (robot,angle){
   if(angle==undefined)
-   angle = Math.PI/2;
+   angle = -Math.PI/2;
    //Primera Persona
   robot.rotation.z+=angle;
   camara.rotation.y+=angle;
