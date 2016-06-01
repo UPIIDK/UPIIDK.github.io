@@ -2,8 +2,6 @@
 //keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha, keyCode=38 FlechaArriba, keyCode=37 FlechaIzq
 window.onload = function() {
   document.onkeydown = muestraInformacion;
-  var mensaje = "¡Haz llegado a la Meta!" + "<br>"+ "¡Bien Hecho!"
-  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
 }
  
 function muestraInformacion(elEvento,robot) {
