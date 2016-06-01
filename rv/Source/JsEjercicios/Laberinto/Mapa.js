@@ -26,6 +26,8 @@ var texturaP= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/
   this.position.x=x;
   this.position.y=y;
   this.position.z=z;
+  xM=x;
+  yM=y;
 }
 Piso.prototype=new THREE.Mesh();
 
