@@ -40,17 +40,17 @@ function muestraInformacion(elEvento,robot) {
  }
  //ZOOM
    if(evento.keyCode==32){//Space
- camara.position.z-=1;
+ camara.position.z-=0.5;
  }
  if(evento.keyCode==90){//Z
- camara.position.z+=1;
+ camara.position.z+=0.5;
  }
  
  if(evento.keyCode==27){ //ESC
   camara.position.z=(0.5/1)+(1/1)+(0.3/1);
-  camara.position.y=robot.position.y;
-  camara.position.x=robot.position.x;
-  camara.rotation=robot.rotation;
+  camara.position.y=yR;
+  camara.position.x=xR;
+  //camara.rotation=robot.rotation;
 luzPuntual.position=camara.position;
 luzPuntual.rotation=camara.rotation;
  }
