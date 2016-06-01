@@ -154,7 +154,7 @@ Robot.prototype.plan=function (environment){
    this.actuator.commands=[];
   if(this.sensor.colision==false)
   this.actuator.commands.push('goStraight');
-else if(xR==xM-0.1 && yR==yM-0.1){
+else if(xR<=xM && yR<=yM){
 this.actuator.commands.push('Stop');
  var mensaje = "¡Haz llegado a la Meta!" + "<br>"+ "¡Bien Hecho!"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
