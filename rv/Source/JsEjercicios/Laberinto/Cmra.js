@@ -58,6 +58,10 @@ function muestraInformacion(elEvento,robot) {
 luzPuntual.position=camara.position;
 luzPuntual.rotation=camara.rotation;
  }
+ 
+  if(evento.keyCode==90){//+
+ distance+=0.1;
+ }
  //Captar variables
   if(evento.keyCode==91){ //ESC
   var mensaje = "Position camara x: " + camara.position.x + "<br>" +
@@ -69,7 +73,7 @@ luzPuntual.rotation=camara.rotation;
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
  }
  
- /*var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+ var mensaje2 = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
-  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-*/}
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje2
+}
