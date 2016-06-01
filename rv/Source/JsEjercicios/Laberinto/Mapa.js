@@ -1,7 +1,7 @@
 function Wall(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
 var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)+1.5),new THREE.MeshPhongMaterial({map: texturaW}));
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)+2),new THREE.MeshPhongMaterial({map: texturaW}));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -69,7 +69,7 @@ function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "x  x               F";
-  mapa[2]  = "x                  F";
+  mapa[2]  = "x   x              F";
   mapa[3]  = "x  x               x";
   mapa[4]  = "x     x            x";
   mapa[5]  = "x      x           x";
