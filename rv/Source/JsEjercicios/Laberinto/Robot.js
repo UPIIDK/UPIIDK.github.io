@@ -257,4 +257,9 @@ Robot.prototype.operations.Stop=function(robot, distance){
   camara.updateProjectionMatrix();
   xR=robot.position.x;
   yR=robot.position.y;
+  if(xR==xM-0.1&&yR==yM)
+  {
+    var mensaje = "¡Haz llegado a la Meta!" + "<br>"+ "¡Bien Hecho!"
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+  }
 }
