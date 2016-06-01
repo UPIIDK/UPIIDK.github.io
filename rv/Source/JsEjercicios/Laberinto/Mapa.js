@@ -58,7 +58,7 @@ Environment.prototype.setMap=function(map){
     this.add(new Techo(1,j-_offset,-(i-_offset),-0.4+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]=="F"){
-     this.add(new Meta(0.1,j-_offset,-(i-_offset),(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
+     this.add(new Meta(0.1,j-_offset,-(i-_offset),-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
   }
   }
 }
@@ -103,8 +103,8 @@ function setup(){
   camara.rotation.z=-Math.PI;
   
 //Posicion luces 
-luzPuntual.position.set=camara.position;
-luzPuntual.rotation=camara.rotation;
+luzPuntual.position.set(xC,yC,(0.5/1)+(1/1)+(0.3/1));
+luzPuntual.rotation.set(4.71,-Math.PI/2,-Math.PI);
 luzPuntual.shadow.camera.near = 5;
 luzPuntual.shadow.camera.far = 40;
 luzPuntual.shadow.camera.fov = 0.3;
