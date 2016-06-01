@@ -59,9 +59,6 @@ luzPuntual.position=camara.position;
 luzPuntual.rotation=camara.rotation;
  }
  
-  if(evento.keyCode==107){//+
- distance+=0.1;
- }
  //Captar variables
   if(evento.keyCode==91){ //ESC
   var mensaje = "Position camara x: " + camara.position.x + "<br>" +
