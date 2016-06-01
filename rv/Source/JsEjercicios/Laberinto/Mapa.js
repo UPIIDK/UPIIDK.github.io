@@ -11,7 +11,7 @@ var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/
 Wall.prototype=new THREE.Mesh();
 
 function Meta(size,x,y,z){
- THREE.Mesh.call(this,new THREE.SphereGeometry(size), new THREE.MeshPhongMaterial({color:'green'})); 
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size), new THREE.MeshPhongMaterial({color:'green'})); 
  this.size=size;
  this.position.x=x;
  this.position.y=y;
@@ -90,7 +90,7 @@ function setup(){
   environment = new Environment();
   camara=new THREE.PerspectiveCamera();
   //Luces
- luzPuntual=new THREE.PointLight(0xFFFFFF,1,60,1,0.5,2);
+ luzPuntual=new THREE.PointLight(0xFFFFFF,0.1,20,1,0.5,2);
   environment.setMap(mapa);
   
   //Valores obtenidos a prueba y error
@@ -103,7 +103,7 @@ function setup(){
   camara.rotation.z=-Math.PI;
   
 //Posicion luces 
-luzPuntual.position.set(xC,yC,(0.5/1)+(1/1)+(0.3/1));
+luzPuntual.position.set(xC,yC,(0.5/1)+(0.3/1));
 luzPuntual.rotation.set(4.71,-Math.PI/2,-Math.PI);
 luzPuntual.shadow.camera.near = 5;
 luzPuntual.shadow.camera.far = 40;
