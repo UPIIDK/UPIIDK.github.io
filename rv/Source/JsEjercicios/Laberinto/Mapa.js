@@ -58,7 +58,7 @@ Environment.prototype.setMap=function(map){
     this.add(new Techo(1,j-_offset,-(i-_offset),-0.4+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]=="F"){
-     this.add(new Meta(0.1,j-_offset,-(i-_offset),-0.4+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
+     this.add(new Meta(0.1,j-_offset,-(i-_offset),(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
   }
   }
 }
@@ -66,7 +66,7 @@ Environment.prototype.setMap=function(map){
 function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
-  mapa[1]  = "x  x              Fx";
+  mapa[1]  = "x  x               F";
   mapa[2]  = "x                  x";
   mapa[3]  = "x                  x";
   mapa[4]  = "x     x            x";
