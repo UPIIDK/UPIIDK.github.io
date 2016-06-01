@@ -109,10 +109,10 @@ Robot.prototype.sense = function(environment){
     this.sensor.colision=false;
     */
     this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
-this.sensor2.set(this.position, new THREE.Vector3(1,0,0));
-this.sensor3.set(this.position, new THREE.Vector3(-1,0,0));
-this.sensor4.set(this.position, new THREE.Vector3(0,1,0));
-this.sensor5.set(this.position, new THREE.Vector3(0,-1,0));
+this.sensor2.set(this.position, new THREE.Vector3(Math.cos(this.rotation.x),Math.sin(this.rotation.x),0));
+this.sensor3.set(this.position, new THREE.Vector3(-Math.cos(this.rotation.x),Math.sin(this.rotation.x),0));
+this.sensor4.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y),Math.sin(this.rotation.y),0));
+this.sensor5.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y),-Math.sin(this.rotation.y)0));
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
  var obstaculo2 = this.sensor2.intersectObjects(environment.children,true);
 var obstaculo3 = this.sensor3.intersectObjects(environment.children,true);
