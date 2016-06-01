@@ -35,7 +35,9 @@ function Techo(size,x,y,z){
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshPhongMaterial({map: texturaP}));
   this.size=size;
   this.position.x=x;
+  xM=x;
   this.position.y=y;
+  yM=y;
   this.position.z=z;
 }
 Techo.prototype=new THREE.Mesh();
@@ -128,6 +130,6 @@ function loop(){
 
 }
 
-var environment, camara, renderer,luzPuntual,xR,yR,xC,yC,xl,yl;
+var environment, camara, renderer,luzPuntual,xR,yR,xC,yC,xl,yl,xM,yM;
 setup();
 loop();
