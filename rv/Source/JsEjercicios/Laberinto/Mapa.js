@@ -1,7 +1,7 @@
 function Wall(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
 var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)),new THREE.MeshPhongMaterial({map: texturaW}));
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)),new THREE.MeshPhongMaterial({map: texturaW}));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -57,7 +57,7 @@ Environment.prototype.setMap=function(map){
     if(map[i][j]!=="'\0'")
     {
     this.add(new Piso(1,j-_offset,-(i-_offset),-0.9));
-    this.add(new Techo(1,j-_offset,-(i-_offset),-0.4+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
+    this.add(new Techo(1,j-_offset,-(i-_offset),-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]=="F"){
      this.add(new Meta(0.5,j-_offset,-(i-_offset),-0.8+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
@@ -90,7 +90,7 @@ function setup(){
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
-  camara=new THREE.OrthographicCamera();
+  camara=new THREE.PerspectiveCamera();
   //Luces
  luzPuntual=new THREE.PointLight(0xFFFFFF,1,20,1,0.5,2);
   environment.setMap(mapa);
