@@ -97,7 +97,7 @@ function setup(){
   
   //Valores obtenidos a prueba y error
     //Position, inicial de la camara, inicia con el robot
-  camara.position.z=(0.5/1)+(1/1)+(0.3/1);
+  camara.position.z=(0.5/1)+(1/1)+(0.3/1)+0.5;
   camara.position.x=xC;
   camara.position.y=yC;
   camara.rotation.x=4.71;
