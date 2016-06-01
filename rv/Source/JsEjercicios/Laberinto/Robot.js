@@ -154,8 +154,11 @@ Robot.prototype.plan=function (environment){
    this.actuator.commands=[];
   if(this.sensor.colision==false)
   this.actuator.commands.push('goStraight');
-else if(xR==xM && yR==yM)
+else if(xR==xM-0.1 && yR==yM-0.1){
 this.actuator.commands.push('Stop');
+ var mensaje = "¡Haz llegado a la Meta!" + "<br>"+ "¡Bien Hecho!"
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+}
 else if(this.sensor3.colision==true && this.sensor5.colision==true)
   this.actuator.commands.push('rotateCW');
 
@@ -257,9 +260,4 @@ Robot.prototype.operations.Stop=function(robot, distance){
   camara.updateProjectionMatrix();
   xR=robot.position.x;
   yR=robot.position.y;
-  if(xR==xM-0.1&&yR==yM-0.1)
-  {
-    var mensaje = "¡Haz llegado a la Meta!" + "<br>"+ "¡Bien Hecho!"
-  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-  }
 }
