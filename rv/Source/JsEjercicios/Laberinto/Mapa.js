@@ -60,7 +60,7 @@ Environment.prototype.setMap=function(map){
     this.add(new Techo(1,j-_offset,-(i-_offset),-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
     }
     if(map[i][j]=="F"){
-     this.add(new Meta(0.5,j-_offset,-(i-_offset),(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)));
+     this.add(new Meta(1,j-_offset,-(i-_offset),(0.5/1)+(0.3/1)+(0.5/1)+(0.2/1)));
   }
   }
 }
@@ -90,7 +90,7 @@ function setup(){
   mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
-  camara=new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 1, 1000 );
+  camara=new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.5, 1000 );
   //Luces
  luzPuntual=new THREE.PointLight(0xFFFFFF,0.5,30,0.1,1,2);
   environment.setMap(mapa);
