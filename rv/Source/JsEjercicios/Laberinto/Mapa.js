@@ -92,7 +92,7 @@ function setup(){
   environment = new Environment();
   camara=new THREE.PerspectiveCamera();//(10, window.innerWidt/ hwindow.innerHeight, 1, 10000 );
   //Luces
- luzPuntual=new THREE.PointLight(0xFFFFFF,0.5,30,0.1,1,2);
+ luzPuntual=new THREE.PointLight(0xFFFFFF,0.5,10,0.01,1,2);
   environment.setMap(mapa);
   
   //Valores obtenidos a prueba y error
