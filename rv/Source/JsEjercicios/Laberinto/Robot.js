@@ -227,7 +227,7 @@ Robot.prototype.operations.rotateCW= function (robot,angle){
    angle = -Math.PI/2;
    //Primera Persona
   robot.rotation.z+=angle;
-  camara.rotation.y+=angle;
+  camara.rotation.y-=angle;
    luzPuntual.rotation.z+=angle;
    camara.updateProjectionMatrix();
    environment.add(luzPuntual);
