@@ -120,8 +120,8 @@ var obstaculo4 = this.sensor4.intersectObjects(environment.children,true);
 var obstaculo5 = this.sensor5.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1))){
   this.sensor.colision=true;
-  console.log(xM);
-  console.log(yM);
+  console.log(xR);
+  console.log(yR);
   }
  else
   this.sensor.colision=false;
