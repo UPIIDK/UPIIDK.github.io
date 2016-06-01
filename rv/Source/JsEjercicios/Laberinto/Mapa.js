@@ -1,7 +1,7 @@
 function Wall(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
 var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
-  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)),new THREE.MeshPhongMaterial({map: texturaW}));
+  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)+1),new THREE.MeshPhongMaterial({map: texturaW}));
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -69,7 +69,7 @@ function setup(){
   var mapa = new Array();
   mapa[0]  = "xxxxxxxxxxxxxxxxxxxx";
   mapa[1]  = "x  x               F";
-  mapa[2]  = "x                  x";
+  mapa[2]  = "x                  F";
   mapa[3]  = "x                  x";
   mapa[4]  = "x     x            x";
   mapa[5]  = "x      x           x";
@@ -83,11 +83,15 @@ function setup(){
   mapa[13] = "x                  x";
   mapa[14] = "x                  x";
   mapa[15] = "x                  x";
-  mapa[16] = "xx   xxx  xx    xxxx";
+  mapa[16] = "x                  x";
   mapa[17] = "x                  x";
-  mapa[18] = "x     r       x    x";
-  mapa[19] = "x             x    x";
-  mapa[20] = "xxxxxxxxxxxxxxxxxxxx";
+  mapa[18] = "x                  x";
+  mapa[19] = "x                  x";
+  mapa[20] = "xx   xxx  xx    xxxx";
+  mapa[21] = "x                  x";
+  mapa[22] = "x     r       x    x";
+  mapa[23] = "x             x    x";
+  mapa[24] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
   camara=new THREE.PerspectiveCamera();//(10, window.innerWidth/ window.innerHeight, 1, 10000 );
