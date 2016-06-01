@@ -59,7 +59,7 @@ luzPuntual.position=camara.position;
 luzPuntual.rotation=camara.rotation;
  }
  
-  if(evento.keyCode==90){//+
+  if(evento.keyCode==107){//+
  distance+=0.1;
  }
  //Captar variables
@@ -73,7 +73,7 @@ luzPuntual.rotation=camara.rotation;
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
  }
  
- var mensaje2 = "Tipo de evento: " + evento.type + "<br>" +
+ /*var mensaje2 = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
-  info.innerHTML += "<br>--------------------------------------<br>" + mensaje2
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje2*/
 }
