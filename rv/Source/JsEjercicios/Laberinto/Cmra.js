@@ -2,6 +2,10 @@
 //keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha, keyCode=38 FlechaArriba, keyCode=37 FlechaIzq
 window.onload = function() {
   document.onkeydown = muestraInformacion;
+  var mensaje1 = "Teclas de Control " + "<br>" + "Tecla Esc: Reinicia la Camara" + "<br>" +
+                "Tecla Z: Zoom out " + "<br>" + "Barra Espaciadora, Zoom In" + "<br>" + "Flecha, Mueven la camara" + 
+                "<br>" + "Letras AWSDQE, Rotan la Camara" 
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje1
 }
  
 function muestraInformacion(elEvento,robot) {
