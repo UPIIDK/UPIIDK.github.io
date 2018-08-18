@@ -1,0 +1,126 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" controllerName="com.sap.build.standard.dataManagement.controller.SsSearch" xmlns:uxap="sap.uxap" xmlns="sap.m">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" showFooter="true" subSectionLayout="TitleOnTop">
+        <uxap:headerContent/>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="/sap/fiori/g500dmtapp/webapp/resources/Picture1_2_.png" objectTitle="ESTACIÓN DE SERVICIO" objectSubtitle="Aquí podrás buscar información sobre estaciones de servicio en el país, aun si no son parte de la red G500" headerDesign="Light" objectImageShape="Square" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+                <uxap:actions>
+                    <Button text="" type="Transparent" icon="sap-icon://home" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="" type="Default" icon="sap-icon://refresh" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonRefresh"/>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="false" title="Page Section Title" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Sub Section Title" mode="Expanded">
+                        <uxap:blocks>
+                            <Table id="SearchTableSS" items="{/d/results/}" width="auto" noDataText="{i18n>NoData}" mode="None" showSeparators="All" growing="true" growingThreshold="10" growingScrollToLoad="true" class="sapUiResponsiveMargin" itemPress="_onTableItemPress">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <SearchField id="searchField" liveChange="onSearch" placeholder="Buscar" showSearchButton="true" visible="true" width="auto"/>
+                                            <Title id="CountRowsTable" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                                            <ToolbarSpacer width=""/>
+                                            <OverflowToolbarButton text="Ordenar" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" 
+                                            						press="onSort" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Filtro" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" 
+                                            press="onOpenViewSettings" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Descargar" type="Default" icon="sap-icon://download" 
+                                            						press="onDataExport" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Alias" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{i18n>SSSearchBSName}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{i18n>SSSearchG500ID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{i18n>SSSearchCREID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{i18n>SSSearchPREVIOUSSIIC}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{i18n>SSSearchPREVIOUSID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{i18n>SSSearchBPID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <Image src="/sap/fiori/g500dmtapp/webapp/resources/G500LogoC.PNG" height="auto" width="50px" 
+                                            visible="{= ${BUSINESSPARTNERID} > 0 ? true : false}" densityAware="false"/>
+                                            <Text text="{ALIAS}" width="auto" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{DEALER>/d/results/BUSINESSNAME}" width="auto" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{G500ID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{CREID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{PREVIOUSSIIC}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{PREVIOUSID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{BUSINESSPARTNERID}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer>
+            <OverflowToolbar width="100%" height="auto" design="Auto" enabled="true" visible="true">
+                <content>
+                    <Text text="{i18n>HomeFooterToolbar1}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <ToolbarSpacer width=""/>
+                    <Text text="{i18n>HomeFooterToolbar2}" width="auto"  textAlign="Begin" textDirection="Inherit" visible="true"/>
+                </content>
+            </OverflowToolbar>
+        </uxap:footer>
+    </uxap:ObjectPageLayout>
+</mvc:View>

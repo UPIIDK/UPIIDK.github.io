@@ -1,0 +1,366 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.dataManagement.controller.SsDetail" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:vbm="sap.ui.vbm">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" showFooter="false" subSectionLayout="TitleOnTop">
+        <uxap:headerContent/>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="/sap/fiori/g500dmtapp/webapp/resources/Picture1_2_.png" objectTitle="{SERVICESTATION>/d/ALIAS}" objectSubtitle="{DEALER>/d/BUSINESSNAME}" headerDesign="Light" objectImageShape="Square" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+                <uxap:actions> 
+                    <Button text="" type="Transparent" icon="sap-icon://nav-back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="" type="Default" icon="sap-icon://home" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                    <Button text="" type="Default" icon="sap-icon://refresh" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonRefresh"/>
+                    <Button text="" type="Default" icon="sap-icon://download" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="true" title="GENERAL" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Información General" mode="Collapsed">
+                        <uxap:blocks>
+                            <List mode="SingleSelectMaster" width="100%" headerText="ID" footerText="" backgroundDesign="Solid" 
+                             showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                	<StandardListItem title="{SERVICESTATION>/d/CREID}" description="ID CRE" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SERVICESTATION>/d/G500ID}" description="ID G500" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SERVICESTATION>/d/PREVIOUSSIIC}" description="SIIC (original)" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SERVICESTATION>/d/PREVIOUSID}" description="ID anterior (e.g. Pemex)" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SERVICESTATION>/d/BUSINESSPARTNERID}" description="ID B. Partner" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Grupo" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem title="{DEALERGROUP>/d/GROUPALIAS}" description="Grupo" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SERVICESTATION>/d/FK_TAXID}" description="RFC" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Relación con G500" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem title="{SSCOMMERCIALRELATIONSHIP>/d/DESCRIPTION}" description="Relación Comercial" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSBRAND>/d/DESCRIPTION}" description="Marca" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                    <uxap:ObjectPageSubSection title="Ubicación" mode="Collapsed">
+                        <uxap:blocks>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Dirección" 
+                            	 footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem title="{SSLOCATION>/d/STREET}" description="Calle" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSLOCATION>/d/STREETNUMBER}" description="No. exterior" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSLOCATION>/d/DISTRICT}" description="Colonia" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSLOCATION>/d/ZIPCODE}" description="Código Postal" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSLOCATION>/d/CITY}" description="Ciudad" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSLOCATION>/d/FEDERALSTATE}" description="Estado" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Coordenadas" 
+                             footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem title="{SSLOCATION>/d/LATITUDE}" description="Latitud" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSLOCATION>/d/LONGITUDE}" description="Longitud" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem title="{SSLOCATION>/d/LOCATIONURL}" description="URL" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                            <vbm:GeoMap id="GeoMap" legendVisible="true" scaleVisible="true" width="379.9875183105469px" height="375px" initialPosition="-102.53;23.626033;0" centerPosition="{SSLOCATION>/d/LONGITUDE};{SSLOCATION>/d/LATITUDE}" initialZoom="4" enableAnimation="false" refMapLayerStack="Default" disableZoom="false" disablePan="false">
+                                <vbm:resources/>
+                                <vbm:legend/>
+                                <vbm:vos>
+                                    <vbm:Spots>
+                                        <vbm:items>
+                                            <vbm:Spot position="{SSLOCATION>/d/LONGITUDE};{SSLOCATION>/d/LATITUDE};0" alignment="5"/>
+                                        </vbm:items>
+                                    </vbm:Spots>
+                                    <vbm:Circles>
+                                        <vbm:items/>
+                                    </vbm:Circles>
+                                    <vbm:Routes>
+                                        <vbm:items/>
+                                    </vbm:Routes>
+                                </vbm:vos>
+                            </vbm:GeoMap>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection showTitle="true" title="CONFIGURACIÓN" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Operación" mode="Expanded">
+                        <uxap:blocks>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Info. para Entregas" 
+                             footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem icon="sap-icon://date-time" title="{DELIVERYSPECIFICATION>/d/LOADHOUR1}" description="Horario de entrega 1" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://date-time" title="{DELIVERYSPECIFICATION>/d/LOADHOUR2}" description="Horario de entrega 2" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://measure" title="{DELIVERYSPECIFICATION>/d/VEHICLEMAXCAPACITY}" description="Capacidad máxima de entrega" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                            <List mode="SingleSelectMaster" width="100%" headerText="General" footerText="" backgroundDesign="Solid" 
+                            showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem icon="sap-icon://measure" title="{SSCONFIGURATION>/d/BUILDEDTOTALAREA}" description="Área total" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://car-rental" title="{SSCONFIGURATION>/d/PARKINGAREAS}" description="Lugares de estacionamiento" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://retail-store" title="{SSCONFIGURATION>/d/COMMERCIALFACILITIES}" description="Locales comerciales" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                    <uxap:ObjectPageSubSection title="Control Volumétrico" mode="Collapsed">
+                        <uxap:blocks>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" 
+                            items="{TANK>/d/results/}" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Title id="TitleTanks" text="Tanques ({COUNT ROWS})" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" />
+                                            <ToolbarSpacer width=""/>
+                                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Descarga" type="Transparent" icon="sap-icon://download" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="ID" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Producto" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true"  mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Cap. Total" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true"  mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Cap. Operativa" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true"  mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Cap. Útil" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true"  mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Fondo" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true"  mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Estatus" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <Text text="{TANK>CODE}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{TANK>HCPRODUCT}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{TANK>TOTALCAPACITY}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{TANK>OPERATIVECAPACITY}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{TANK>USEFULCAPACITY}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{TANK>BOTTOMCAPACITY}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{TANK>STATUS}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true"
+                            items="{PUMP>/d/}" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Title text="Dispensarios ({COUNT ROWS})" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" />
+                                            <ToolbarSpacer width=""/>
+                                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Group" type="Transparent" icon="sap-icon://download" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="ID" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Nombre" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Producto" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <Text text="{PUMP>PUMPID}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{PUMP>DESCRIPTION}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="\{TBD\}" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection showTitle="true" title="CONTACTOS" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection id="CountContactos" title="CONTACTOS ({COUNT ROWS})" mode="Collapsed">
+                        <uxap:blocks>
+                            <Table id="TablaContactos" width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" 
+                            items="{SSCONTACT>/d/results/}" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <!--Title text="({COUNT ROWS})" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" /-->
+                                            <ToolbarSpacer width=""/>
+                                            <OverflowToolbarButton text="Action" type="Default" icon="sap-icon://add-contact" iconFirst="true" 
+                                            press="_onButtonAddContact" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Action" type="Default" icon="sap-icon://download" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Rol" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Nombre" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="1° Apellido" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="2° Apellido" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Teléfono 1" width="auto"   textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="

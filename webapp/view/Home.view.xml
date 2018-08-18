@@ -1,0 +1,72 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.dataManagement.controller.Home" xmlns:uxap="sap.uxap" xmlns="sap.m">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" showFooter="true" subSectionLayout="TitleOnTop">
+        <uxap:headerContent/>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="/sap/fiori/g500dmtapp/webapp/resources/G500LogoC.PNG" objectTitle="{i18n>HomePageTitle}" objectSubtitle="{i18n>HomePageSubTitle}" headerDesign="Light" objectImageShape="Square" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+                <uxap:actions> 
+                <Button text="" type="Default" icon="sap-icon://refresh" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonRefresh"/> 
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection title="CATEGORÍAS" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="CATEGORÍAS" mode="Expanded">
+                        <uxap:blocks>
+                            <GenericTile  header="{i18n>HomeTileSS}" subheader="" frameType="TwoByOne" press="_onGenericTilePress">
+                                <tileContent>
+                                    <TileContent footer="" unit="">
+                                        <content>
+                                            <NumericContent id="SSTileNumericContent" truncateValueTo="7" valueColor="Neutral" indicator="None" icon="sap-icon://mileage"/>
+                                        </content>
+                                    </TileContent>
+                                </tileContent>
+                            </GenericTile>
+                            <GenericTile header="{i18n>HomeTileDealer}" subheader="" frameType="TwoByOne" press="_onGenericTilePress1">
+                                <tileContent>
+                                    <TileContent footer="" unit="">
+                                        <content>
+                                            <NumericContent id="DealerTileNumericContent" truncateValueTo="7" valueColor="Neutral" indicator="None" icon="/sap/fiori/g500dmtapp/webapp/resources/Dealer_logo.png"/>
+                                        </content>
+                                    </TileContent>
+                                </tileContent>
+                            </GenericTile>
+                            <GenericTile header="{i18n>HomeTileProduct}" subheader="" frameType="TwoByOne">
+                                <tileContent>
+                                    <TileContent footer="" unit="">
+                                        <content>
+                                            <NumericContent value="" valueColor="Neutral" truncateValueTo="7" indicator="None" icon="sap-icon://product"/>
+                                        </content>
+                                    </TileContent>
+                                </tileContent>
+                            </GenericTile>
+                            <GenericTile header="{i18n>HomeTileFleets}" subheader="" frameType="TwoByOne" press="_onGenericTileFleets">
+                                <tileContent>
+                                    <TileContent footer="" unit="">
+                                        <content>
+                                            <NumericContent value="2" valueColor="Neutral" truncateValueTo="7" indicator="None" icon="sap-icon://product"/>
+                                        </content>
+                                    </TileContent>
+                                </tileContent>
+                            </GenericTile>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer>
+            <OverflowToolbar width="100%" height="auto" design="Auto" enabled="true" visible="true">
+                <content>
+                    <Text text="{i18n>HomeFooterToolbar1}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <ToolbarSpacer width=""/>
+                    <Text text="{i18n>HomeFooterToolbar2}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                </content>
+            </OverflowToolbar>
+        </uxap:footer>
+    </uxap:ObjectPageLayout>
+</mvc:View>

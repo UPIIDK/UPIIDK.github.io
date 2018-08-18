@@ -1,0 +1,17 @@
+{
+  "dataBinding": {
+    "/webapp/view/Home.view.xml": {
+      "entitySet": ""
+    },
+    "/webapp/view/SsSearch.view.xml": {
+      "entitySet": ""
+    },
+    "/webapp/view/SsDetail.view.xml": {
+      "entitySet": ""
+    }
+  },
+  "deploy": {
+    "destination": "FID_G500",
+    "name": "ZAPP_VISDMG500"
+  }
+}

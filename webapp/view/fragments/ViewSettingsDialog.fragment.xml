@@ -1,0 +1,76 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<ViewSettingsDialog
+		id="viewSettingsDialog"
+		confirm="onConfirmViewSettingsDialog"
+		resetFilters="onViewSettingsDialogResetFilters">
+		<filterItems>
+			<ViewSettingsFilterItem
+				id="filterItems"
+				text="{i18n>masterFilterRebranding}"
+				key="BrandStatus"
+				multiSelect="true">
+				<items>
+					<ViewSettingsItem
+						text="{i18n>masterRebrandingFilter1}"
+						key="Filter1"
+						id="viewRebrandingFilter1"/>
+					<ViewSettingsItem
+						text="{i18n>masterRebrandingFilter2}"
+						key="Filter2"
+						id="viewRebrandingFilter2"/>
+					<ViewSettingsItem
+						text="{i18n>masterRebrandingFilter3}"
+						key="Filter3"
+						id="viewRebrandingFilter3"/>
+					<ViewSettingsItem
+						text="{i18n>masterRebrandingFilter4}"
+						key="Filter4"
+						id="viewRebrandingFilter4"/>
+					<ViewSettingsItem
+						text="{i18n>masterRebrandingFilter5}"
+						key="Filter5"
+						id="viewRebrandingFilter5"/>
+					<ViewSettingsItem
+						text="{i18n>masterRebrandingFilter6}"
+						key="Filter6"
+						id="viewRebrandingFilter6"/>
+				</items>
+			</ViewSettingsFilterItem>
+			
+			<ViewSettingsFilterItem
+				id="filterItemFactDate"
+				text="{i18n>masterFilterFactDate}"
+				key="FactStartDate"
+				multiSelect="true"
+				items="undefined>/">
+				<items>
+					<ViewSettingsItem
+						text="{path: 'undefined>FACTSTARTDATE',
+					           type: 'sap.ui.model.type.Date'}"
+						key="Filter1"
+						id="viewFactDateFilter1"/>
+				</items>
+			</ViewSettingsFilterItem>
+			
+			<ViewSettingsFilterItem
+				id="filterItemFederalEntities"
+				text="{i18n>masterFilterFederalEntity}"
+				key="FederalEntity"
+				multiSelect="true"
+				items="{CatEstados>/}">
+				
+				<items>
+					<ViewSettingsItem
+						text="{CatEstados>FEDERALSTATE}"
+						key="{CatEstados>STATESAPKEY}"
+						id="viewFederalEntityFilter1"/>
+				</items>	
+				
+			</ViewSettingsFilterItem>
+		</filterItems>
+	</ViewSettingsDialog>
+
+</core:FragmentDefinition>
