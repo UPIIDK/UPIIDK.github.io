@@ -15,12 +15,12 @@ canvas { width: 100%; height: 100%; }
 <script src=" ../../js/three.min.js"></script>
 <script>
   
-  var escena = new THREE.Scene();
-  var fov =75;//campo de vision control+shit + i habre el depurador
-  var aspect = window.innerWidth/window.innerHeight;
-  var near = 0.1;
-  var far =1000;
-  var camara =new THREE.PerspectiveCamera(fov,aspect,near,far);
+  var escena = new THREE.Scene(),
+     fov =75,//campo de vision control+shit + i habre el depurador
+     aspect = window.innerWidth/window.innerHeight,
+     near = 0.1,
+     far =1000,
+     camara =new THREE.PerspectiveCamera(fov,aspect,near,far);
   camara.position.z=4;
   var renderer =new THREE.WebGLRenderer();
   renderer.setSize( window.innerWidth, window.innerHeight);
