@@ -1,0 +1,41 @@
+<mvc:View controllerName="com.ZAdminTiles.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<!--Shell id="shell" backgroundOpacity="0"-->
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}" backgroundDesign="Transparent" showHeader="false" showSubHeader="false" showFooter="false">
+					<!--subHeader>
+						<Bar>
+							<contentLeft>
+								<Title text="Administación Mosaicos" level="H1"/>
+							</contentLeft>
+						</Bar>
+					</subHeader-->
+					<content>
+						<TileContainer
+							id="container"
+							tiles="{/Tiles}"
+							editable="false"
+							allowAdd="false"
+							>
+							<StandardTile
+								type="{type}"
+								number="{number}"
+								numberUnit="{numberUnit}"
+								title="{title}"
+								info="{subtitle}"
+								infoState="{infoState}"
+								icon="{icon}"
+								press="onPressTile" visible="false"/>
+							<!--GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{title}"
+										subheader="{subtitle}" press="onPressTile">
+										<TileContent unit="{numberUnit}" footer="{info}">
+											<ImageContent src="{icon}" />
+										</TileContent>
+							</GenericTile-->
+						</TileContainer>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	<!--/Shell-->
+</mvc:View>

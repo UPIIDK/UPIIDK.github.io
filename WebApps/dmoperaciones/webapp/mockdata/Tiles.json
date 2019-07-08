@@ -1,0 +1,43 @@
+{
+	"Tiles": [{
+				"icon": "sap-icon://Fiori2/F0003",
+				"type": "None",
+				"number":"",
+				"numberUnit": "",
+				"title": "Pacientes creados",
+				"subtitle": "Reporte",
+				"info": "S4",
+				"infoState": "None"							
+				},
+				{
+				"icon": "sap-icon://Fiori2/F0003",
+				"type": "None",
+				"number":"",
+				"numberUnit": "",
+				"title": "Modificaciones a pacientes",
+				"subtitle": "Reporte",
+				"info": "S4",
+				"infoState": "None"							
+				},
+				{
+				"icon": "sap-icon://Fiori3/F0251",
+				"type": "None",
+				"number":"",
+				"numberUnit": "",
+				"title": "Mantenimiento pacientes duplicados",
+				"subtitle": "Reporte",
+				"info": "S4",
+				"infoState": "None"							
+				},
+				{
+				"icon": "sap-icon://Fiori2/F0003",
+				"type": "None",
+				"number":"",
+				"numberUnit": "",
+				"title": "Pacientes con formato pendiente por adjuntar",
+				"subtitle": "Reporte",
+				"info": "S4",
+				"infoState": "None"							
+				}]
+}
+	

@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "com.ZAdminTiles.ZAdminTiles",
+        "description": "Administator group",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#ZAdminTiles-Display",
+        "navigationComponentName": "com.ZAdminTiles",
+        "intentSemanticObject": "ZAdminTiles",
+        "intentAction": "Display",
+        "html5ApplicationName": "zadmintiles",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "3ea62be9-6d51-4094-8d02-1ec3ab993075-1550978239176"
+        ],
+        "contentPackages": [
+            "89566ee3-bd42-49c7-8a29-660a9d52564d-1550977985264"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Administración",
+        "subtitle": "Reportes",
+        "searchKeywords": "Administración,Reportes",
+        "displayIconUrl": "sap-icon://activity-2",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
