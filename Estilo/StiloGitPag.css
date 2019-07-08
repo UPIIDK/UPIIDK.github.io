@@ -6,6 +6,7 @@ font: bold 36px verdana, sans-serif;
 text-align: center;
 font: bold 36px verdana, sans-serif;
 }
+
 #Menu {
   list-style-type:circle;
   li {
@@ -14,6 +15,7 @@ font: bold 36px verdana, sans-serif;
 	border:1px solid#CCCCCC;
 	}
 }
+
 #Pie {
 display: block;
 width: 500px;
@@ -28,4 +30,45 @@ border-radius: 20px;
 -moz-box-shadow: rgb(150,150,150) 5px 5px;
 -webkit-box-shadow: rgb(150,150,150) 5px 5px;
 box-shadow: rgb(150,150,150) 5px 5px;
+}
+
+/** Navegacion **/
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem; /** = 18px **/
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+.navegacion a:hover {
+    color: #71B100;
+}
+
+.barra {
+    padding-top: 3rem;
+}
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contenedor {
+	background-image: url(http://periodiconmx.com/wp-content/uploads/2014/08/SEGUNDO-EXAMEN-POLI.jpg);
+background-position: center center;
+background-size: cover;
+height: 100vh;
+min-height: 60rem;
+
 }
