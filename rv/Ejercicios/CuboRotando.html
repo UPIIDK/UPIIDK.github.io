@@ -14,28 +14,49 @@ canvas { width: 90%; height: 90%; }
 <body>
 <script src=" ../../js/three.min.js"></script>
 <script>
+ 
+  //Establish functions
+  function addToScene(obj){
+    escena.add(obj)
+  };
   
-  var escena = new THREE.Scene(),
-     fov =75,//campo de vision control+shit + i habre el depurador
-     aspect = window.innerWidth/window.innerHeight,
-     near = 0.1,
-     far =1000,
-     camara =new THREE.PerspectiveCamera(fov,aspect,near,far);
-  camara.position.z=4;
-  var renderer =new THREE.WebGLRenderer();
-  renderer.setSize( window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
-  var forma = new THREE.BoxGeometry(1,1,1),
-      material = new THREE.MeshBasicMaterial({color: 0x00ff00}),
-      cubo = new THREE.Mesh(forma,material),
-      rotation = 0.01;
-  escena.add(cubo);
+  function createPerpectiveCamera(fov, aspect, near, far, position = {}){
+    var perspectiveCam = new THREE.PerspectiveCamera(fov,aspect,near,far);
+        if(position !== {})
+        {
+          perspectiveCam.position = position;
+        }
+    return perspectiveCam;
+  };
+  
   function render(){
     requestAnimationFrame(render);
     cubo.rotation.x+=rotation;
     cubo.rotation.y+=rotation;
     renderer.render(escena, camara);
   }
+  
+  //Initialize Scene and camera
+  var escena = new THREE.Scene(),
+     fov =75,//campo de vision control+shit + i habre el depurador
+     aspect = window.innerWidth/window.innerHeight,
+     near = 0.1,
+     far =1000,
+     position = {z: 4},
+     camara = createPerpectiveCamera(fov, aspect, near, far, position),
+    renderer =new THREE.WebGLRenderer();
+  
+    renderer.setSize( window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+  
+  //Initialize Form
+  var forma = new THREE.BoxGeometry(1,1,1),
+      material = new THREE.MeshBasicMaterial({color: 0x00ff00}),
+      cubo = new THREE.Mesh(forma,material),
+      rotation = 0.01;
+  
+  escena.add(cubo);
+  
   
   render();
 </script>
