@@ -27,11 +27,11 @@ canvas { width: 90%; height: 90%; }
     renderer.render(escena, camara);
   };
   
-  function createPerpectiveCamera(fov, aspect, near, far, position = {x: 0, y: 0, z: 0}){
+  function createPerpectiveCamera(fov, aspect, near, far, position = new THREE.Vector3()){
     var perspectiveCam = new THREE.PerspectiveCamera(fov,aspect,near,far);
         if(position !== {})
         {
-          perspectiveCam.position = position;
+          perspectiveCam.position = new THREE.Vector3(position.x, position.y, position.z);
         }
     return perspectiveCam;
   };
