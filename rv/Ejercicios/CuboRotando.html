@@ -31,7 +31,9 @@ canvas { width: 90%; height: 90%; }
     var perspectiveCam = new THREE.PerspectiveCamera(fov,aspect,near,far);
         if(position !== {})
         {
-          perspectiveCam.position = new THREE.Vector3(position.x, position.y, position.z);
+          perspectiveCam.position.x = position.x;
+          perspectiveCam.position.y = position.y;
+          perspectiveCam.position.z = position.z;
         }
     return perspectiveCam;
   };
