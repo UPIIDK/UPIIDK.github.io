@@ -28,14 +28,7 @@ canvas { width: 90%; height: 90%; }
         }
     return perspectiveCam;
   };
-  
-  function render(){
-    requestAnimationFrame(render);
-    cubo.rotation.x+=rotation;
-    cubo.rotation.y+=rotation;
-    renderer.render(escena, camara);
-  }
-  
+    
   //Initialize Scene and camera
   var escena = new THREE.Scene(),
      fov =75,//campo de vision control+shit + i habre el depurador
@@ -57,7 +50,12 @@ canvas { width: 90%; height: 90%; }
   
   escena.add(cubo);
   
-  
+  function render(){
+    requestAnimationFrame(render);
+    cubo.rotation.x+=rotation;
+    cubo.rotation.y+=rotation;
+    renderer.render(escena, camara);
+  }
   render();
 </script>
 </body>
