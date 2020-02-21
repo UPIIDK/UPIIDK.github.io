@@ -19,8 +19,15 @@ canvas { width: 90%; height: 90%; }
   function addToScene(obj){
     escena.add(obj)
   };
+ 
+ function render(){
+    requestAnimationFrame(render);
+    cubo.rotation.x+=rotation;
+    cubo.rotation.y+=rotation;
+    renderer.render(escena, camara);
+  };
   
-  function createPerpectiveCamera(fov, aspect, near, far, position = {}){
+  function createPerpectiveCamera(fov, aspect, near, far, position = {x: 0, y: 0, z: 0}){
     var perspectiveCam = new THREE.PerspectiveCamera(fov,aspect,near,far);
         if(position !== {})
         {
@@ -35,7 +42,7 @@ canvas { width: 90%; height: 90%; }
      aspect = window.innerWidth/window.innerHeight,
      near = 0.1,
      far =1000,
-     position = {z: 4},
+     position = {x: 0, y: 0, z: 4},
      camara = createPerpectiveCamera(fov, aspect, near, far, position),
     renderer =new THREE.WebGLRenderer();
   
@@ -50,12 +57,6 @@ canvas { width: 90%; height: 90%; }
   
   escena.add(cubo);
   
-  function render(){
-    requestAnimationFrame(render);
-    cubo.rotation.x+=rotation;
-    cubo.rotation.y+=rotation;
-    renderer.render(escena, camara);
-  }
   render();
 </script>
 </body>
