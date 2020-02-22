@@ -47,7 +47,8 @@ canvas { width: 90%; height: 90%; display: block}
      position = {x: 0, y: 0, z: 4},
      camara = createPerpectiveCamera(fov, aspect, near, far, position),
     renderer =new THREE.WebGLRenderer();
-  
+    
+    escena.background = new THREE.Color();
     renderer.setSize( window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
   
