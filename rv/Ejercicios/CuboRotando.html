@@ -27,7 +27,7 @@ canvas { width: 90%; height: 90%; display: block}
     renderer.render(escena, camara);
   };
   
-  function createPerpectiveCamera(fov, aspect, near, far, position = new THREE.Vector3()){
+  function createPerpectiveCamera(fov, aspect, near, far, position){
     var perspectiveCam = new THREE.PerspectiveCamera(fov,aspect,near,far);
         if(position !== {})
         {
