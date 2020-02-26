@@ -55,13 +55,13 @@ Robot.prototype=new THREE.Object3D();
 function setupRobot(){
  oluzPuntual=new THREE.PointLight(0xffffff);
  oluzPuntual.position.x=15;
- oluzPuntual.position.y=15;
+ oluzPuntual.position.y=30;
  oluzPuntual.position.z=15;
  orob=new Robot();
  oescena=new THREE.Scene();
  oescena.add(orob,oluzPuntual);
  ocamara=new THREE.PerspectiveCamera();
- ocamara.position.y=22;
+ ocamara.position.y=30;
  let myCanvas = document.getElementById("RobotDK");
  orenderer=new THREE.WebGLRenderer({canvas: myCanvas});
  orenderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
