@@ -64,7 +64,7 @@ function setup(){
  camara.position.y=22;
  let myCanvas = document.getElementById("RobotDK");
  renderer=new THREE.WebGLRenderer({canvas: myCanvas});
- //renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  //document.body.appendChild(renderer.domElement); Use only when dont have nothing on body for add a canvas.
 }
 
