@@ -52,7 +52,7 @@ Llanta.prototype=new THREE.Object3D();
 Cuerpo.prototype=new THREE.Object3D();
 Robot.prototype=new THREE.Object3D();
 
-function setupRobot1(){
+function setupRobot(){
  luzPuntual=new THREE.PointLight(0xffffff);
  luzPuntual.position.x=15;
  luzPuntual.position.y=15;
@@ -68,7 +68,7 @@ function setupRobot1(){
  //document.body.appendChild(renderer.domElement); Use only when dont have nothing on body for add a canvas.
 }
 
-function loopRobot1(){
+function loopRobot(){
 var timer = Date.now() * 0.0002;
 camara.position.x = Math.cos( timer ) * 35;
 camara.position.z = Math.sin( timer ) * 15;
@@ -76,7 +76,7 @@ luzPuntual.position.x = Math.cos( timer ) * 35;
 luzPuntual.position.z = Math.sin( timer ) * 15;
 luzPuntual.lookAt(escena.position);
 camara.lookAt( escena.position );
-requestAnimationFrame(loop);
+requestAnimationFrame(loopRobot);
 renderer.render(escena,camara);
 rob.llanta1.rotation.z+=0.01;
 rob.llanta3.rotation.z+=0.01;
@@ -85,6 +85,6 @@ rob.llanta6.rotation.z+=0.01;
 }
 
 var escena,camara,renderer,rob,luzPuntual;
-setupRobot1();
-loopRobot1();
+setupRobot();
+loopRobot();
 
