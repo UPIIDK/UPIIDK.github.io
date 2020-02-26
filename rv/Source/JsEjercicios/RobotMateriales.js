@@ -53,7 +53,7 @@ Cuerpo.prototype=new THREE.Object3D();
 Robot.prototype=new THREE.Object3D();
 
 function setup(){
- var luzPuntual=new THREE.PointLight(0xffffff);
+ luzPuntual=new THREE.PointLight(0xffffff);
  luzPuntual.position.x=15;
  luzPuntual.position.y=15;
  luzPuntual.position.z=15;
@@ -72,6 +72,9 @@ function loop(){
 var timer = Date.now() * 0.0002;
 camara.position.x = Math.cos( timer ) * 35;
 camara.position.z = Math.sin( timer ) * 15;
+luzPuntual.position.x = Math.cos( timer ) * 35;
+luzPuntual.position.z = Math.sin( timer ) * 15;
+luzPuntual.lookAt(escena.position);
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
@@ -81,7 +84,7 @@ rob.llanta4.rotation.z+=0.01;
 rob.llanta6.rotation.z+=0.01;
 }
 
-var escena,camara,renderer,rob;
+var escena,camara,renderer,rob,luzPuntual;
 setup();
 loop();
 
