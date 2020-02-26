@@ -53,38 +53,38 @@ Cuerpo.prototype=new THREE.Object3D();
 Robot.prototype=new THREE.Object3D();
 
 function setupRobot(){
- luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=15;
- luzPuntual.position.y=15;
- luzPuntual.position.z=15;
- rob=new Robot();
- escena=new THREE.Scene();
- escena.add(rob,luzPuntual);
- camara=new THREE.PerspectiveCamera();
- camara.position.y=22;
+ oluzPuntual=new THREE.PointLight(0xffffff);
+ oluzPuntual.position.x=15;
+ oluzPuntual.position.y=15;
+ oluzPuntual.position.z=15;
+ orob=new Robot();
+ oescena=new THREE.Scene();
+ oescena.add(rob,luzPuntual);
+ ocamara=new THREE.PerspectiveCamera();
+ ocamara.position.y=22;
  let myCanvas = document.getElementById("RobotDK");
- renderer=new THREE.WebGLRenderer({canvas: myCanvas});
- renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+ orenderer=new THREE.WebGLRenderer({canvas: myCanvas});
+ orenderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  //document.body.appendChild(renderer.domElement); Use only when dont have nothing on body for add a canvas.
 }
 
 function loopRobot(){
 var timer = Date.now() * 0.0002;
-camara.position.x = Math.cos( timer ) * 35;
-camara.position.z = Math.sin( timer ) * 15;
-luzPuntual.position.x = Math.cos( timer ) * 35;
-luzPuntual.position.z = Math.sin( timer ) * 15;
-luzPuntual.lookAt(escena.position);
-camara.lookAt( escena.position );
+ocamara.position.x = Math.cos( timer ) * 35;
+ocamara.position.z = Math.sin( timer ) * 15;
+oluzPuntual.position.x = Math.cos( timer ) * 35;
+oluzPuntual.position.z = Math.sin( timer ) * 15;
+oluzPuntual.lookAt(escena.position);
+ocamara.lookAt( escena.position );
 requestAnimationFrame(loopRobot);
-renderer.render(escena,camara);
-rob.llanta1.rotation.z+=0.01;
-rob.llanta3.rotation.z+=0.01;
-rob.llanta4.rotation.z+=0.01;
-rob.llanta6.rotation.z+=0.01;
+orenderer.render(escena,camara);
+orob.llanta1.rotation.z+=0.01;
+orob.llanta3.rotation.z+=0.01;
+orob.llanta4.rotation.z+=0.01;
+orob.llanta6.rotation.z+=0.01;
 }
 
-var escena,camara,renderer,rob,luzPuntual;
+var oescena, ocamara, orenderer, orob, oluzPuntual;
 setupRobot();
 loopRobot();
 
