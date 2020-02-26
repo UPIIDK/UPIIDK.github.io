@@ -64,7 +64,8 @@ function setup(){
  camara.position.y=22;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
- document.body.appendChild(renderer.domElement);
+ //document.body.appendChild(renderer.domElement);
+ document.getElementById("RobotDK").appendChild(renderer.domElement);
 }
 
 function loop(){
