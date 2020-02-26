@@ -103,10 +103,10 @@ escena.add(luzPuntual);
 camara=new THREE.PerspectiveCamera();
 camara.position.z=90;
 
-renderer= new THREE.WebGLRenderer();
+renderer= new THREE.WebGLRenderer({canvas: document.getElementById("RobotMiguel")});
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
-//document.body.appendChild(renderer.domElement);
-  document.getElementById("RobotMiguel");
+//document.body.appendChild(renderer.domElement); This is only when is a Canvas on full body
+  
 }
 
 function loop(){
