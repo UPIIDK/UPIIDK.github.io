@@ -62,10 +62,10 @@ function setup(){
  escena.add(rob,luzPuntual);
  camara=new THREE.PerspectiveCamera();
  camara.position.y=22;
- renderer=new THREE.WebGLRenderer();
- renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
- //document.body.appendChild(renderer.domElement);
- document.getElementById("RobotDK").appendChild(renderer.domElement);
+ let myCanvas = document.getElementById("RobotDK");
+ renderer=new THREE.WebGLRenderer({canvas: myCanvas});
+ //renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+ //document.body.appendChild(renderer.domElement); Use only when dont have nothing on body for add a canvas.
 }
 
 function loop(){
