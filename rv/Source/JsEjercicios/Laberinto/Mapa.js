@@ -120,7 +120,7 @@ luzPuntual.castShadow =true;
   
   renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
-  var controls = new THREE.OrbitControls( camara, renderer.domElement );
+  //var controls = new THREE.OrbitControls( camara, renderer.domElement );
   document.body.appendChild(renderer.domElement);
   
   environment.add(camara,luzPuntual);
@@ -132,7 +132,7 @@ function loop(){
   environment.sense();
   environment.plan();
   environment.act();
-  controls.update();
+  //controls.update();
   renderer.render(environment,camara);
   
 }
