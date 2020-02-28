@@ -131,9 +131,9 @@ function loop(){
   environment.sense();
   environment.plan();
   environment.act();
-  
+  controls.update();
   renderer.render(environment,camara);
-
+  
 }
 
 var environment, camara, renderer,luzPuntual,xR,yR,xC,yC,xl,yl,xM,yM;
