@@ -1,6 +1,6 @@
 
 //keyCode=40 FlechaAbajo, keyCode=39 FlechaDerecha, keyCode=38 FlechaArriba, keyCode=37 FlechaIzq
-window.onload = function() {
+/*window.onload = function() {
   document.onkeydown = muestraInformacion;
   var mensaje1 = "Teclas de Control " + "<br>" + "Tecla Esc: Reinicia la Camara" + "<br>" +
                 "Tecla Z: Zoom out " + "<br>" + "Barra Espaciadora, Zoom In" + "<br>" + "Flecha, Mueven la camara" + 
@@ -68,9 +68,11 @@ luzPuntual.rotation=camara.rotation;
                 "Rotation camara y: " + camara.rotation.y + "<br>" +
                 "Rotation camara z: " + camara.rotation.z + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje
- }
+ }*/
  
  /*var mensaje2 = "Tipo de evento: " + evento.type + "<br>" +
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje2*/
-}
+//}
+
+var controls = new THREE.OrbitControls( camara, renderer.domElement );
