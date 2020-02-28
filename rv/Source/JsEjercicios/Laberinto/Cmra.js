@@ -74,5 +74,3 @@ luzPuntual.rotation=camara.rotation;
                 "Propiedad keyCode: " + evento.keyCode + "<br>"
   info.innerHTML += "<br>--------------------------------------<br>" + mensaje2*/
 //}
-
-var controls = new THREE.OrbitControls( camara, renderer.domElement );
