@@ -1,31 +1,28 @@
 function CuerpoRobot(Tmaño,x,y,z){
 THREE.Object3D.call(this);
-THREE.ImageUtils.crossOrigin=' ';
-var texturaC = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen1.jpg') : 
-                                     THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen1.jpg');
-    texturaC.setCrossOrigin(window.location.origin)                                 
+THREE.ImageUtils.crossOrigin= ' ';
+
+var texturaC = THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen1.jpg');
+                                   
 this.Camara= new THREE.Mesh(new THREE.SphereGeometry(0.2/Tmaño) ,new THREE.MeshBasicMaterial({map: texturaC}));
 this.Camara.position.y=0.5/y;
 this.Camara.position.z=z+(0.4/Tmaño)+(0.5/Tmaño)+(1/Tmaño)+(0.3/Tmaño)+(0.5/Tmaño);
 
-var texturaA = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen2.JPG') : 
-                                    THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen2.JPG');
+var texturaA = THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(0.15/Tmaño,0.15/Tmaño,0.4/Tmaño),new THREE.MeshBasicMaterial({map: texturaA}));
 var AA=0.4/Tmaño;
 this.Antena.position.y=0.5/y;
 this.Antena.rotation.x=Math.PI/2;
 this.Antena.position.z=z+(0.5/Tmaño)+(1/Tmaño)+(0.3/Tmaño)+(0.5/Tmaño);
 
-var texturaR = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen4.jpg') : 
-               THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen4.jpg');
+var texturaR = THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen4.jpg');
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.6/Tmaño,0.6/Tmaño,0.5/Tmaño),new THREE.MeshBasicMaterial({map: texturaR}));
 this.Rostro.position.y=0.5/y;
 var AR=1/Tmaño;//Altura Rostro
 this.Rostro.position.z=z+(0.5/Tmaño)+(1/Tmaño)+(0.3/Tmaño);
 this.Rostro.rotation.x=Math.PI/2;
 
-var texturaO = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen3.jpg') : 
-                                     THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen3.jpg');
+var texturaO = THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshBasicMaterial({map: texturaO}));
 this.OrejaI.position.x=((-0.6/Tmaño)+(-0.5/Tmaño))/x;
 this.OrejaI.position.y=0.5/y;
@@ -227,6 +224,7 @@ robot.BrazoI.rotation.x -=step;
   xR=robot.position.x;
   yR=robot.position.y;
   camara.updateProjectionMatrix();
+  camara.lookAt(robot.position);
   environment.add(luzPuntual);
 }
 

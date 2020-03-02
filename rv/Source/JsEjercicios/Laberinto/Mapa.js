@@ -1,8 +1,8 @@
 function Wall(size,x,y,z){
-  THREE.ImageUtils.crossOrigin=' ';
-var texturaW = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/hoja-metalica.jpg') : 
-                                     THREE.ImageUtils.loadTexture('../Imagenes/hoja-metalica.jpg');
-    texturaW.setCrossOrigin(window.location.origin)
+  THREE.ImageUtils.crossOrigin = ' ';
+
+var texturaW = THREE.ImageUtils.loadTexture('../Imagenes/hoja-metalica.jpg');
+    
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)+2.25),new THREE.MeshPhongMaterial({map: texturaW}));
   this.size=size;
   this.position.x=x;
@@ -21,9 +21,8 @@ function Meta(size,x,y,z){
 }
 Meta.prototype=new THREE.Mesh();
 function Piso(size,x,y,z){
-  THREE.ImageUtils.crossOrigin=' ';
-var texturaP = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/MetalRayado.jpg') : 
-                                     THREE.ImageUtils.loadTexture('../Imagenes/MetalRayado.jpg');
+  THREE.ImageUtils.crossOrigin = ' ';
+var texturaP = THREE.ImageUtils.loadTexture('../Imagenes/MetalRayado.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshPhongMaterial({map: texturaP}));
   this.size=size;
   this.position.x=x;
@@ -35,9 +34,9 @@ var texturaP = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/MetalRayad
 Piso.prototype=new THREE.Mesh();
 
 function Techo(size,x,y,z){
-  THREE.ImageUtils.crossOrigin=' ';
-  var texturaP = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/MetalRayado.jpg') : 
-                                       THREE.ImageUtils.loadTexture('../Imagenes/MetalRayado.jpg');
+  THREE.ImageUtils.crossOrigin = ' ';
+  
+  var texturaP = THREE.ImageUtils.loadTexture('../Imagenes/MetalRayado.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshPhongMaterial({map: texturaP}));
   this.size=size;
   this.position.x=x;
