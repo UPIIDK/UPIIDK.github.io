@@ -7,7 +7,7 @@ function Agent(x=0,y=0){
 Agent.prototype = new THREE.Object3D();
 
 /*Los agentes tienen tres directivas basicas
-  -ensar
+  -sensar
   -planificar
   -actuar */
 Agent.prototype.sense = function(environment) {};

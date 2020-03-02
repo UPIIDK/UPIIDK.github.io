@@ -1,6 +1,8 @@
 function Wall(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
-var texturaW= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/hoja-metalica.jpg');
+var texturaW = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/hoja-metalica.jpg') : 
+                                     THREE.ImageUtils.loadTexture('../Imagenes/hoja-metalica.jpg');
+    texturaW.setCrossOrigin(window.location.origin)
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,-0.2+(0.4/1)+(0.5/1)+(1/1)+(0.3/1)+(0.5/1)+(0.2/1)+2.25),new THREE.MeshPhongMaterial({map: texturaW}));
   this.size=size;
   this.position.x=x;
@@ -20,7 +22,8 @@ function Meta(size,x,y,z){
 Meta.prototype=new THREE.Mesh();
 function Piso(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
-var texturaP= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/MetalRayado.jpg');
+var texturaP = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/MetalRayado.jpg') : 
+                                     THREE.ImageUtils.loadTexture('../Imagenes/MetalRayado.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshPhongMaterial({map: texturaP}));
   this.size=size;
   this.position.x=x;
@@ -33,7 +36,8 @@ Piso.prototype=new THREE.Mesh();
 
 function Techo(size,x,y,z){
   THREE.ImageUtils.crossOrigin=' ';
-  var texturaP= THREE.ImageUtils.loadTexture('http://UPIIDK.github.io/rv/Imagenes/MetalRayado.jpg');
+  var texturaP = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/MetalRayado.jpg') : 
+                                       THREE.ImageUtils.loadTexture('../Imagenes/MetalRayado.jpg');
   THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,0.1),new THREE.MeshPhongMaterial({map: texturaP}));
   this.size=size;
   this.position.x=x;
@@ -45,7 +49,7 @@ function Techo(size,x,y,z){
 Techo.prototype=new THREE.Mesh();
 
 Environment.prototype.setMap=function(map){
-  var _offset=Math.floor(map.length/2);
+  var _offset = Math.floor(map.length/2);
   for(var i=0;i<map.length;i++)
   for(var j=0;j<(map.length)-1;j++){
     if(map[i][j] === "x")
@@ -96,7 +100,7 @@ function setup(){
   mapa[24] = "xxxxxxxxxxxxxxxxxxxx";
   
   environment = new Environment();
-  camara=new THREE.PerspectiveCamera();//(10, window.innerWidth/ window.innerHeight, 1, 10000 );
+  camara = new THREE.PerspectiveCamera();//(10, window.innerWidth/ window.innerHeight, 1, 10000 );
   //Luces
  luzPuntual=new THREE.PointLight(0xFFFFFF,0.5,15,0.01,1,2);
   environment.setMap(mapa);

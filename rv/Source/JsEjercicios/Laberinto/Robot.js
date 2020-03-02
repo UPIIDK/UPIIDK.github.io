@@ -1,26 +1,31 @@
 function CuerpoRobot(Tmaño,x,y,z){
 THREE.Object3D.call(this);
 THREE.ImageUtils.crossOrigin=' ';
-var texturaC= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen1.jpg');
+var texturaC = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen1.jpg') : 
+                                     THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen1.jpg');
+    texturaC.setCrossOrigin(window.location.origin)                                 
 this.Camara= new THREE.Mesh(new THREE.SphereGeometry(0.2/Tmaño) ,new THREE.MeshBasicMaterial({map: texturaC}));
 this.Camara.position.y=0.5/y;
 this.Camara.position.z=z+(0.4/Tmaño)+(0.5/Tmaño)+(1/Tmaño)+(0.3/Tmaño)+(0.5/Tmaño);
 
-var texturaA= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen2.JPG');
+var texturaA = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen2.JPG') : 
+                                    THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen2.JPG');
 this.Antena= new THREE.Mesh(new THREE.CylinderGeometry(0.15/Tmaño,0.15/Tmaño,0.4/Tmaño),new THREE.MeshBasicMaterial({map: texturaA}));
 var AA=0.4/Tmaño;
 this.Antena.position.y=0.5/y;
 this.Antena.rotation.x=Math.PI/2;
 this.Antena.position.z=z+(0.5/Tmaño)+(1/Tmaño)+(0.3/Tmaño)+(0.5/Tmaño);
 
-var texturaR= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen4.jpg');
+var texturaR = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen4.jpg') : 
+               THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen4.jpg');
 this.Rostro= new THREE.Mesh(new THREE.BoxGeometry(0.6/Tmaño,0.6/Tmaño,0.5/Tmaño),new THREE.MeshBasicMaterial({map: texturaR}));
 this.Rostro.position.y=0.5/y;
 var AR=1/Tmaño;//Altura Rostro
 this.Rostro.position.z=z+(0.5/Tmaño)+(1/Tmaño)+(0.3/Tmaño);
 this.Rostro.rotation.x=Math.PI/2;
 
-var texturaO= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen3.jpg');
+var texturaO = THREE.TextureLoader ? THREE.TextureLoader('../Imagenes/RobotLaberinto/imagen3.jpg') : 
+                                     THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen3.jpg');
 this.OrejaI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño, 0.25/Tmaño, 0.2/Tmaño ),new THREE.MeshBasicMaterial({map: texturaO}));
 this.OrejaI.position.x=((-0.6/Tmaño)+(-0.5/Tmaño))/x;
 this.OrejaI.position.y=0.5/y;
@@ -36,7 +41,7 @@ var AC=0.25/Tmaño;//Altura Cuello
 this.Cuello.position.y=0.5/y;
 this.Cuello.position.z=z+(0.5/Tmaño)+(1/Tmaño);
 
-var texturaB= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen8.jpg');
+var texturaB= THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen8.jpg');
 this.BrazoI= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.3/Tmaño,0.5/Tmaño),new THREE.MeshBasicMaterial({map: texturaB}));
 this.BrazoI.position.x=-0.6/x;
 this.BrazoI.position.y=0.5/y;
@@ -47,14 +52,14 @@ this.BrazoD.position.x=0.6/x;
 this.BrazoD.position.y=0.5/y;
 this.BrazoD.position.z=z+(1/Tmaño);
 
-var texturaP= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen5.JPG');
+var texturaP= THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen5.JPG');
 this.Panza= new THREE.Mesh(new THREE.BoxGeometry(0.5/Tmaño,0.5/Tmaño,0.9/Tmaño ),new THREE.MeshBasicMaterial({map: texturaP}));
 var AP=0.5/Tmaño;
 this.Panza.position.y=0.5/y;
 this.Panza.position.z=z+(1/Tmaño);
 this.Panza.rotation.z=Math.PI;
 
-var texturaPn= THREE.ImageUtils.loadTexture('http://miguel26.github.io/rv/imagen7.jpg');
+var texturaPn= THREE.ImageUtils.loadTexture('../Imagenes/RobotLaberinto/imagen7.jpg');
 this.PiernaI= new THREE.Mesh(new THREE.BoxGeometry(0.25/Tmaño,0.25/Tmaño,1/Tmaño),new THREE.MeshBasicMaterial({map: texturaPn}));
 this.PiernaI.position.x=-0.75/x;
 this.PiernaI.position.y=0.5/y;
@@ -176,7 +181,7 @@ else if(this.sensor.colision==true )
   this.actuator.commands.push('rotateCCW');
   
 }
-Robot.prototype.act=function(environment){
+Robot.prototype.act = function(environment){
   var command=this.actuator.commands.pop();
   if( command==undefined)
     console.log('Undefined command');
