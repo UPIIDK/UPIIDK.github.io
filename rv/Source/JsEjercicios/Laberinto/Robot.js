@@ -223,8 +223,8 @@ robot.BrazoI.rotation.x -=step;
   luzPuntual.position.y+=distance*Math.sin(robot.rotation.z);
   xR=robot.position.x;
   yR=robot.position.y;
+  //camara.lookAt(robot.position);
   camara.updateProjectionMatrix();
-  camara.lookAt(robot.position);
   environment.add(luzPuntual);
 }
 
@@ -234,6 +234,7 @@ Robot.prototype.operations.rotateCW= function (robot,angle){
    //Primera Persona
   robot.rotation.z+=angle;
   camara.rotation.y-=angle;
+  //camara.lookAt(robot.position);
    luzPuntual.rotation.z+=angle;
    camara.updateProjectionMatrix();
    environment.add(luzPuntual);
@@ -245,6 +246,7 @@ Robot.prototype.operations.rotateCCW=function(robot,angle){
   //Primera Persona
   robot.rotation.z+=angle;
   camara.rotation.y-=angle;
+  //camara.lookAt(robot.position);
   camara.updateProjectionMatrix();
   luzPuntual.rotation.z+=angle;
   environment.add(luzPuntual);

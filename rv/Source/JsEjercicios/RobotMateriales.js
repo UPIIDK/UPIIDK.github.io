@@ -75,7 +75,7 @@ ocamara.position.z = Math.sin( timer ) * 15;
 oluzPuntual.position.x = Math.cos( timer ) * 35;
 oluzPuntual.position.z = Math.sin( timer ) * 15;
 oluzPuntual.lookAt(oescena.position);
-ocamara.lookAt( oescena.position );
+//ocamara.lookAt( oescena.position );
 requestAnimationFrame(loopRobot);
 orenderer.render(oescena,ocamara);
 orob.llanta1.rotation.z+=0.01;

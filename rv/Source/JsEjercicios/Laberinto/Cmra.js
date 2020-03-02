@@ -50,10 +50,10 @@ function muestraInformacion(elEvento,robot) {
  camara.position.z+=0.5;
  }
  
- if(evento.keyCode==27){ //ESC
-  camara.position.z=(0.5/1)+(1/1)+(0.3/1);
-  camara.position.y=yR;
-  camara.position.x=xR;
+ if(evento.keyCode === 27){ //ESC
+  camara.position.z = (0.5/1) + (1/1) + (0.3/1);
+  camara.position.y = yR;
+  camara.position.x = xR;
   //camara.rotation=robot.rotation;
 luzPuntual.position=camara.position;
 luzPuntual.rotation=camara.rotation;
